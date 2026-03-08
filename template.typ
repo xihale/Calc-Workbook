@@ -26,6 +26,11 @@
 #let oint = math.integral.cont
 #let quad = h(1em)
 
+#let dif = math.upright("d")
+#let pd = math.partial
+#let ee = math.upright("e")
+#let ii = math.upright("i")
+
 #let conf(
   is-answer: false,
   doc,

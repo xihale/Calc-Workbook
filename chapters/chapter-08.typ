@@ -11,7 +11,7 @@
 ], a: [√.])
 
 #question([
-  2. 若向量 $bold(a) = (a_x, a_y, a_z)$，则平行于向量 $bold(a)$ 的单位向量为 $( a_x/|bold(a)|, a_y/|bold(a)|, a_z/|bold(a)| )$。 (#choice[×])
+  2. 若向量 $bold(a) = (a_x, a_y, a_z)$，则平行于向量 $bold(a)$ 的单位向量为 $( a_x/(|bold(a)|), a_y/(|bold(a)|), a_z/(|bold(a)|) )$。 (#choice[×])
 ], a: [×.])
 
 #prob-type("二、选择题")
@@ -444,7 +444,7 @@ D. 椭圆
 (1) $ cases(x^2 + y^2 + z^2 = 9, y = x) $ 
 
 (2) $ cases((x - 1)^2 + y^2 + (z + 1)^2 = 4, z = 0) $ 
-], a: [(1) $ cases(x = 3/sqrt(2) cos t, y = 3/sqrt(2) cos t, z = 3 sin t) $ ( $0 <= t <= 2 pi$ );
+], a: [(1) $ cases(x = 3/(sqrt(2)) cos t, y = 3/(sqrt(2)) cos t, z = 3 sin t) $ ( $0 <= t <= 2 pi$ );
 (2) $ cases(x = 1 + sqrt(3) cos t, y = sqrt(3) sin t, z = 0) $ ( $0 <= t <= 2 pi$ ).])
 
 #question([
@@ -522,7 +522,7 @@ D. 直线在平面上
 
 #question([
   6. 已知三点 $A(-2, 1, -1), B(1, -3, 4), C(-3, -1, 1)$，则
-（1）向量 $arrow(A B)$ 的方向余弦为 #ans[$cos alpha = 3/(5 sqrt(2)), cos beta = -4/(5 sqrt(2)), cos gamma = 1/sqrt(2)$]，单位向量为 #ans[$(3/(5 sqrt(2)), -4/(5 sqrt(2)), 1/sqrt(2))$]；
+（1）向量 $arrow(A B)$ 的方向余弦为 #ans[$cos alpha = 3/(5 sqrt(2)), cos beta = -4/(5 sqrt(2)), cos gamma = 1/(sqrt(2))$]，单位向量为 #ans[$(3/(5 sqrt(2)), -4/(5 sqrt(2)), 1/(sqrt(2)))$]；
 
 (2) 向量 $arrow(A B)$ 在向量 $arrow(A C)$ 上的投影为 #ans[$5$]，$arrow(A B)$ 与 $arrow(A C)$ 的夹角为 #ans[$45^degree$]；
 
@@ -531,7 +531,7 @@ D. 直线在平面上
 （4）过点 $C$ 且垂直于 $arrow(A B)$ 的平面方程为 #ans[$3x - 4y + 5z + 0 = 0$]；
 
 （5）过点 $C$ 且平行于 $arrow(A B)$ 的直线方程为 #ans[$(x + 3)/3 = (y + 1)/(-4) = (z - 1)/5$]。
-], a: [（1） $cos alpha = 3/(5 sqrt(2)), cos beta = -4/(5 sqrt(2)), cos gamma = 1/sqrt(2)$；单位向量为 $(3/(5 sqrt(2)), -4/(5 sqrt(2)), 1/sqrt(2))$；
+], a: [（1） $cos alpha = 3/(5 sqrt(2)), cos beta = -4/(5 sqrt(2)), cos gamma = 1/(sqrt(2))$；单位向量为 $(3/(5 sqrt(2)), -4/(5 sqrt(2)), 1/(sqrt(2)))$；
 (2) $5, 45^degree$；
 (3) $15/2$；
 (4) $3x - 4y + 5z = 0$；

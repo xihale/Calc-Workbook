@@ -2,7 +2,7 @@
 
 #let ans(it) = context {
   if is-answer-state.get() {
-    text(fill: blue.darken(20%), weight: "bold", underline(stroke: 0.5pt, offset: 2pt, it))
+    underline(stroke: 0.5pt, offset: 2pt, it)
   } else {
     underline(stroke: 0.5pt, offset: 2pt, hide(it))
   }
@@ -10,7 +10,7 @@
 
 #let choice(it) = context {
   if is-answer-state.get() {
-    text(fill: blue.darken(20%), weight: "bold", it)
+    it
   } else {
     hide(it)
   }
@@ -66,7 +66,7 @@
 
   align(center, text(20pt, weight: "bold")[高等数学习题册（下册）])
   if is-answer {
-    align(center, text(14pt, fill: blue.darken(20%))[【参考答案版】])
+    align(center, text(14pt)[【参考答案版】])
   }
   v(2em)
 
@@ -89,10 +89,7 @@
       #if a != none [
         #if show-ans [
           #v(0.5em)
-          #block(fill: rgb("f0f8ff"), inset: 10pt, radius: 5pt, width: 100%)[
-            #text(fill: rgb("00509e"), weight: "bold")[【解答过程】] \
-            #text(fill: rgb("003366"))[#a]
-          ]
+          【解答】 #a
           #v(0.5em)
         ] else [
           #v(space)
@@ -106,13 +103,6 @@
 
 #let prob-type(title) = {
   v(1.5em)
-  block(
-    fill: gray.lighten(90%),
-    inset: 5pt,
-    radius: 3pt,
-    width: 100%,
-  )[
-    #text(12pt, weight: "bold")[#title]
-  ]
+  text(12pt, weight: "bold")[#title]
   v(0.8em)
 }

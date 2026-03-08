@@ -1,4 +1,9 @@
-#set page(width: auto, height: auto, margin: 1cm)
+#set page(width: 10cm, height: auto, margin: 1cm)
 
-$ A union B $
-$ A sect B $
+$ ( a_x/|bold(a)| ) $
+
+$ ( a_x/(|bold(a)|) ) $
+
+$ frac(a_x, |bold(a)|) $
+
+$ a_x / (|bold(a)|) $

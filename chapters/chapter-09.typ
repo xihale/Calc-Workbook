@@ -7,18 +7,18 @@
 #prob-type("一、选择题")
 
 #question([
-  1. $lim_((x,y) arrow (0,0)) (x^2 y)/(x^4 + y^2)$
-A. $= 0$ 
+  1. $lim_((x,y) arrow (0,0)) (x^2 y)/(x^4 + y^2) = $（ #choice[B] ）
+A. $0$ 
 
 B. 不存在
 
-C. $= 1/2$ 
+C. $1/2$ 
 
-D. 存在但不等于 0 或 $1/2$
+D. 存在但不等于 $0$ 或 $1/2$
 ], a: [B.])
 
 #question([
-  2. 设函数 $ f(x, y) = cases(x sin(1/y) + y sin(1/x) & "if" x y != 0, 0 & "if" x y = 0) $ 则 $lim_((x, y) arrow (0, 0)) f(x, y) = underline("          ")$ .
+  2. 设函数 $ f(x, y) = cases(x sin(1/y) + y sin(1/x) & "if" x y != 0, 0 & "if" x y = 0) $ 则 $lim_((x, y) arrow (0, 0)) f(x, y) = $（ #choice[C] ）。
 A. 不存在
 
 B. 1 
@@ -26,13 +26,13 @@ B. 1
 C. 0 
 
 D. 2
-], a: [])
+], a: [C.])
 
 #question([
-  3. 设函数 $ f(x, y) = cases((x y)/(sqrt(x^2 + y^2)) & "if" x^2 + y^2 != 0, 0 & "if" x^2 + y^2 = 0) $ 则 $f(x, y)$ ( ).
+  3. 设函数 $ f(x, y) = cases((x y)/(sqrt(x^2 + y^2)) & "if" x^2 + y^2 != 0, 0 & "if" x^2 + y^2 = 0) $ 则 $f(x, y)$ （ #choice[A] ）。
 A. 处处连续
 
-B. 处处有极限, 但不连续
+B. 处处有极限，但不连续
 
 C. 仅在点 $(0,0)$ 处连续
 
@@ -43,23 +43,23 @@ D. 除点 $(0,0)$ 外处处连续
 
 #question([
   4. 函数 $z = sqrt(ln(x + y))$ 的定义域为
-], a: [${(x, y) | x + y >= 1}$])
+], a: [${(x, y) | x + y >= 1}$。])
 
 #question([
-  5. 设函数 $f(x, y) = x^2 + y^2 + x y ln (y/x)$ ，则 $f(k x, k y) =$  #underline("          ") .
+  5. 设函数 $f(x, y) = x^2 + y^2 + x y ln (y/x)$，则 $f(k x, k y) = $ #ans[$k^2 f(x, y)$]。
 ], a: [$k^2 f(x,y)$])
 
 #question([
-  6. $lim_((x,y) arrow (0,1)) ( ln (y + (e)^(x^2)))( sqrt (x^2 + y^2)) = underline("          ")$
-], a: [In])
+  6. $lim_((x,y) arrow (0,1)) (ln (y + e^(x^2))) (sqrt(x^2 + y^2)) = $ #ans[$ln 2$]。
+], a: [$ln 2$])
 
 #question([
-  7. 设函数 $ f(x, y) = cases( (( tan (x^2 + y^2))/(x^2 + y^2)), & (x, y) != (0, 0),   A, & (x, y) = (0, 0), ) $ 要使得 $f(x, y)$ 在点(0,0)处连续，则 $A =$  #underline("          ") .
+  7. 设函数 $ f(x, y) = cases( (tan (x^2 + y^2))/(x^2 + y^2) & (x, y) != (0, 0), A & (x, y) = (0, 0) ) $ 要使得 $f(x, y)$ 在点 $(0,0)$ 处连续，则 $A = $ #ans[$1$]。
 ], a: [1.])
 
 #question([
-  8. 函数 $f(x, y) = (1/x^2 - y^2) cos (y/x)$ 的间断点为
-], a: [$((x,y) | y = plus.minus x)$])
+  8. 函数 $f(x, y) = (x^2 - y^2)^(-1) cos (y/x)$ 的间断点为
+], a: [${(x,y) | y = plus.minus x}$。])
 
 #prob-type("三、计算题")
 
@@ -92,29 +92,29 @@ D. 除点 $(0,0)$ 外处处连续
 #prob-type("一、选择题")
 
 #question([
-  1. 设函数 $u = (y/x)$ ，则 $(partial u/partial x) = ( " " )$
-A. $(x/x^2 + y^2)$ 
+  1. 设函数 $u = arctan(y/x)$，则 $diff u / diff x = $（ #choice[B] ）。
+A. $x/(x^2 + y^2)$ 
 
-B. $-((y)/(x^2 + y^2))$ 
+B. $-y/(x^2 + y^2)$ 
 
-C. $((y)/(x^2 + y^2))$ 
+C. $y/(x^2 + y^2)$ 
 
-D. $-((x)/(x^2 + y^2))$
+D. $-x/(x^2 + y^2)$
 ], a: [B.])
 
 #question([
-  2. 设函数 $f(x, y) = sqrt (y/x)$ ，则 $f_x'(2, 1) = ( " " )$ .
-A. $-(1/4)$ 
+  2. 设函数 $f(x, y) = sqrt(y/x)$，则 $f_x'(2, 1) = $（ #choice[A] ）。
+A. $-1/4$ 
 
-B. $(1/4)$ 
+B. $1/4$ 
 
-C. $-(1/2)$ 
+C. $-1/2$ 
 
-D. $(1/2)$
+D. $1/2$
 ], a: [A.])
 
 #question([
-  3. 设函数 $z = y^x$ ，则 $( (partial z) / (partial x) + (partial z) / (partial y) ) |_(x = 2, y = 1) = underline("          ")$
+  3. 设函数 $z = y^x$，则 $(diff z / diff x + diff z / diff y) |_(x=2, y=1) = $（ #choice[A] ）。
 A. 2 
 
 B. $1 + ln 2$ 
@@ -127,53 +127,53 @@ D. 1
 #prob-type("二、填空题")
 
 #question([
-  4. 设函数 $z = sin (3 x - y) + y$ ，则 $((partial z) / (partial x)) |_(x=2, y=1) = $
-], a: [3cos5.])
+  4. 设函数 $z = sin(3x - y) + y$，则 $(diff z / diff x) |_(x=2, y=1) = $ #ans[$3 cos 5$]。
+], a: [3 cos 5])
 
 #question([
-  5. 设函数 $u = x y + (y/x)$ , 则 $(partial^2 u/partial x^2) =$  #underline("          ") .
-], a: [$(2 y/x^3)$])
+  5. 设函数 $u = x y + y/x$，则 $diff^2 u / diff x^2 = $ #ans[$2y/x^3$] 。
+], a: [$2 y / x^3$])
 
 #question([
-  6. 设函数 $u = x ln x y$ ，则 $ (partial^2 u) / (partial x partial y) $ =$  #underline("          ") .
-], a: [$(1/y)$])
+  6. 设函数 $u = x ln(x y)$，则 $diff^2 u / diff x diff y = $ #ans[$1/y$] 。
+], a: [$1/y$])
 
 #prob-type("三、计算题")
 
 #question([
   7. 求下列函数的偏导数：
-(1) $z = sqrt ( ln x y)$ ; 
+(1) $z = sqrt(ln(x y))$； 
 
-(2) $z = (1 + x y)^y$ 
+(2) $z = (1 + x y)^y$；
 
-(3) $u = x^(y/z)$ 
+(3) $u = x^(y/z)$；
 
-(4) $u = (x - y)^z$
-], a: [(1) $ (partial z/partial x) = ((1)/(2 x sqrt ( ln x y))), (partial z/partial y) = ((1)/(2 y sqrt ( ln x y))); $
-(2) $ (partial z/partial x) = y^2 (1 + x y)^(y - 1), (partial z/partial y) = (1 + x y)^y [ ln (1 + x y) + (x y/1 + x y) ] $ ;
-(3) $ (partial u/partial x) = (y/z) x^((y/z) - 1), (partial u/partial y) = (1/z) x^(y/z) ln x, (partial u/partial z) = -(y/z^2) x^(y/z) ln x; $
-(4) $ (partial u/partial x) = ((z(x - y)^(z - 1))/(1 + (x - y)^(2 z))), (partial u/partial y) = -((z(x - y)^(z - 1))/(1 + (x - y)^(2 z))), (partial u/partial z) = (((x - y)^(z) ln (x - y))/(1 + (x - y)^(2 z))). $])
+(4) $u = (x - y)^z$。
+], a: [(1) $diff z / diff x = 1/(2x sqrt(ln(x y))), diff z / diff y = 1/(2y sqrt(ln(x y)))$；
+(2) $diff z / diff x = y^2 (1 + x y)^(y - 1), diff z / diff y = (1 + x y)^y [ln(1 + x y) + (x y)/(1 + x y)]$；
+(3) $diff u / diff x = y/z x^(y/z - 1), diff u / diff y = 1/z x^(y/z) ln x, diff u / diff z = -y/z^2 x^(y/z) ln x$；
+(4) $diff u / diff x = z(x - y)^(z - 1), diff u / diff y = -z(x - y)^(z - 1), diff u / diff z = (x - y)^z ln(x - y)$。])
 
 #question([
-  8. 求下列函数的二阶偏导数 $ (partial^2 z/partial x^2), (partial^2 z/partial y^2), (partial^2 z/partial x partial y) $
-(1) $z = (y/x)$ ; 
+  8. 求下列函数的二阶偏导数 $diff^2 z / diff x^2, diff^2 z / diff y^2, diff^2 z / diff x diff y$：
+(1) $z = arctan(y/x)$； 
 
-(2) $z = y^x$
-], a: [(1) $ (partial^2 z/partial x^2) = ((2 x y)/((x^2 + y^2)^2)), (partial^2 z/partial y^2) = -((2 x y)/((x^2 + y^2)^2)), (partial^2 z/partial x partial y) = ((y^2 - x^2)/((x^2 + y^2)^2)) $ ;
-(2) $ (partial^2 z/partial x^2) = y^x ln^2 y, (partial^2 z/partial y^2) = x(x - 1)y^(x - 2), (partial^2 z/partial x partial y) = y^(x - 1)(1 + x ln y). $])
+(2) $z = y^x$。
+], a: [(1) $diff^2 z / diff x^2 = (2 x y)/(x^2 + y^2)^2, diff^2 z / diff y^2 = -(2 x y)/(x^2 + y^2)^2, diff^2 z / diff x diff y = (y^2 - x^2)/(x^2 + y^2)^2$；
+(2) $diff^2 z / diff x^2 = y^x ln^2 y, diff^2 z / diff y^2 = x(x - 1)y^(x - 2), diff^2 z / diff x diff y = y^(x - 1)(1 + x ln y)$。])
 
 #prob-type("四、证明题")
 
 #question([
-  9. 设函数 $z = (e)^(-((1/x) + (1/y)))$ ，求证： $x^2 (partial z/partial x) + y^2 (partial z/partial y) = 2 z$
-], a: [略])
+  9. 设函数 $z = e^(-(1/x + 1/y))$，求证：$x^2 (diff z / diff x) + y^2 (diff z / diff y) = z$。
+], a: [略。])
 
 == 第三节 全微分
 
 #prob-type("一、选择题")
 
 #question([
-  1. 函数 $f(x, y)$ 在点 $(x_0, y_0)$ 处两个偏导数 $f_x'(x_0, y_0), f_y'(x_0, y_0)$ 存在是 $f(x, y)$ 在该点处全微分存在的（ ）.
+  1. 函数 $f(x, y)$ 在点 $(x_0, y_0)$ 处两个偏导数 $f_x'(x_0, y_0), f_y'(x_0, y_0)$ 存在是 $f(x, y)$ 在该点处全微分存在的（#choice[C]）.
 A. 充分条件
 
 B. 充要条件
@@ -184,7 +184,7 @@ D. 无关条件
 ], a: [C.])
 
 #question([
-  2. 函数 $f(x, y)$ 在点 $(x_0, y_0)$ 处两个偏导数 $f_x'(x_0, y_0), f_y'(x_0, y_0)$ 存在是 $f(x, y)$ 在该点处连续的（ ）.
+  2. 函数 $f(x, y)$ 在点 $(x_0, y_0)$ 处两个偏导数 $f_x'(x_0, y_0), f_y'(x_0, y_0)$ 存在是 $f(x, y)$ 在该点处连续的（#choice[D]）.
 A. 充要条件
 
 B. 必要条件
@@ -195,7 +195,7 @@ D. 无关条件
 ], a: [D.])
 
 #question([
-  3. 函数 $f(x, y)$ 在点 $(x_0, y_0)$ 处满足关系（ ）
+  3. 函数 $f(x, y)$ 在点 $(x_0, y_0)$ 处满足关系（#choice[C]）
 A. 可微分 $$ 可偏导 $$ 连续
 
 B. 可微分 $$ 可偏导 $$ 连续
@@ -208,32 +208,26 @@ D. 可偏导 $$ 连续, 但可偏导不一定可微分
 #prob-type("二、填空题")
 
 #question([
-  4. 函数 $z = (y/x)$ 当 $x = 2, y = 1, Delta x = 0 .1, Delta y = -0 .2$ 时的全增量 $Delta z =$ 全微分 $dif z =$
-], a: [$-(5/42), - (1/8)$])
+  4. 函数 $z = arctan(y/x)$ 当 $x = 2, y = 1, Delta x = 0.1, Delta y = -0.2$ 时的全增量 $Delta z approx$ #ans[$-0.125$]，全微分 $dif z =$ #ans[$-1/8$]。
+], a: [$-5/42 approx -0.119, -0.125$])
 
 #question([
-  5. 设函数 $z = (e)^(y(x^2 + y^2))$ ，则 $dif z =$
-], a: [$2 x y (e)^(y(x^2 +y^2)) dif x + (x^2 +3 y^2) (e)^(y(x^2 +y^2)) dif y .$])
+  5. 设函数 $z = e^(y(x^2 + y^2))$，则 $dif z =$
+], a: [$2x y e^(y(x^2 + y^2)) dif x + (x^2 + 3 y^2) e^(y(x^2 + y^2)) dif y$。])
 
 #question([
-  6. 设函数 $z = f(y/x)$ ，则 $dif z =$
-], a: [$-(y/x^2) f'(y/x) dif x + (1/x) f'(y/x) dif y .$])
+  6. 设函数 $z = f(y/x)$，则 $dif z =$
+], a: [$-y/x^2 f'(y/x) dif x + 1/x f'(y/x) dif y$。])
 
 #prob-type("三、计算题")
 
 #question([
-  7. 设函数 $u = a^(x + y z) - ln x^a (a > 0)$ ，求 $dif u$
-], a: [提示: $ (partial u/partial x) = a^(x + y z) ln a - a x^(-1), (partial u/partial y) = a^(x + y z) dot z ln a, (partial u/partial z) = y a^(x + y z) ln a, $
-$$
- {d} u = (a ^ {x + y z} \ln a - a x ^ {- 1})  {d} x + a ^ {x + y z} \ln a (z  {d} y + y  {d} z).
-$$])
+  7. 设函数 $u = a^(x + y z) - ln x^a$ ($a > 0$)，求 $dif u$。
+], a: [$dif u = (a^(x + y z) ln a - a/x) dif x + a^(x + y z) z ln a dif y + a^(x + y z) y ln a dif z$。])
 
 #question([
-  8. 求函数 $z = ln (x^2 + y^2 + e^(x y))$ 的全微分.
-], a: [提示: $ (partial z/partial x) = ((2 x + y (e)^(x y))/(x^2 + y^2 + (e)^(x y))), (partial z/partial y) = ((2 y + x (e)^(x y))/(x^2 + y^2 + (e)^(x y))) $
-$$
- {d} z = \frac {1}{x ^ {2} + y ^ {2} +  {e} ^ {x y}} <=ft\[ (2 x + y  {e} ^ {x y})  {d} x + (2 y + x  {e} ^ {x y})  {d} y \right\].
-$$])
+  8. 求函数 $z = ln(x^2 + y^2 + e^(x y))$ 的全微分。
+], a: [$dif z = 1/(x^2 + y^2 + e^(x y)) [(2x + y e^(x y)) dif x + (2y + x e^(x y)) dif y]$。])
 
 #question([
   9. 求函数 $z = ln (1 + x^2 + y^2)$ 当 $x = 1, y = 2$ 时的全微分.
@@ -250,45 +244,44 @@ $$])
 #prob-type("一、选择题")
 
 #question([
-  1. 设函数 $u = (x - y)^z$ ，而函数 $z = x^2 + y^2$ ，则 $u_x' + u_y' = ( " " )$
-A. $2[z(x - y)^(z - 1) + (x + y)(x - y)^(z) ln (x - y)]$ 
+  1. 设函数 $u = (x - y)^z$，而 $z = x^2 + y^2$，则 $u_x' + u_y' = $（ #choice[C] ）。
+A. $2[z(x - y)^(z - 1) + (x + y)(x - y)^z ln(x - y)]$ 
 
-B. $2 z(x - y)^(z)$ 
+B. $2z(x - y)^z$ 
 
-C. $2(( x - y) )^(z)( (x + y)) ln ( (x - y))$ 
+C. $2(x - y)^z (x + y) ln(x - y)$ 
 
-D. $2(x - y)^(z + 1) ln (x - y)$
+D. $2(x - y)^(z + 1) ln(x - y)$
 ], a: [C.])
 
 #question([
-  2. 设函数 $z = 3^(x y)$ ，而 $x = f(y)$ 且 $f$ 可导，则 $(( dif z)/( dif y)) = ( " " )$ .
-A. $3^(x y)[y + x f'(y)] ln 3$ 
+  2. 设函数 $z = 3^(x y)$，而 $x = f(y)$ 且 $f$ 可导，则 $dif z / dif y = $（ #choice[B] ）。
+A. $3^(x y) (y + x f'(y)) ln 3$ 
 
-B. $3^(x y)[x + y f'(y)] ln 3$ 
+B. $3^(x y) (x + y f'(y)) ln 3$ 
 
-C. $((3^(x y))/( ln 3)) [x + y f'(y)]$ 
+C. $3^(x y) / ln 3 (x + y f'(y))$ 
 
-D. $z_x^( )f^( )(y) + z_y^( ) - 3^(x y)[x + y f^( )(y)] ln 3$
+D. $z_x f'(y) + z_y$
 ], a: [B.])
-
 #question([
-  3. 设函数 $u = f(x + y, x z)$ ，其中 $f$ 具有二阶连续偏导数，则 $(partial^2 u/partial x partial z) = ( " " )$
-A. $f_2^( ) + x f_11^( ) + z f_12^( ) + x f_12^( )$ 
+  3. 设函数 $u = f(x + y, x z)$，其中 $f$ 具有二阶连续偏导数，则 $diff^2 u / diff x diff z = $（ #choice[D] ）。
+A. $f_2' + x f_11'' + z f_12'' + x f_12''$ 
 
-B. $x f_12^( ) + x f_2^( ) + x z f_22^( )$ 
+B. $x f_12'' + x f_2' + x z f_22''$ 
 
-C. $x f_21^( ) + x z f_22^( )$ 
+C. $x f_21'' + x z f_22''$ 
 
-D. $f_2^( ) + x f_21^( ) + x z f_22^( )$
+D. $f_2' + x f_21'' + x z f_22''$
 ], a: [D.])
 
 #question([
-  4. 若函数 $f(x, 2 x) = x^2 + 3 x$ , $f_1'(x, 2 x) = 6 x + 1$ ，则 $f_2'(x, 2 x) = ( " " )$ .
-A. $x + (3/2)$ 
+  4. 若函数 $f(x, 2 x) = x^2 + 3 x$ , $f_1'(x, 2 x) = 6 x + 1$ ，则 $f_2'(x, 2 x) =$ （ #choice[D] ）。
+A. $x + 3/2$ 
 
-B. $x - (3/2)$ 
+B. $x - 3/2$ 
 
-C. $(2 x) + 1$ 
+C. $2 x + 1$ 
 
 D. $-2 x + 1$
 ], a: [D.])
@@ -296,30 +289,30 @@ D. $-2 x + 1$
 #prob-type("二、填空题")
 
 #question([
-  5. 设函数 $z = x^2 + sin y, x = cos t, y = t^3$ ，则 $(( dif z)/( dif t)) =$  #underline("          ") .
+  5. 设函数 $z = x^2 + sin y, x = cos t, y = t^3$ ，则 $(( dif z)/( dif t)) =$  #ans[$- sin 2 t + 3 t^2 cos t^3$] .
 ], a: [$- sin 2 t + 3 t^2 cos t^3$])
 
 #question([
-  6. 设函数 $z = f(x + y, x - y)$ ，其中 $f$ 可微，则 $dif z =$
-], a: [$(f_1' + f_2') dif x + (f_1' - f_2') dif y .$])
+  6. 设函数 $z = f(x + y, x - y)$，其中 $f$ 可微，则 $dif z =$
+], a: [$(f_1' + f_2') dif x + (f_1' - f_2') dif y$。])
 
 #question([
-  7. 设函数 $z = f(x, (x/y))$ ，其中 $f$ 具有二阶连续偏导数，则 $(partial^2 z/partial x partial y) =$  #underline("          ") .
-], a: [$-(1/y^2) f_2' - (x/y^2) f_12'' - (x/y^3) f_22''.$])
+  7. 设函数 $z = f(x, x/y)$，其中 $f$ 具有二阶连续偏导数，则 $diff^2 z / diff x diff y = $ #ans[$-1/y^2 f_2' - x/y^2 f_12'' - x/y^3 f_22''$]。
+], a: [$-1/y^2 f_2' - x/y^2 f_12'' - x/y^3 f_22''$])
 
 #prob-type("三、计算题")
 
 #question([
-  8. 设函数 $z = u^2 ln v$ , 而 $u = (x/y), v = 3 x - 2 y$ , 求 $(partial z/partial x), (partial z/partial y)$ .
-], a: [$ (partial z/partial x) = (2 x/y^2) ln (3 x - 2 y) + ((3 x^2)/((3 x - 2 y)y^2)), (partial z/partial y) = -(2 x^2/y^3) ln (3 x - 2 y) - ((2 x^2)/((3 x - 2 y)y^2)). $])
+  8. 设函数 $z = u^2 ln v$，而 $u = x/y, v = 3x - 2y$，求 $diff z / diff x, diff z / diff y$。
+], a: [$diff z / diff x = (2x/y^2) ln(3x-2y) + (3x^2)/((3x-2y)y^2), diff z / diff y = -(2x^2/y^3) ln(3x-2y) - (2x^2)/((3x-2y)y^2)$。])
 
 #question([
-  9. 设函数 $z = (x - y)$ ，而 $x = 3 t, y = 4 t^3$ ，求 $(( dif z)/( dif t))$ .
-], a: [$(3(1 - 4 t^2))( sqrt (1 - (3 t - 4 t^3)^2))$ .])
+  9. 设函数 $z = arcsin(x - y)$，而 $x = 3t, y = 4t^3$，求 $dif z / dif t$。
+], a: [$(3(1 - 4t^2))/sqrt(1 - (3t - 4t^3)^2)$。])
 
 #question([
-  10. 设函数 $z = x y$ ，而 $y = (e)^x$ ，求 $(( dif z)/( dif x))$
-], a: [$(( (e)^x(1 + x))/(1 + x^2 (e)^(2 x)))$])
+  10. 设函数 $z = arctan(x y)$，而 $y = e^x$，求 $dif z / dif x$。
+], a: [$(e^x(1 + x))/(1 + x^2 e^(2x))$])
 
 #question([
   11. 设函数 $u = f((x/y), (y/z))$ , 其中 $f$ 具有一阶连续偏导数, 求 $(partial u/partial x), (partial u/partial y), (partial u/partial z)$ .
@@ -335,10 +328,10 @@ O])
 #prob-type("一、选择题")
 
 #question([
-  1. 已知 $x + y - z = (e)^(x), x (e)^(x) = tan t, y = cos t$ ，则 $.(( dif z)/( dif t))|_(t=0) = ( " " )$
-A. $(1/2)$ 
+  1. 已知 $x + y - z = e^x, x e^x = tan t, y = cos t$，则 $(dif z / dif t) |_(t=0) = $（ #choice[D] ）。
+A. $1/2$ 
 
-B. $-(1/2)$ 
+B. $-1/2$ 
 
 C. 1 
 
@@ -346,35 +339,35 @@ D. 0
 ], a: [D.])
 
 #question([
-  2. 设函数 $y = y(x, z)$ 由方程 $x y z = (e)^(x + y)$ 所确定，则 $(partial y/partial x) = ( " " )$ .
-A. $((y(x - 1))/(x(1 - y)))$ 
+  2. 设函数 $y = y(x, z)$ 由方程 $x y z = e^(x + y)$ 所确定，则 $diff y / diff x = $（ #choice[A] ）。
+A. $(y(x - 1))/(x(1 - y))$ 
 
-B. $((y)/(x(1 - y)))$ 
+B. $y/(x(1 - y))$ 
 
-C. $(y z/1 - y)$ 
+C. $(y z)/(1 - y)$ 
 
-D. $((y(1 - x z))/(x(1 - y)))$
+D. $(y(1 - x z))/(x(1 - y))$
 ], a: [A.])
 
 #prob-type("二、填空题")
 
 #question([
-  3. 设函数 $y = y(x)$ 由方程 $1 + x^2y = (e)^(y)$ 所确定，则 $(( (d y))/( (d x))) =$
-], a: [$((2 x y)/( (e)^y - x^2))$])
+  3. 设函数 $y = y(x)$ 由方程 $1 + x^2 y = e^y$ 所确定，则 $dif y / dif x =$
+], a: [$(2 x y)/(e^y - x^2)$])
 
 #question([
-  4. 设函数 $z = z(x, y)$ 由方程 $x y^2 z = x + y + z$ 所确定，则 $(partial z/partial y) =$  #underline("          ") .
-], a: [$(2 x y z - 1/1 - x y^2)$])
+  4. 设函数 $z = z(x, y)$ 由方程 $x y^2 z = x + y + z$ 所确定，则 $diff z / diff y = $ #ans[$(2 x y z - 1)/(1 - x y^2)$]。
+], a: [$(2 x y z - 1)/(1 - x y^2)$])
 
 #question([
-  5. 由方程 $x y z + sqrt (x^2 + y^2 + z^2) = sqrt (2)$ 所确定的函数 $z = z(x, y)$ 在点 $(1,0,-1)$ 处的全微分 $dif z =$
-], a: [$(d x) - sqrt (2) (d y)$])
+  5. 由方程 $x y z + sqrt(x^2 + y^2 + z^2) = sqrt(2)$ 所确定的函数 $z = z(x, y)$ 在点 $(1, 0, -1)$ 处的全微分 $dif z =$
+], a: [$dif x - sqrt(2) dif y$])
 
 #prob-type("三、计算题")
 
 #question([
-  6. 设 $ln sqrt (x^2 + y^2) = (y/x)$ , 求 $(( dif y)/( dif x))$ .
-], a: [$(x + y/x - y)$])
+  6. 设 $ln sqrt(x^2 + y^2) = y/x$，求 $dif y / dif x$。
+], a: [$(x + y)/(x - y)$])
 
 #question([
   7. 设 $(x/z) = ln (z/y)$ , 求 $(partial z/partial x), (partial z/partial y)$ .
@@ -403,29 +396,29 @@ D. $((y(1 - x z))/(x(1 - y)))$
 #prob-type("一、选择题")
 
 #question([
-  1. 曲线 $x = 2 sin t, y = 4 cos t, z = t$ 在点 $(2,0, pi/2)$ 处的法平面方程为（ ）.
-A. $2 x - z = 4 - (pi /2)$ 
+  1. 曲线 $x = 2 sin t, y = 4 cos t, z = t$ 在点 $(2, 0, pi/2)$ 处的法平面方程为（ #choice[C] ）。
+A. $2x - z = 4 - pi/2$ 
 
-B. $2 x - z = (pi /2) - 4$ 
+B. $2x - z = pi/2 - 4$ 
 
-C. $4 y - z = -(pi /2)$ 
+C. $4y - z = -pi/2$ 
 
-D. $4 y - z = (pi /2)$
+D. $4y - z = pi/2$
 ], a: [C.])
 
 #question([
-  2. 曲线 $4 x = y^5, y = sqrt (z)$ 在点(8,2,4)处的切线方程为（ ）.
-A. $(x - 8/20) = y - 2 = (z - 4/4)$ 
+  2. 曲线 $4x = y^5, y = sqrt(z)$ 在点 $(8, 2, 4)$ 处的切线方程为（ #choice[A] ）。
+A. $(x - 8)/20 = (y - 2)/1 = (z - 4)/4$ 
 
-B. $(x + 12/20) = y = (z + 4/4)$ 
+B. $(x + 12)/20 = y/1 = (z + 4)/4$ 
 
-C. $(x - 8/5) = y - 2 = (z - 4/4)$ 
+C. $(x - 8)/5 = (y - 2)/1 = (z - 4)/4$ 
 
-D. $(x - 3/5) = y - 1 = (z/4)$
+D. $(x - 3)/5 = (y - 1)/1 = z/4$
 ], a: [A.])
 
 #question([
-  3. 曲面 $x cos z + y cos x - (pi /2) z = (pi /2)$ 在点 $((pi /2), 1 - (pi /2), 0)$ 处的切平面方程为( ).
+  3. 曲面 $x cos z + y cos x - (pi /2) z = (pi /2)$ 在点 $((pi /2), 1 - (pi /2), 0)$ 处的切平面方程为(#choice[D]).
 A. $x - z = pi - 1$ 
 
 B. $x - y = pi - 1$ 
@@ -436,21 +429,21 @@ D. $x - z = (pi /2)$
 ], a: [D.])
 
 #question([
-  4. 曲面 $x^2y z - x y^2z^3 = 6$ 在点(3,2，1)处的法线方程为（ ）.
-A. $(x + 5/8) = (y - 5/-3) = (z - 19/-18)$ 
+  4. 曲面 $x^2 y z - x y^2 z^3 = 6$ 在点 $(3, 2, 1)$ 处的法线方程为（ #choice[A] ）。
+A. $(x - 3)/8 = (y - 2)/(-3) = (z - 1)/(-18)$ 
 
-B. $(x - 3/8) = (y - 2/3) = (z - 1/-18)$ 
+B. $(x - 3)/8 = (y - 2)/3 = (z - 1)/(-18)$ 
 
-C. $8 x - 3 y - 1 8 z = 0$ 
+C. $8x - 3y - 18z = 0$ 
 
-D. $8 x + 3 y - 1 8 z = 12$
+D. $8x + 3y - 18z = 12$
 ], a: [A.])
 
 #prob-type("二、填空题")
 
 #question([
-  5. 曲线 $x = t^2, y = 2 t, z = (1/3) t^3$ 在点 $(1,2,(1/3))$ 处的切线方程为
-], a: [$(x - 1/2) = (y - 2/2) = z - (1/3)$])
+  5. 曲线 $x = t^2, y = 2t, z = t^3/3$ 在点 $(1, 2, 1/3)$ 处的切线方程为
+], a: [$(x - 1)/2 = (y - 2)/2 = (z - 1/3)/1$])
 
 #question([
   6. 曲线 $x = 2 t (e)^(2 t), y = 3 (e)^(2 t), z = t^2 (e)^(2 t)$ 在 $t = -1$ 的对应点处的法平面方程为
@@ -491,21 +484,6 @@ D. $8 x + 3 y - 1 8 z = 12$
 #prob-type("一、判断题（如果错误，请加以改正）")
 
 #question([
-  1. 若函数在某一点处连续且存在偏导数，则该函数在这一点处的方向导数必存在.（）
-], a: [$times$])
-
-#question([
-  2. 若函数在某一点处存在任意方向的方向导数，则该函数在这一点处的偏导数必存在. （）
-], a: [$times$])
-
-#question([
-  3. $.(partial f/partial l)|_(x_0,y_0) = | bold(g r a d) f(x_0,y_0)|$
-], a: [$times$ 改正略
-
-#prob-type("二、填空题")
-
-#question([
-  4. 函数 $z = x (e)^(2 y)$ 在点 $A(1,0)$ 处沿从点 $A(1,0)$ 到点 $B(2, - 1)$ 的方向的方向导数为
 ], a: [$-(( sqrt (2))/(2))$])
 
 #question([
@@ -515,11 +493,11 @@ D. $8 x + 3 y - 1 8 z = 12$
 #prob-type("三、计算题")
 
 #question([
-  6. 设函数 $u = x^2 + y^2 + z^2$ , 求:
-(1) $bold(g r a d) u(1,1,1)$ 
+  6. 设函数 $u = x^2 + y^2 + z^2$，求：
+(1) $bold(grad) u(1, 1, 1)$；
 
-(2) $.(partial u/partial l)|_(1,1,1)$ ，其中方向 $l$ 从点 $(1,1,1)$ 到点 $(2,3,3)$ .
-], a: [（1） $(2,2,2)$ (2） $(10/3)$])
+(2) $(diff u / diff l) |_(1, 1, 1)$，其中方向 $l$ 从点 $(1, 1, 1)$ 到点 $(2, 3, 3)$。
+], a: [(1) $(2, 2, 2)$；(2) $10/3$。])
 
 #question([
   7. 设函数 $f(x, y) = sqrt (x^2 + y^4)$ ，求：
@@ -533,12 +511,11 @@ D. $8 x + 3 y - 1 8 z = 12$
 (3) $-((3 sqrt (10))/(10))$ .])
 
 #question([
-  8. 如果可微函数 $f(x, y)$ 在点(1,2)处沿从点(1,2)到点(2,2)的方向的方向导数为2，沿从点(1,2)到点(1,1)的方向的方向导数为-2，求：
-(1) $op (g r a d) f(1,2)$ ; 
+  8. 如果可微函数 $f(x, y)$ 在点 $(1, 2)$ 处沿从点 $(1, 2)$ 到点 $(2, 2)$ 的方向的方向导数为 2，沿从点 $(1, 2)$ 到点 $(1, 1)$ 的方向的方向导数为 $-2$，求：
+(1) $bold(grad) f(1, 2)$； 
 
-(2) $.(partial f/partial l)|_(1,2)$ ，其中方向 $l$ 从点（1，2）到点（4，6）.
-], a: [(1）{2,2}；
-(2) $(14/5)$ .])
+(2) $(diff f / diff l) |_(1, 2)$，其中方向 $l$ 从点 $(1, 2)$ 到点 $(4, 6)$。
+], a: [(1) $(2, 2)$；(2) $14/5$。])
 
 #question([
   9. 已知曲面 $2 x^2 + 3 y^2 + z^2 = 6$ 在点 $P(1,1,1)$ 处指向外侧的法向量为 $bold(n)$ , 求函数 $u = (( sqrt (6 x^2 + 8 y^2))/(z))$ 在点 $P$ 处沿方向 $bold(n)$ 的方向导数.
@@ -555,7 +532,7 @@ D. $8 x + 3 y - 1 8 z = 12$
 #prob-type("一、选择题")
 
 #question([
-  1. 函数 $z = f(x, y)$ 在点 $(x_0, y_0)$ 处具有偏导数且在点 $(x_0, y_0)$ 处有极值是 $f_x'(x_0, y_0) = 0$ 及 $f_y'(x_0, y_0) = 0$ 的（ ）.
+  1. 函数 $z = f(x, y)$ 在点 $(x_0, y_0)$ 处具有偏导数且在点 $(x_0, y_0)$ 处有极值是 $f_x'(x_0, y_0) = 0$ 及 $f_y'(x_0, y_0) = 0$ 的（#choice[A]）.
 A. 充分条件
 
 B. 必要条件
@@ -566,7 +543,7 @@ D. 无关条件
 ], a: [A.])
 
 #question([
-  2. 设函数 $z = f(x, y)$ 的全微分 $dif z = x dif x + y dif y$ ，则点(0，0)( ).
+  2. 设函数 $z = f(x, y)$ 的全微分 $dif z = x dif x + y dif y$，则点 $(0, 0)$（ #choice[D] ）。
 A. 不是 $f(x, y)$ 的连续点
 
 B. 不是 $f(x, y)$ 的极值点
@@ -577,7 +554,7 @@ D. 是 $f(x, y)$ 的极小值点
 ], a: [D.])
 
 #question([
-  3. 函数 $z = 3(x + y) - x^3 - y^3$ 的极值点是（ ）.
+  3. 函数 $z = 3(x + y) - x^3 - y^3$ 的极值点是（#choice[D]）.
 A. (1,2) 
 
 B. $(1, - 2)$ 
@@ -590,12 +567,12 @@ D. $(-1, - 1)$
 #prob-type("二、填空题")
 
 #question([
-  4. 设函数 $f(x, y) = 2 x^2 + a x + x y^2 + 2 y$ 在点 $(1, -1)$ 处取得极值，则常数 $a =$  #underline("          ") ，极值的类型为  #underline("          ") 。
-], a: [-5, 极小值.])
+  4. 设函数 $f(x, y) = 2x^2 + a x + x y^2 + 2y$ 在点 $(1, -1)$ 处取得极值，则常数 $a = $ #ans[$-5$]，极值的类型为 #ans[极小值]。
+], a: [-5, 极小值。])
 
 #question([
-  5. 若要求函数 $u = sin x sin y sin z$ 满足 $x + y + z = (pi /2)$ 且 $x > 0, y > 0, z > 0$ 的条件极值，可构造函数  #underline("          ") ，求得其驻点为  #underline("          ") ，在该点处函数取得  #underline("          ") 。
-], a: [$ L = sin x sin y sin z + lambda (x + y + z - (pi /2)), ((pi /6), (pi /6), (pi /6)) $ ，极大值 $(1/8)$])
+  5. 若要求函数 $u = sin x sin y sin z$ 在条件 $x + y + z = pi/2$ ($x > 0, y > 0, z > 0$) 下的极值，可构造拉格朗日函数 #ans[$L = sin x sin y sin z + lambda(x + y + z - pi/2)$]，求得其驻点为 #ans[$(pi/6, pi/6, pi/6)$]，在该点处函数取得 #ans[极大值 $1/8$]。
+], a: [$L = sin x sin y sin z + lambda(x + y + z - pi/2), (pi/6, pi/6, pi/6)$，极大值 $1/8$])
 
 #prob-type("三、计算题")
 
@@ -612,19 +589,19 @@ D. $(-1, - 1)$
 ], a: [边长为 $((2 a)/( sqrt (3)))$ 的正方体])
 
 #question([
-  9. 在椭圆 $x^2 + 4 y^2 = 4$ 上求一点，使得它到直线 $2 x + 3 y - 6 = 0$ 的距离最短.
-], a: [$((8/5),(3/5))$])
+  9. 在椭圆 $x^2 + 4y^2 = 4$ 上求一点，使得它到直线 $2x + 3y - 6 = 0$ 的距离最短。
+], a: [$(8/5, 3/5)$])
 
 #question([
-  10. （附加题）求函数 $f(x, y, z) = ln x + ln y + 3 ln z$ 在球面 $x^2 + y^2 + z^2 = 5 r^2 (x > 0, y > 0, z > 0)$ 上的最大值，并证明： $forall a, b, c in bold(R)_+$ ，有 $a b c^3 <= 27(a + b + c/5)^5$ 成立.
-], a: [最大值 $f(r, r, sqrt (3) r) = ln 3 sqrt (3) r^5$ . 证明略])
+  10. （附加题）求函数 $f(x, y, z) = ln x + ln y + 3 ln z$ 在球面 $x^2 + y^2 + z^2 = 5r^2$ ($x > 0, y > 0, z > 0$) 上的最大值，并证明：对于正实数 $a, b, c$，有 $a b c^3 <= 27((a + b + c)/5)^5$ 成立。
+], a: [最大值 $f(r, r, sqrt(3)r) = ln(3 sqrt(3)r^5)$。])
 
 == 总习题九
 
 #prob-type("一、选择题")
 
 #question([
-  1. 设函数 $ f(x, y) = cases( (x^2 + 2 y^2/x + y), & (x, y) != (0, 0),   0, & (x, y) = (0, 0), ) $ 则 $f'_y(0, 0) = ( " " )$ .
+  1. 设函数 $ f(x, y) = cases((x^2 + 2y^2)/(x + y) & (x, y) != (0, 0), 0 & (x, y) = (0, 0)) $ 则 $f_y'(0, 0) = $（ #choice[C] ）。
 A. 0 
 
 B. 1 
@@ -632,10 +609,10 @@ B. 1
 C. 2 
 
 D. -1
-], a: [$$])
+], a: [C.])
 
 #question([
-  2. 若函数 $f(x, y)$ 在点 $(x_0, y_0)$ 处的两个偏导数 $f_x'(x_0, y_0), f_y'(x_0, y_0)$ 存在，则（ ）.
+  2. 若函数 $f(x, y)$ 在点 $(x_0, y_0)$ 处的两个偏导数 $f_x'(x_0, y_0), f_y'(x_0, y_0)$ 存在，则（#choice[D]）.
 A. $f(x,y)$ 在点 $(x_0,y_0)$ 处可微分
 
 B. $f(x,y)$ 在点 $(x_0,y_0)$ 处连续
@@ -646,29 +623,29 @@ D. $f(x,y)$ 在点 $(x_0,y_0)$ 处关于 $x$ 与 $y$ 皆连续
 ], a: [D.])
 
 #question([
-  3. 设函数 $z = f(x, y)$ 在点 $(x_0, y_0)$ 处可微分， $Delta z$ 是 $f$ 在点 $(x_0, y_0)$ 处的全增量，则在点 $(x_0, y_0)$ 处有（ ）.
+  3. 设函数 $z = f(x, y)$ 在点 $(x_0, y_0)$ 处可微分，$Delta z$ 是 $f$ 在点 $(x_0, y_0)$ 处的全增量，则在点 $(x_0, y_0)$ 处有（ #choice[D] ）。
 A. $Delta z = dif z$ 
 
-B. $Delta z = f_x^( )(x_0,y_0) Delta x + f_y^( )(x_0,y_0) Delta y$ 
+B. $Delta z = f_x'(x_0, y_0) Delta x + f_y'(x_0, y_0) Delta y$ 
 
-C. $Delta z = f_x^( )(x_0,y_0) dif x + f_y^( )(x_0,y_0) dif y$ 
+C. $Delta z = f_x'(x_0, y_0) dif x + f_y'(x_0, y_0) dif y$ 
 
-D. $Delta z = dif z + o( rho )$ , 其中 $rho = sqrt (( Delta x)^2 + ( Delta y)^2)$
+D. $Delta z = dif z + o(rho)$，其中 $rho = sqrt((Delta x)^2 + (Delta y)^2)$
 ], a: [D.])
 
 #question([
-  4. 设方程 $y = F(x^2 + y^2) + F(x + y)$ 能确定隐函数 $y = f(x)$ ( $F$ 可微), 且 $f(0) = 2$ , $F'(2) = (1/2), F'(4) = 1$ , 则 $f'(0) = ( " " )$ .
-A. $(1/7)$ 
+  4. 设方程 $y = F(x^2 + y^2) + F(x + y)$ 能确定隐函数 $y = f(x)$ ($F$ 可微), 且 $f(0) = 2$ , $F'(2) = 1/2, F'(4) = 1$ , 则 $f'(0) =$ （ #choice[B] ）。
+A. $1$ 
 
-B. $-(1/7)$ 
+B. $-1$ 
 
-C. $-(1/4)$ 
+C. $1/2$ 
 
-D. $-(1/3)$
+D. $-1/2$
 ], a: [B.])
 
 #question([
-  5. 曲面 $x y z = 1$ 上平行于平面 $x + y + z + 3 = 0$ 的切平面方程是（ ）.
+  5. 曲面 $x y z = 1$ 上平行于平面 $x + y + z + 3 = 0$ 的切平面方程是（#choice[A]）.
 A. $x + y + z - 3 = 0$ 
 
 B. $x + y + z - 2 = 0$ 
@@ -681,24 +658,25 @@ D. $x + y + z = 0$
 #prob-type("二、填空题")
 
 #question([
-  6. $lim_((x,y) arrow (0,0))(1 + sin x y)^(1/x y) = underline("          ")$
+  6. $lim#ans[$e.$]((x,y) arrow (0,0))(1 + sin x y)^(1/x y) = underline("          ")$
 ], a: [e.])
 
 #question([
-  7. 设函数 $z = x^(y + 1) (x > 0, x != 1)$ ，则 $dif z =$  #underline("          ") .
+  7. 设函数 $z = x^(y + 1) (x > 0, x != 1)$ ，则 $dif z =$  #ans[$(y + 1)x^(y) dif x + x^(y + 1) ln x dif y .$] .
 ], a: [$(y + 1)x^(y) dif x + x^(y + 1) ln x dif y .$])
 
 #question([
-  8. 设函数 $u = ln sqrt (x^2 + y^2 + z^2)$ ，则它在点 $M_0(1, -1, 1)$ 处的方向导数的最大值为
-], a: [$(( sqrt (3))/(3))$ .])
+  8. 设函数 $u = ln sqrt(x^2 + y^2 + z^2)$，则它在点 $M_0(1, -1, 1)$ 处的方向导数的最大值为 #ans[$sqrt(3)/3$]。
+], a: [$sqrt(3)/3$])
 
 #question([
   9. 曲线 $x = cos t, y = sin t, z = tan (t/2)$ 在点(0,1,1)处的切线方程为
 ], a: [$(x/-1) = (y - 1/0) = z -$])
 
 #question([
-  10. 函数 $z = x y$ 在闭区域 $D = ((x, y) | x >= 0, y >= 0, x + y <= 1)$ 上的最大值为  #underline("          ") .
-], a: [$(1/4)$])
+  10. 函数 $z = x y$ 在闭区域 $D = {(x, y) | x >= 0, y >= 0, x + y <= 1}$ 上的最大值为 #ans[$1/4$]。
+
+], a: [$1/4$])
 
 #prob-type("三、计算题")
 

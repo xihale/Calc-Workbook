@@ -101,7 +101,7 @@ D. $bold(a) || bold(b)$ 的必要但不充分条件
 ], a: none)
 
 #question([
-  4. 设向量 $bold(a) = 2 bold(i) - bold(j) + bold(k), bold(b) = bold(i) + 2 bold(j) - bold(k)$，则 $(bold(a) + bold(b)) times (bold(a) - bold(b)) = ( underline("     ") )$。
+  4. 设向量 $bold(a) = 2 bold(i) - bold(j) + bold(k), bold(b) = bold(i) + 2 bold(j) - bold(k)$，则 $(bold(a) + bold(b)) times (bold(a) - bold(b)) = ( underline(" ") )$。
 A. $-bold(i) + 3 bold(j) + 5 bold(k)$ 
 
 B. $-2 bold(i) + 6 bold(j) + 10 bold(k)$ 
@@ -129,7 +129,7 @@ D. 若 $bold(a) != 0$ 且 $bold(a) dot bold(b) = bold(a) dot bold(c)$，则 $bol
 ], a: none)
 
 #question([
-  7. 设向量 $bold(a) = (4, -3, 4), bold(b) = (2, 2, 1)$，则 $op("Prj")_bold(b) bold(a) = underline("          ")$
+  7. 设向量 $bold(a) = (4, -3, 4), bold(b) = (2, 2, 1)$，则 $op("Prj")_bold(b) bold(a) = underline(" ")$
 ], a: none)
 
 #question([
@@ -157,7 +157,7 @@ D. 若 $bold(a) != 0$ 且 $bold(a) dot bold(b) = bold(a) dot bold(c)$，则 $bol
 ], a: none)
 
 #question([
-  12. 已知向量 $arrow(OA) = bold(i) + 3 bold(k), arrow(OB) = bold(j) + 3 bold(k)$，求 $Delta "OAB"$ 的面积。
+  12. 已知向量 $arrow(O A) = bold(i) + 3 bold(k), arrow(O B) = bold(j) + 3 bold(k)$，求 $Delta "OAB"$ 的面积。
 ], a: none)
 
 #question([
@@ -252,9 +252,9 @@ D. $pi/4$
 
 #question([
   1. 直线 $L_1$: $ cases(x + 2y - z = 7, -2x + y + z = 7) $ 与 $L_2$: $ cases(3x + 6y - 3z = 8, 2x - y - z = 0) $ 的位置关系为（ #choice[B] ）。
-A. $L_1 \perp L_2$ 
+A. $L_1 perp L_2$ 
 
-B. $L_1 \parallel L_2$ 
+B. $L_1 parallel L_2$ 
 
 C. $L_1$ 与 $L_2$ 相交但不垂直
 
@@ -278,9 +278,9 @@ A. 1
 
 B. $2/3$ 
 
-C. $(4 \sqrt{3})/3$ 
+C. $(4 sqrt(3))/3$ 
 
-D. $(2 \sqrt{3})/3$
+D. $(2 sqrt(3))/3$
 ], a: [C.])
 
 #prob-type("二、填空题")
@@ -295,7 +295,7 @@ D. $(2 \sqrt{3})/3$
 
 #question([
   6. 点 $(1, 2, 3)$ 到直线 $x/1 = (y - 4)/(-3) = (z - 3)/(-2)$ 的距离为
-], a: [$\sqrt{6}/2$])
+], a: [$sqrt(6)/2$])
 
 #question([
   7. 点 $(-1, 3, -4)$ 在平面 $x + 2y - z + 1 = 0$ 上的投影为
@@ -324,7 +324,7 @@ $ cases(x + 2y - z + 1 = 0, x - y + z - 1 = 0) $ 和 $ cases(2x - y + z = 0, x -
 
 #question([
   12. 求点 $(3, -1, 2)$ 到直线 $ cases(x + y - z + 1 = 0, 2x - y + z - 4 = 0) $ 的距离。
-], a: [$(3 \sqrt{2})/2$])
+], a: [$(3 sqrt(2))/2$])
 
 == 第五节 曲面及其方程
 
@@ -350,7 +350,7 @@ B. $y$ 轴
 C. $z$ 轴
 
 D. 直线 $ cases(y = z, x = 0) $
-], a: [B.
+], a: [B.])
 
 #prob-type("二、填空题")
 
@@ -386,7 +386,7 @@ D. 直线 $ cases(y = z, x = 0) $
 ], a: [（1）椭圆柱面；（2）双叶双曲面；（3）椭圆抛物面。图略。])
 
 #question([
-  9. 画出由曲面 $z = 0, z = 3, x - y = 0, x - sqrt (3)y = 0, x^2 + y^2 = 1$ (在第一卦限内) 所围立体的图形.
+  9. 画出由曲面 $z = 0, z = 3, x - y = 0, x - sqrt(3)y = 0, x^2 + y^2 = 1$ (在第一卦限内) 所围立体的图形.
 ], a: [略.])
 
 == 第六节 空间曲线及其方程
@@ -516,21 +516,21 @@ B. 互相平行但直线不在平面上
 C. 既不平行也不垂直
 
 D. 直线在平面上
-], a: [D.
+], a: [D.])
 
 #prob-type("二、填空题")
 
 #question([
   6. 已知三点 $A(-2, 1, -1), B(1, -3, 4), C(-3, -1, 1)$，则
-（1）向量 $arrow(AB)$ 的方向余弦为 #ans[$cos alpha = 3/(5 sqrt(2)), cos beta = -4/(5 sqrt(2)), cos gamma = 1/sqrt(2)$]，单位向量为 #ans[$(3/(5 sqrt(2)), -4/(5 sqrt(2)), 1/sqrt(2))$]；
+（1）向量 $arrow(A B)$ 的方向余弦为 #ans[$cos alpha = 3/(5 sqrt(2)), cos beta = -4/(5 sqrt(2)), cos gamma = 1/sqrt(2)$]，单位向量为 #ans[$(3/(5 sqrt(2)), -4/(5 sqrt(2)), 1/sqrt(2))$]；
 
-(2) 向量 $arrow(AB)$ 在向量 $arrow(AC)$ 上的投影为 #ans[$5$]，$arrow(AB)$ 与 $arrow(AC)$ 的夹角为 #ans[$45^degree$]；
+(2) 向量 $arrow(A B)$ 在向量 $arrow(A C)$ 上的投影为 #ans[$5$]，$arrow(A B)$ 与 $arrow(A C)$ 的夹角为 #ans[$45^degree$]；
 
 （3）以该三点为顶点的三角形的面积为 #ans[$15/2$]；
 
-（4）过点 $C$ 且垂直于 $arrow(AB)$ 的平面方程为 #ans[$3x - 4y + 5z + 0 = 0$]；
+（4）过点 $C$ 且垂直于 $arrow(A B)$ 的平面方程为 #ans[$3x - 4y + 5z + 0 = 0$]；
 
-（5）过点 $C$ 且平行于 $arrow(AB)$ 的直线方程为 #ans[$(x + 3)/3 = (y + 1)/(-4) = (z - 1)/5$]。
+（5）过点 $C$ 且平行于 $arrow(A B)$ 的直线方程为 #ans[$(x + 3)/3 = (y + 1)/(-4) = (z - 1)/5$]。
 ], a: [（1） $cos alpha = 3/(5 sqrt(2)), cos beta = -4/(5 sqrt(2)), cos gamma = 1/sqrt(2)$；单位向量为 $(3/(5 sqrt(2)), -4/(5 sqrt(2)), 1/sqrt(2))$；
 (2) $5, 45^degree$；
 (3) $15/2$；
@@ -550,7 +550,7 @@ D. 直线在平面上
 ], a: [单叶双曲面。])
 
 #question([
-  9. 曲线 $ cases( y = x^2 + 1,   z = 0 ) $ 绕 $y$ 轴旋转一周所得旋转曲面方程是
+  9. 曲线 $ cases( y = x^2 + 1, z = 0 ) $ 绕 $y$ 轴旋转一周所得旋转曲面方程是
 ], a: [$y = x^2 + z^2 + 1$])
 
 #question([
@@ -568,7 +568,7 @@ D. 直线在平面上
 ], a: [$y = 2$])
 
 #question([
-  13. 求过点 $(2, -3, 1)$ 和直线 $ cases( x - 5 y - 16 = 0,   2 y - z + 6 = 0 ) $ 的平面方程
+  13. 求过点 $(2, -3, 1)$ 和直线 $ cases( x - 5 y - 16 = 0, 2 y - z + 6 = 0 ) $ 的平面方程
 ], a: [$x - 3 y - z - 10 = 0$])
 
 #question([

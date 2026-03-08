@@ -8,7 +8,7 @@
 
 #question(
   [
-    1. $iint_D f(x, y) d sigma = lim_(lambda arrow 0) sum_(i=1)^n f(xi_i, eta_i) Delta sigma_i$ 中 $lambda$ 是（ #choice[D] ）。
+    1. $iint_D f(x, y) dif sigma = lim_(lambda arrow 0) sum_(i=1)^n f(xi_i, eta_i) Delta sigma_i$ 中 $lambda$ 是（ #choice[D] ）。
     A. 最大小区间长度
 
     B. 小区域最大面积
@@ -22,7 +22,7 @@
 
 #question(
   [
-    2. 能使得等式 $iint_D d sigma = 1$ 成立的积分区域 $D$ 为（ #choice[B] ）。
+    2. 能使得等式 $iint_D dif sigma = 1$ 成立的积分区域 $D$ 为（ #choice[B] ）。
     A. 由直线 $y = x, x = 1, y = 0$ 所围成的平面区域
 
     B. 由直线 $y = 2x, x = 1, y = 0$ 所围成的平面区域
@@ -36,7 +36,7 @@
 
 #question(
   [
-    3. 设 $D$ 是由直线 $x = 0, y = 0, x + y = 3, x + y = 5$ 所围成的闭区域，记 $ I_1 = iint_D ln(x + y) d sigma, I_2 = iint_D ln^2(x + y) d sigma $，则（ #choice[A] ）。
+    3. 设 $D$ 是由直线 $x = 0, y = 0, x + y = 3, x + y = 5$ 所围成的闭区域，记 $ I_1 = iint_D ln(x + y) dif sigma, I_2 = iint_D ln^2(x + y) dif sigma $，则（ #choice[A] ）。
     A. $I_1 < I_2$
 
     B. $I_1 > I_2$
@@ -54,19 +54,19 @@
   [
     4. 设曲顶柱体的顶部曲面函数 $z = f(x, y)$，它的底部区域为 $D$，则曲顶柱体的体积可表示为
   ],
-  a: [$iint_D |f(x, y)| d sigma$。],
+  a: [$iint_D |f(x, y)| dif sigma$。],
 )
 
 #question(
   [
-    5. 设闭区域 $D = {(x, y) | x^2 + y^2 <= 1}$，则 $iint_D d sigma =$ #ans[$pi$] 。
+    5. 设闭区域 $D = {(x, y) | x^2 + y^2 <= 1}$，则 $iint_D dif sigma =$ #ans[$pi$] 。
   ],
   a: [$pi$],
 )
 
 #question(
   [
-    6. 设闭区域 $D = {(x, y) | x^2 + y^2 <= a^2, x >= 0, y >= 0}$ ($a > 0$)，则 $iint_D sqrt(a^2 - x^2 - y^2) d sigma =$ #ans[$pi a^3 / 6$]。
+    6. 设闭区域 $D = {(x, y) | x^2 + y^2 <= a^2, x >= 0, y >= 0}$ ($a > 0$)，则 $iint_D sqrt(a^2 - x^2 - y^2) dif sigma =$ #ans[$pi a^3 / 6$]。
   ],
   a: [$pi a^3 / 6$],
 )
@@ -75,14 +75,14 @@
   [
     7. 设一平面薄片在 $x O y$ 面内占有区域 $D$，其面密度函数为 $rho = (x^2 + y^2) / 2$，则此薄片的质量可表示为
   ],
-  a: [$1/2 iint_D (x^2 + y^2) d sigma$。],
+  a: [$1/2 iint_D (x^2 + y^2) dif sigma$。],
 )
 
 #prob-type("三、计算题")
 
 #question(
   [
-    8. 利用二重积分的性质估计二重积分 $I = iint_D (x^2 + y^2 + 2) d sigma$ 的值，其中积分区域 $D = {(x, y) | |x| + |y| <= 1}$。
+    8. 利用二重积分的性质估计二重积分 $I = iint_D (x^2 + y^2 + 2) dif sigma$ 的值，其中积分区域 $D = {(x, y) | |x| + |y| <= 1}$。
   ],
   a: [$4 < I < 6$],
 )
@@ -93,7 +93,7 @@
 
 #question(
   [
-    1. 设闭区域 $D$ 由直线 $y = x, y = 1, x = 3$ 所围成，要计算 $iint_D 1/(y ln x) d sigma$。
+    1. 设闭区域 $D$ 由直线 $y = x, y = 1, x = 3$ 所围成，要计算 $iint_D 1/(y ln x) dif sigma$。
     （1）既可将 $D$ 视为 $X$ 型区域，也可视为 $Y$ 型区域；（ #choice[√] ）
 
     （2）若将 $D$ 视为 $X$ 型区域，则其相应积分限为 $1 <= x <= 3, 1 <= y <= x$；（ #choice[×] ）
@@ -107,7 +107,7 @@
 
 #question(
   [
-    2. 设闭区域 $D$ 由 $x$ 轴和 $y = sin x$ ($0 <= x <= pi$) 所围成，则 $iint_D y d sigma =$（ #choice[B] ）。
+    2. 设闭区域 $D$ 由 $x$ 轴和 $y = sin x$ ($0 <= x <= pi$) 所围成，则 $iint_D y dif sigma =$（ #choice[B] ）。
     A. $pi/6$
 
     B. $pi/4$
@@ -121,35 +121,35 @@
 
 #question(
   [
-    3. 设闭区域 $D$ 由 $y = x^2$ 和 $y = x + 2$ 所围成，则 $iint_D f(x, y) d sigma =$（ #choice[A] ）。
-    A. $integral_(-1)^2 d x integral_(x^2)^(x + 2) f(x, y) d y$
+    3. 设闭区域 $D$ 由 $y = x^2$ 和 $y = x + 2$ 所围成，则 $iint_D f(x, y) dif sigma =$（ #choice[A] ）。
+    A. $int_(-1)^2 dif x int_(x^2)^(x + 2) f(x, y) dif y$
 
-    B. $integral_(-1)^2 d x integral_0^2 f(x, y) d y$
+    B. $int_(-1)^2 dif x int_0^2 f(x, y) dif y$
 
-    C. $integral_(-2)^1 d x integral_(x^2)^(x + 2) f(x, y) d y$
+    C. $int_(-2)^1 dif x int_(x^2)^(x + 2) f(x, y) dif y$
 
-    D. $integral_0^1 d x integral_(x^2)^(x + 2) f(x, y) d y$
+    D. $int_0^1 dif x int_(x^2)^(x + 2) f(x, y) dif y$
   ],
   a: [A.],
 )
 
 #question(
   [
-    4. 设 $f(x, y)$ 是连续函数，则 $integral_0^4 d x integral_x^(2 sqrt(x)) f(x, y) d y =$（ #choice[A] ）。
-    A. $integral_0^4 d y integral_(y^2/4)^y f(x, y) d x$
+    4. 设 $f(x, y)$ 是连续函数，则 $int_0^4 dif x int_x^(2 sqrt(x)) f(x, y) dif y =$（ #choice[A] ）。
+    A. $int_0^4 dif y int_(y^2/4)^y f(x, y) dif x$
 
-    B. $integral_0^4 d y integral_(-y)^(y^2/4) f(x, y) d x$
+    B. $int_0^4 dif y int_(-y)^(y^2/4) f(x, y) dif x$
 
-    C. $integral_0^4 d y integral_(1/4)^y f(x, y) d x$
+    C. $int_0^4 dif y int_(1/4)^y f(x, y) dif x$
 
-    D. $integral_0^4 d y integral_(y^2/2)^y f(x, y) d x$
+    D. $int_0^4 dif y int_(y^2/2)^y f(x, y) dif x$
   ],
   a: [A.],
 )
 
 #question(
   [
-    5. 若闭区域 $D$ 由直线 $x + y = 1, x = 0, y = 0$ 所围成，且 $integral_0^1 f(x) dif x = integral_0^1 x f(x) dif x$ ，则 $iint_D f(x) dif sigma =$（ #choice[B] ）。
+    5. 若闭区域 $D$ 由直线 $x + y = 1, x = 0, y = 0$ 所围成，且 $int_0^1 f(x) dif x = int_0^1 x f(x) dif x$ ，则 $iint_D f(x) dif sigma =$（ #choice[B] ）。
     A. 2
 
     B. 0
@@ -165,7 +165,7 @@
 
 #question(
   [
-    6. 已知闭区域 $D = {(x, y) | a <= x <= b, 0 <= y <= 1}$，且 $iint_D y f(x) d sigma = 1$，则 $integral_a^b f(x) d x =$ #ans[$2$]。
+    6. 已知闭区域 $D = {(x, y) | a <= x <= b, 0 <= y <= 1}$，且 $iint_D y f(x) dif sigma = 1$，则 $int_a^b f(x) dif x =$ #ans[$2$]。
   ],
   a: [2],
 )
@@ -195,21 +195,21 @@
 
 #question(
   [
-    10. 计算 $iint_D x sqrt(y) d sigma$，其中 $D$ 是由曲线 $y = sqrt(x), y = x^2$ 所围成的闭区域。
+    10. 计算 $iint_D x sqrt(y) dif sigma$，其中 $D$ 是由曲线 $y = sqrt(x), y = x^2$ 所围成的闭区域。
   ],
   a: [$6/55$],
 )
 
 #question(
   [
-    11. 计算 $iint_D e^(x + y) d sigma$，其中闭区域 $D = {(x, y) | |x| + |y| <= 1}$。
+    11. 计算 $iint_D e^(x + y) dif sigma$，其中闭区域 $D = {(x, y) | |x| + |y| <= 1}$。
   ],
   a: [$e - 1/e$],
 )
 
 #question(
   [
-    12. 计算 $iint_D (x^2 + y^2 - x) d sigma$，其中 $D$ 是由直线 $y = 2, y = x$ 及 $y = 2x$ 所围成的闭区域。
+    12. 计算 $iint_D (x^2 + y^2 - x) dif sigma$，其中 $D$ 是由直线 $y = 2, y = x$ 及 $y = 2x$ 所围成的闭区域。
   ],
   a: [$13/6$],
 )
@@ -220,21 +220,21 @@
 
 #question(
   [
-    1. 二次积分 $ integral_0^(pi/2) d theta integral_0^(cos theta) f(rho cos theta, rho sin theta) rho d rho $ 可写成（ #choice[D] ）
-    A. $integral_0^1 d y integral_0^(sqrt(y - y^2)) f(x, y) d x$
+    1. 二次积分 $ int_0^(pi/2) dif theta int_0^(cos theta) f(rho cos theta, rho sin theta) rho dif rho $ 可写成（ #choice[D] ）
+    A. $int_0^1 dif y int_0^(sqrt(y - y^2)) f(x, y) dif x$
 
-    B. $integral_0^1 d y integral_0^(sqrt(1 - y^2)) f(x, y) d x$
+    B. $int_0^1 dif y int_0^(sqrt(1 - y^2)) f(x, y) dif x$
 
-    C. $integral_0^1 d x integral_0^1 f(x, y) d y$
+    C. $int_0^1 dif x int_0^1 f(x, y) dif y$
 
-    D. $integral_0^1 d x integral_0^(sqrt(x - x^2)) f(x, y) d y$
+    D. $int_0^1 dif x int_0^(sqrt(x - x^2)) f(x, y) dif y$
   ],
   a: [D.],
 )
 
 #question(
   [
-    2. 设闭区域 $D$ 关于直线 $y = x$ 对称，则有 $iint_D f(x, y) d sigma = iint_D f(y, x) d sigma$。用此结论可得 $iint_(x^2 + y^2 <= 2) (x^2 + y^2/4) d sigma =$（ #choice[C] ）。
+    2. 设闭区域 $D$ 关于直线 $y = x$ 对称，则有 $iint_D f(x, y) dif sigma = iint_D f(y, x) dif sigma$。用此结论可得 $iint_(x^2 + y^2 <= 2) (x^2 + y^2/4) dif sigma =$（ #choice[C] ）。
     A. $pi$
 
     B. $3/2 pi$
@@ -250,28 +250,28 @@
 
 #question(
   [
-    3. 设闭区域 $D = {(x, y) | x^2 + y^2 <= 2x}$，则 $iint_D f(x, y) d sigma$ 在极坐标系下的二次积分可表示为
+    3. 设闭区域 $D = {(x, y) | x^2 + y^2 <= 2x}$，则 $iint_D f(x, y) dif sigma$ 在极坐标系下的二次积分可表示为
   ],
-  a: [$integral_(-pi/2)^(pi/2) d theta integral_0^(2 cos theta) f(rho cos theta, rho sin theta) rho d rho$。],
+  a: [$int_(-pi/2)^(pi/2) dif theta int_0^(2 cos theta) f(rho cos theta, rho sin theta) rho dif rho$。],
 )
 
 #question(
   [
-    4. 设闭区域 $D = {(x, y) | 0 <= y <= 1 - x, 0 <= x <= 1}$，则 $iint_D f(x, y) d sigma$ 在极坐标系下的二次积分可表示为
+    4. 设闭区域 $D = {(x, y) | 0 <= y <= 1 - x, 0 <= x <= 1}$，则 $iint_D f(x, y) dif sigma$ 在极坐标系下的二次积分可表示为
   ],
-  a: [$integral_0^(pi/2) d theta integral_0^(1/(cos theta + sin theta)) f(rho cos theta, rho sin theta) rho d rho$。],
+  a: [$int_0^(pi/2) dif theta int_0^(1/(cos theta + sin theta)) f(rho cos theta, rho sin theta) rho dif rho$。],
 )
 
 #question(
   [
-    5. 将二次积分 $integral_0^1 d x integral_0^(sqrt(2 a x - x^2)) f(sqrt(x^2 + y^2)) d y$ 化为极坐标形式，结果为
+    5. 将二次积分 $int_0^1 dif x int_0^(sqrt(2 a x - x^2)) f(sqrt(x^2 + y^2)) dif y$ 化为极坐标形式，结果为
   ],
-  a: [$integral_0^(pi/2) d theta integral_0^(2 a cos theta) f(rho) rho d rho$。],
+  a: [$int_0^(pi/2) dif theta int_0^(2 a cos theta) f(rho) rho dif rho$。],
 )
 
 #question(
   [
-    6. 若二重积分 $iint_D (x^5 + sin y^3 + 3) d sigma = 24$ ，则闭区域 $D$ 可用不等式表示成
+    6. 若二重积分 $iint_D (x^5 + sin y^3 + 3) dif sigma = 24$ ，则闭区域 $D$ 可用不等式表示成
   ],
   a: [$|x| <= 1, |y| <= 2$ （答案不唯一）],
 )
@@ -280,28 +280,28 @@
 
 #question(
   [
-    7. 计算 $iint_D x y^2 d sigma$，其中 $D$ 是由圆 $x^2 + y^2 = 4$ 及 $y$ 轴所围成的右半闭区域。
+    7. 计算 $iint_D x y^2 dif sigma$，其中 $D$ 是由圆 $x^2 + y^2 = 4$ 及 $y$ 轴所围成的右半闭区域。
   ],
   a: [$64/15$],
 )
 
 #question(
   [
-    8. 计算 $iint_D |1 - x^2 - y^2| d sigma$，其中闭区域 $D = {(x, y) | x^2 + y^2 <= 4}$。
+    8. 计算 $iint_D |1 - x^2 - y^2| dif sigma$，其中闭区域 $D = {(x, y) | x^2 + y^2 <= 4}$。
   ],
   a: [$5 pi$],
 )
 
 #question(
   [
-    9. 计算 $iint_D y/x d sigma$，其中 $D$ 是由圆 $x^2 + y^2 = 4, x^2 + y^2 = 1$ 及直线 $y = 0, y = x$ 所围成的在第一象限的闭区域。
+    9. 计算 $iint_D y/x dif sigma$，其中 $D$ 是由圆 $x^2 + y^2 = 4, x^2 + y^2 = 1$ 及直线 $y = 0, y = x$ 所围成的在第一象限的闭区域。
   ],
   a: [$3/8 ln 2$ (注：原卷答案 $3 pi^2/64$ 可能有误，建议核对) ],
 )
 
 #question(
   [
-    10. （附加题）计算 $iint_D (x + y) d sigma$ ，其中闭区域 $D = {(x, y) | x^2 + y^2 <= x + y}$ .
+    10. （附加题）计算 $iint_D (x + y) dif sigma$ ，其中闭区域 $D = {(x, y) | x^2 + y^2 <= x + y}$ .
   ],
   a: [$(pi /2)$],
 )
@@ -312,7 +312,7 @@
 
 #question(
   [
-    1. 设空间闭区域 $Omega$ 由曲面 $z = x y$ 与平面 $y = x, x = 1$ 及 $z = 0$ 所围成，则 $iiint_Omega x y^2 z^3 d v =$（ #choice[D] ）。
+    1. 设空间闭区域 $Omega$ 由曲面 $z = x y$ 与平面 $y = x, x = 1$ 及 $z = 0$ 所围成，则 $iiint_Omega x y^2 z^3 dif v =$（ #choice[D] ）。
     A. $1/361$
 
     B. $1/362$
@@ -326,28 +326,28 @@
 
 #question(
   [
-    2. 设空间闭区域 $Omega$ 由曲面 $z = x y$ 及平面 $x + y - 1 = 0, z = 0$ 所围成，将 $iiint_Omega f(x, y, z) d v$ 化成三次积分为（ #choice[C] ）。
-    A. $integral_0^1 d y integral_0^y d x integral_0^(x y) f(x, y, z) d z$
+    2. 设空间闭区域 $Omega$ 由曲面 $z = x y$ 及平面 $x + y - 1 = 0, z = 0$ 所围成，将 $iiint_Omega f(x, y, z) dif v$ 化成三次积分为（ #choice[C] ）。
+    A. $int_0^1 dif y int_0^y dif x int_0^(x y) f(x, y, z) dif z$
 
-    B. $integral_0^1 d x integral_0^1 d y integral_0^(x y) f(x, y, z) d z$
+    B. $int_0^1 dif x int_0^1 dif y int_0^(x y) f(x, y, z) dif z$
 
-    C. $integral_0^1 d y integral_0^(1 - y) d x integral_0^(x y) f(x, y, z) d z$
+    C. $int_0^1 dif y int_0^(1 - y) dif x int_0^(x y) f(x, y, z) dif z$
 
-    D. $integral_0^1 d x integral_0^x d y integral_0^(x y) f(x, y, z) d z$
+    D. $int_0^1 dif x int_0^x dif y int_0^(x y) f(x, y, z) dif z$
   ],
   a: [C.],
 )
 
 #question(
   [
-    3. 设空间闭区域 $Omega$ 由曲面 $y = sqrt(x)$ 及平面 $y = 0, z = 0, x + z = pi/2$ 所围成，下列将 $iiint_Omega f(x, y, z) d v$ 化成三次积分中不正确的是（ #choice[B] ）。
-    A. $integral_0^(pi/2) d x integral_0^(sqrt(x)) d y integral_0^(pi/2 - x) f(x, y, z) d z$
+    3. 设空间闭区域 $Omega$ 由曲面 $y = sqrt(x)$ 及平面 $y = 0, z = 0, x + z = pi/2$ 所围成，下列将 $iiint_Omega f(x, y, z) dif v$ 化成三次积分中不正确的是（ #choice[B] ）。
+    A. $int_0^(pi/2) dif x int_0^(sqrt(x)) dif y int_0^(pi/2 - x) f(x, y, z) dif z$
 
-    B. $integral_0^(pi/2) d y integral_0^(sqrt(y)) d x integral_0^(pi/2 - x) f(x, y, z) d z$
+    B. $int_0^(pi/2) dif y int_0^(sqrt(y)) dif x int_0^(pi/2 - x) f(x, y, z) dif z$
 
-    C. $integral_0^(pi/2) d x integral_0^(pi/2 - x) d z integral_0^(sqrt(x)) f(x, y, z) d y$
+    C. $int_0^(pi/2) dif x int_0^(pi/2 - x) dif z int_0^(sqrt(x)) f(x, y, z) dif y$
 
-    D. $integral_0^(pi/2) d z integral_0^(pi/2 - z) d x integral_0^(sqrt(x)) f(x, y, z) d y$
+    D. $int_0^(pi/2) dif z int_0^(pi/2 - z) dif x int_0^(sqrt(x)) f(x, y, z) dif y$
   ],
   a: [B.],
 )
@@ -365,14 +365,14 @@
 
 #question(
   [
-    5. 计算 $iiint_Omega x z d v$，其中空间闭区域 $Omega$ 由平面 $z = 0, z = y, y = 1$ 及曲面 $y = x^2$ 所围成。
+    5. 计算 $iiint_Omega x z dif v$，其中空间闭区域 $Omega$ 由平面 $z = 0, z = y, y = 1$ 及曲面 $y = x^2$ 所围成。
   ],
   a: [0],
 )
 
 #question(
   [
-    6. 计算 $iiint_Omega z d v$，其中空间闭区域 $Omega$ 由平面 $z = h$ 及曲面 $z = h/R sqrt(x^2 + y^2)$ ($R > 0, h > 0$) 所围成。
+    6. 计算 $iiint_Omega z dif v$，其中空间闭区域 $Omega$ 由平面 $z = h$ 及曲面 $z = h/R sqrt(x^2 + y^2)$ ($R > 0, h > 0$) 所围成。
   ],
   a: [$pi h^2 R^2 / 4$],
 )
@@ -383,14 +383,14 @@
 
 #question(
   [
-    1. 已知 $Omega$ 是由曲面 $4z^2 = 25(x^2 + y^2)$ 及平面 $z = 5$ 所围成的空间闭区域，则 $iiint_Omega (x^2 + y^2) d v$ 在柱面坐标系下的三次积分为（ #choice[C] ）。
-    A. $integral_0^(2 pi) d theta integral_0^2 rho^3 d rho integral_0^5 d z$
+    1. 已知 $Omega$ 是由曲面 $4z^2 = 25(x^2 + y^2)$ 及平面 $z = 5$ 所围成的空间闭区域，则 $iiint_Omega (x^2 + y^2) dif v$ 在柱面坐标系下的三次积分为（ #choice[C] ）。
+    A. $int_0^(2 pi) dif theta int_0^2 rho^3 dif rho int_0^5 dif z$
 
-    B. $integral_0^(2 pi) d theta integral_0^4 rho^3 d rho integral_0^5 d z$
+    B. $int_0^(2 pi) dif theta int_0^4 rho^3 dif rho int_0^5 dif z$
 
-    C. $integral_0^(2 pi) d theta integral_0^2 rho^3 d rho integral_(5/2 rho)^5 d z$
+    C. $int_0^(2 pi) dif theta int_0^2 rho^3 dif rho int_(5/2 rho)^5 dif z$
 
-    D. $integral_0^(2 pi) d theta integral_0^2 rho^2 d rho integral_0^5 d z$
+    D. $int_0^(2 pi) dif theta int_0^2 rho^2 dif rho int_0^5 dif z$
   ],
   a: [C.],
 )
@@ -398,13 +398,13 @@
 #question(
   [
     2. 设有空间闭区域 $ Omega_1 = {(x, y, z) | x^2 + y^2 + z^2 <= R^2, z >= 0}, Omega_2 = {(x, y, z) | x^2 + y^2 + z^2 <= R^2, x >= 0, y >= 0, z >= 0} $，则（ #choice[C] ）。
-    A. $iiint_(Omega_1) x d v = 4 iiint_(Omega_2) x d v$
+    A. $iiint_(Omega_1) x dif v = 4 iiint_(Omega_2) x dif v$
 
-    B. $iiint_(Omega_1) y d v = 4 iiint_(Omega_2) y d v$
+    B. $iiint_(Omega_1) y dif v = 4 iiint_(Omega_2) y dif v$
 
-    C. $iiint_(Omega_1) z d v = 4 iiint_(Omega_2) z d v$
+    C. $iiint_(Omega_1) z dif v = 4 iiint_(Omega_2) z dif v$
 
-    D. $iiint_(Omega_1) x y z d v = 4 iiint_(Omega_2) x y z d v$
+    D. $iiint_(Omega_1) x y z dif v = 4 iiint_(Omega_2) x y z dif v$
   ],
   a: [C.],
 )
@@ -413,14 +413,14 @@
 
 #question(
   [
-    3. 设 $Omega$ 是由曲面 $z = x^2 + y^2$ 和 $z = 2 - x^2 - y^2$ 所围成的空间闭区域，则 $iiint_Omega f(x, y, z) d v$ 在柱面坐标系下的三次积分为
+    3. 设 $Omega$ 是由曲面 $z = x^2 + y^2$ 和 $z = 2 - x^2 - y^2$ 所围成的空间闭区域，则 $iiint_Omega f(x, y, z) dif v$ 在柱面坐标系下的三次积分为
   ],
-  a: [$integral_0^(2 pi) d theta integral_0^1 d rho integral_(rho^2)^(2 - rho^2) f(rho cos theta, rho sin theta, z) rho d z$。],
+  a: [$int_0^(2 pi) dif theta int_0^1 dif rho int_(rho^2)^(2 - rho^2) f(rho cos theta, rho sin theta, z) rho dif z$。],
 )
 
 #question(
   [
-    4. 设 $Omega$ 是由曲面 $x^2 + y^2 + z^2 = 1$ 所围成的空间闭区域，则 $iiint_Omega (z ln(x^2 + y^2 + z^2 + 1)) / (x^2 + y^2 + z^2 + 1) d v =$ #ans[$0$]。
+    4. 设 $Omega$ 是由曲面 $x^2 + y^2 + z^2 = 1$ 所围成的空间闭区域，则 $iiint_Omega (z ln(x^2 + y^2 + z^2 + 1)) / (x^2 + y^2 + z^2 + 1) dif v =$ #ans[$0$]。
   ],
   a: [0],
 )
@@ -429,28 +429,28 @@
 
 #question(
   [
-    5. 计算 $iiint_Omega x y d v$，其中 $Omega$ 是由柱面 $x^2 + y^2 = 1$ 及平面 $z = 1, z = 0, x = 0, y = 0$ 所围成且在第一卦限的空间闭区域。
+    5. 计算 $iiint_Omega x y dif v$，其中 $Omega$ 是由柱面 $x^2 + y^2 = 1$ 及平面 $z = 1, z = 0, x = 0, y = 0$ 所围成且在第一卦限的空间闭区域。
   ],
   a: [$1/8$],
 )
 
 #question(
   [
-    6. 计算 $iiint_Omega z^2 d v$，其中 $Omega$ 是由曲面 $x^2 + y^2 + z^2 = R^2$ 和 $x^2 + y^2 + z^2 = 2R z$ ($R > 0$) 所围成的空间闭区域。
+    6. 计算 $iiint_Omega z^2 dif v$，其中 $Omega$ 是由曲面 $x^2 + y^2 + z^2 = R^2$ 和 $x^2 + y^2 + z^2 = 2R z$ ($R > 0$) 所围成的空间闭区域。
   ],
   a: [$59/480 pi R^5$],
 )
 
 #question(
   [
-    7. 计算 $iiint_Omega (y^2 + z^2) d v$，其中 $Omega$ 是由曲线 $ cases(y^2 = 2x, z = 0) $ 绕 $x$ 轴旋转一周所得的曲面与平面 $x = 5$ 所围成的空间闭区域。
+    7. 计算 $iiint_Omega (y^2 + z^2) dif v$，其中 $Omega$ 是由曲线 $ cases(y^2 = 2x, z = 0) $ 绕 $x$ 轴旋转一周所得的曲面与平面 $x = 5$ 所围成的空间闭区域。
   ],
   a: [$250/3 pi$],
 )
 
 #question(
   [
-    8. （附加题）试分别利用柱面坐标和球面坐标计算 $iiint_Omega (x^2 + y^2 + z^2) d v$，其中 $Omega$ 是由曲面 $x^2 + y^2 + z^2 = 1$ 所围成的空间闭区域。
+    8. （附加题）试分别利用柱面坐标和球面坐标计算 $iiint_Omega (x^2 + y^2 + z^2) dif v$，其中 $Omega$ 是由曲面 $x^2 + y^2 + z^2 = 1$ 所围成的空间闭区域。
   ],
   a: [$4/5 pi$],
 )
@@ -462,13 +462,13 @@
 #question(
   [
     1. 球面 $x^2 + y^2 + z^2 = a^2$ 含在 $x^2 + y^2 = a x$ ($a > 0$) 内部的面积为（ #choice[B] ）。
-    A. $4 integral_0^(pi/2) d theta integral_0^(a cos theta) a/sqrt(a^2 - r^2) r d r$
+    A. $4 int_0^(pi/2) dif theta int_0^(a cos theta) a/sqrt(a^2 - r^2) r d r$
 
-    B. $8 integral_0^(pi/2) d theta integral_0^(a cos theta) a/sqrt(a^2 - r^2) r d r$
+    B. $8 int_0^(pi/2) dif theta int_0^(a cos theta) a/sqrt(a^2 - r^2) r d r$
 
-    C. $16 integral_0^(pi/2) d theta integral_0^(a cos theta) a/sqrt(a^2 - r^2) r d r$
+    C. $16 int_0^(pi/2) dif theta int_0^(a cos theta) a/sqrt(a^2 - r^2) r d r$
 
-    D. $4 integral_(-pi/2)^(pi/2) d theta integral_0^(a cos theta) a/sqrt(a^2 - r^2) r d r$
+    D. $4 int_(-pi/2)^(pi/2) dif theta int_0^(a cos theta) a/sqrt(a^2 - r^2) r d r$
   ],
   a: [B.],
 )
@@ -498,7 +498,7 @@
 
 #question(
   [
-    4. 设平面闭区域 $D$ 的形心坐标为 $(2, 3)$，其面积为 2，则 $iint_D x d sigma =$ #ans[$4$]， $iint_D y d sigma =$ #ans[$6$]。
+    4. 设平面闭区域 $D$ 的形心坐标为 $(2, 3)$，其面积为 2，则 $iint_D x dif sigma =$ #ans[$4$]， $iint_D y dif sigma =$ #ans[$6$]。
   ],
   a: [4, 6],
 )
@@ -523,7 +523,7 @@
   [
     7. 在均匀半圆形薄片的直径上，要接上一个一边与直径等长的矩形薄片，为了使整个均匀薄片的质心恰好在圆心上，问：接上去的均匀矩形薄片另外一边的长度应为多少？
   ],
-  a: [$sqrt (2/3) R$ ( $R$ 为半圆半径).],
+  a: [$sqrt(2/3) R$ ( $R$ 为半圆半径).],
 )
 
 #question(
@@ -547,7 +547,7 @@
 #question(
   [
     1. 设闭区域 $D = {(x, y) | x^2 + y^2 <= 1}$，$D_1$ 为 $D$ 在第一象限的区域，则
-    $ iint_D sqrt(1 - x^2 - y^2) d sigma = 4 iint_(D_1) sqrt(1 - x^2 - y^2) d sigma $ （ #choice[√] ）
+    $ iint_D sqrt(1 - x^2 - y^2) dif sigma = 4 iint_(D_1) sqrt(1 - x^2 - y^2) dif sigma $ （ #choice[√] ）
   ],
   a: [√。],
 )
@@ -555,21 +555,21 @@
 #question(
   [
     2. 设闭区域 $D = {(x, y) | x^2 + y^2 <= 1}$，$D_1$ 为 $D$ 在第一象限的区域，则
-    $ iint_D x y d sigma = 4 iint_(D_1) x y d sigma $ （ #choice[×] ）
+    $ iint_D x y dif sigma = 4 iint_(D_1) x y dif sigma $ （ #choice[×] ）
   ],
   a: [×。],
 )
 
 #question(
   [
-    3. 二重积分 $iint_D f(x, y) d sigma$ 的几何意义是以曲面 $z = f(x, y)$ 为曲顶，以区域 $D$ 为底面的曲顶柱体的体积。（ #choice[×] ）（注：需 $f(x,y) >= 0$）
+    3. 二重积分 $iint_D f(x, y) dif sigma$ 的几何意义是以曲面 $z = f(x, y)$ 为曲顶，以区域 $D$ 为底面的曲顶柱体的体积。（ #choice[×] ）（注：需 $f(x,y) >= 0$）
   ],
   a: [×。],
 )
 
 #question(
   [
-    4. 设空间闭区域 $Omega = {(x, y, z) | x^2 + y^2 + z^2 <= R^2, z >= 0}$，$Omega_1$ 为 $Omega$ 在第一卦限的区域，则 $iiint_Omega x d v = 4 iiint_(Omega_1) x d v$。（ #choice[×] ）（注：应该是 2 倍，关于 $y z$ 面不对称）
+    4. 设空间闭区域 $Omega = {(x, y, z) | x^2 + y^2 + z^2 <= R^2, z >= 0}$，$Omega_1$ 为 $Omega$ 在第一卦限的区域，则 $iiint_Omega x dif v = 4 iiint_(Omega_1) x dif v$。（ #choice[×] ）（注：应该是 2 倍，关于 $y z$ 面不对称）
   ],
   a: [×。],
 )
@@ -578,7 +578,7 @@
 
 #question(
   [
-    5. 设闭区域 $D$ 由直线 $x = 0, y = 0, x + y = 1/2, x + y = 1$ 所围成，记 $I_1 = iint_D ln(x + y) d sigma$，$ I_2 = iint_D (x + y) d sigma, I_3 = iint_D sin(x + y) d sigma $，则 $I_1, I_2, I_3$ 间的大小关系为（ #choice[C] ）。
+    5. 设闭区域 $D$ 由直线 $x = 0, y = 0, x + y = 1/2, x + y = 1$ 所围成，记 $I_1 = iint_D ln(x + y) dif sigma$，$ I_2 = iint_D (x + y) dif sigma, I_3 = iint_D sin(x + y) dif sigma $，则 $I_1, I_2, I_3$ 间的大小关系为（ #choice[C] ）。
     A. $I_1 < I_2 < I_3$
 
     B. $I_3 < I_2 < I_1$
@@ -592,21 +592,21 @@
 
 #question(
   [
-    6. 设 $f(x, y)$ 是连续函数，则二次积分 $integral_(-6)^2 d x integral_((x^2/4) - 1)^(2 - x) f(x, y) d y =$（ #choice[D] ）。
-    A. $integral_(-8)^2 d y integral_(2 sqrt (y + 1))^(2 - y) f(x, y) d x$
+    6. 设 $f(x, y)$ 是连续函数，则二次积分 $int_(-6)^2 dif x int_((x^2/4) - 1)^(2 - x) f(x, y) dif y =$（ #choice[D] ）。
+    A. $int_(-8)^2 dif y int_(2 sqrt(y + 1))^(2 - y) f(x, y) dif x$
 
-    B. $integral_(-8)^2 d y integral_(-6)^(2 - y) f(x, y) d x$
+    B. $int_(-8)^2 dif y int_(-6)^(2 - y) f(x, y) dif x$
 
-    C. $ integral_(-1)^2 d y integral_(-2 sqrt (y + 1))^(2 sqrt (y + 1)) f(x, y) d x + integral_2^8 d y integral_(2 sqrt (y + 1))^(2 - y) f(x, y) d x $
+    C. $ int_(-1)^2 dif y int_(-2 sqrt(y + 1))^(2 sqrt(y + 1)) f(x, y) dif x + int_2^8 dif y int_(2 sqrt(y + 1))^(2 - y) f(x, y) dif x $
 
-    D. $ integral_(-1)^0 d y integral_(-2 sqrt (y + 1))^(2 sqrt (y + 1)) f(x, y) d x + integral_0^8 d y integral_(-2 sqrt (y + 1))^(2 - y) f(x, y) d x $
+    D. $ int_(-1)^0 dif y int_(-2 sqrt(y + 1))^(2 sqrt(y + 1)) f(x, y) dif x + int_0^8 dif y int_(-2 sqrt(y + 1))^(2 - y) f(x, y) dif x $
   ],
   a: [D.],
 )
 
 #question(
   [
-    7. 设 $Omega$ 是由曲面 $x^2 + y^2 + z^2 = 1$ 及平面 $x = 0, y = 0, z = 0$ 所围成的空间闭区域在第一卦限的部分，则 $iiint_Omega x y z d v =$（ #choice[A] ）。
+    7. 设 $Omega$ 是由曲面 $x^2 + y^2 + z^2 = 1$ 及平面 $x = 0, y = 0, z = 0$ 所围成的空间闭区域在第一卦限的部分，则 $iiint_Omega x y z dif v =$（ #choice[A] ）。
     A. $1/48$
 
     B. $1/56$
@@ -622,35 +622,35 @@
 
 #question(
   [
-    8. 计算 $integral_0^1 dif x integral_x^1 x^2 (e)^(-y^2) dif y .$
+    8. 计算 $int_0^1 dif x int_x^1 x^2 e^(-y^2) dif y .$
   ],
   a: [$(1/6)(1 - (2/e))$],
 )
 
 #question(
   [
-    9. 计算 $iint_D (x^2 - y^2) d sigma$，其中闭区域 $D$ 由曲线 $y = sin x$ ($0 <= x <= pi$) 和直线 $y = 0$ 所围成。
+    9. 计算 $iint_D (x^2 - y^2) dif sigma$，其中闭区域 $D$ 由曲线 $y = sin x$ ($0 <= x <= pi$) 和直线 $y = 0$ 所围成。
   ],
   a: [$pi^2 - 40/9$],
 )
 
 #question(
   [
-    10. 计算 $iint_D sqrt(R^2 - x^2 - y^2) d sigma$，其中闭区域 $D$ 由圆 $x^2 + y^2 = R x$ 所围成。
+    10. 计算 $iint_D sqrt(R^2 - x^2 - y^2) dif sigma$，其中闭区域 $D$ 由圆 $x^2 + y^2 = R x$ 所围成。
   ],
   a: [$(pi/3 - 4/9) R^3$],
 )
 
 #question(
   [
-    11. 计算 $iiint_Omega 1/(1 + x + y + z)^3 d v$，其中空间闭区域 $Omega$ 由平面 $x = 0, y = 0, z = 0, x + y + z = 1$ 所围成。
+    11. 计算 $iiint_Omega 1/(1 + x + y + z)^3 dif v$，其中空间闭区域 $Omega$ 由平面 $x = 0, y = 0, z = 0, x + y + z = 1$ 所围成。
   ],
   a: [$1/2 (ln 2 - 5/8)$],
 )
 
 #question(
   [
-    12. 计算 $iiint_Omega (x^2 + y^2) d v$，其 $Omega$ 为曲线 $ cases(y^2 = 2z, x = 0) $ 绕 $z$ 轴旋转一周所得的曲面与平面 $z = 4$ 所围成的空间闭区域。
+    12. 计算 $iiint_Omega (x^2 + y^2) dif v$，其 $Omega$ 为曲线 $ cases(y^2 = 2z, x = 0) $ 绕 $z$ 轴旋转一周所得的曲面与平面 $z = 4$ 所围成的空间闭区域。
   ],
   a: [$128/3 pi$],
 )

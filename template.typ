@@ -16,12 +16,22 @@
   }
 }
 
+#let grad = math.op("grad")
+#let div = math.op("div")
+#let rot = math.op("rot")
+
+#let int = math.integral
+#let iint = math.integral.double
+#let iiint = math.integral.triple
+#let oint = math.integral.cont
+#let quad = h(1em)
+
 #let conf(
   is-answer: false,
-  doc
+  doc,
 ) = {
   is-answer-state.update(is-answer)
-  
+
   set page(
     paper: "a4",
     margin: (x: 2cm, y: 2.5cm),
@@ -36,7 +46,7 @@
     footer: context {
       let page_num = counter(page).at(here()).first()
       align(center, text(size: 10pt)[#page_num])
-    }
+    },
   )
 
   set text(font: ("Times New Roman", "Noto Serif CJK SC", "SimSun"), size: 10.5pt)
@@ -67,15 +77,15 @@
 }
 
 #let question(
-  q, 
+  q,
   a: none,
-  space: 3cm
+  space: 3cm,
 ) = {
   context {
     let show-ans = is-answer-state.get()
     block(width: 100%, breakable: true)[
       #q
-      
+
       #if a != none [
         #if show-ans [
           #v(0.5em)
@@ -85,11 +95,11 @@
           ]
           #v(0.5em)
         ] else [
-          #v(space) // Space for student work
+          #v(space)
         ]
-      ] else if not show-ans {
+      ] else if not show-ans [
         #v(space)
-      }
+      ]
     ]
   }
 }
@@ -100,7 +110,7 @@
     fill: gray.lighten(90%),
     inset: 5pt,
     radius: 3pt,
-    width: 100%
+    width: 100%,
   )[
     #text(12pt, weight: "bold")[#title]
   ]

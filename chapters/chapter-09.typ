@@ -98,7 +98,8 @@
   ],
   a: [(1) $-(1/4)$ ;
     (2) -2;
-    (3) 2;],
+    (3) 2;
+    (4) 0。],
 )
 
 == 第二节 偏导数
@@ -188,7 +189,19 @@
   [
     9. 设函数 $z = e^(-(1/x + 1/y))$，求证：$x^2 (partial z / partial x) + y^2 (partial z / partial y) = z$。
   ],
-  a: [略。],
+  a: [
+    设 $phi(x,y)=-(1/x+1/y)$，则 $z=e^{phi}$。
+    由链式法则
+    $z_x=e^{phi} phi_x=z dot (1/x^2)=z/x^2$，
+    $z_y=e^{phi} phi_y=z dot (1/y^2)=z/y^2$。
+
+    因而
+    $x^2 z_x + y^2 z_y = x^2 dot z/x^2 + y^2 dot z/y^2 = z+z = 2z$。
+
+    所以按计算结果应为
+    $x^2 (partial z / partial x) + y^2 (partial z / partial y) = 2z$；
+    若题面写成 $=z$，则应视为原题笔误。
+  ],
 )
 
 == 第三节 全微分
@@ -224,9 +237,21 @@
 
 #question(
   [
-    4. 函数 $z = arctan(y/x)$ 当 $x = 2, y = 1, Delta x = 0.1, Delta y = -0.2$ 时的全增量 $Delta z approx$ #ans[$-0.125$]，全微分 $dif z =$ #ans[$-1/8$]。
+    4. 函数 $z = arctan(y/x)$ 当 $x = 2, y = 1, Delta x = 0.1, Delta y = -0.2$ 时的全增量 $Delta z approx$ #ans[$-0.09967$]，全微分 $dif z =$ #ans[$-1/10$]。
   ],
-  a: [$-5/42 approx -0.119, -0.125$],
+  a: [
+    先算全微分：
+    $z_x = -y/(x^2+y^2), z_y = x/(x^2+y^2)$。
+    在 $(2,1)$ 处有 $z_x=-1/5, z_y=2/5$，
+    所以
+    $dif z = z_x Delta x + z_y Delta y = (-1/5) dot 0.1 + (2/5) dot (-0.2) = -0.1 = -1/10$。
+
+    全增量
+    $Delta z = arctan((1+Delta y)/(2+Delta x)) - arctan(1/2)$
+    $= arctan(0.8/2.1) - arctan(0.5) approx -0.09967$。
+
+    故 $Delta z approx -0.09967$，$dif z = -1/10$。
+  ],
 )
 
 #question(
@@ -272,7 +297,23 @@
   [
     10. 设函数 $f(x, y) = cases(x y sin ((1)/( sqrt(x^2 + y^2))), & x^2 + y^2 != 0, 0, & x^2 + y^2 = 0,)$ 证明: $f(x, y)$ 在点 (0,0) 处连续且偏导数存在, 但偏导数在点 (0,0) 处不连续, 而 $f(x, y)$ 在点 (0,0) 处可微分.
   ],
-  a: [略.],
+  a: [
+    记 $r=sqrt(x^2+y^2)$。当 $(x,y)!=(0,0)$ 时，
+    $|f(x,y)|=|x y sin(1/r)| <= |x y| <= (x^2+y^2)/2 = r^2/2$，
+    故 $f(x,y)->0=f(0,0)$，所以在 $(0,0)$ 连续。
+
+    由偏导定义：
+    $f_x(0,0)=lim_(h->0)(f(h,0)-f(0,0))/h=0$，
+    $f_y(0,0)=lim_(h->0)(f(0,h)-f(0,0))/h=0$，偏导存在。
+
+    对 $(x,y)!=(0,0)$ 计算 $f_x$ 会出现含 $cos(1/r)/r^3$ 的项。沿 $y=x$ 代入后有振荡项，不趋于 0，
+    因而 $f_x$（同理 $f_y$）在原点不连续。
+
+    可微性检验：
+    $f(0,0)=0, f_x(0,0)=f_y(0,0)=0$，只需看
+    $|f(x,y)|/sqrt(x^2+y^2) <= (r^2/2)/r = r/2 -> 0$。
+    故 $f$ 在 $(0,0)$ 可微。
+  ],
 )
 
 == 第四节 多元复合函数的求导法则
@@ -349,7 +390,15 @@
   [
     9. 设函数 $z = arcsin(x - y)$，而 $x = 3t, y = 4t^3$，求 $dif z / dif t$。
   ],
-  a: [$(3(1 - 4t^2))/(sqrt(1 - (3t - 4t^3))^2)$。],
+  a: [
+    先合成一元函数：
+    $z(t)=arcsin(3t-4t^3)$。
+    设 $u(t)=3t-4t^3$，则 $u'(t)=3-12t^2$。
+
+    由链式法则
+    $dif z / dif t = u'(t)/sqrt(1-u(t)^2)$
+    $= (3-12t^2)/sqrt(1-(3t-4t^3)^2)$。
+  ],
 )
 
 #question(
@@ -370,8 +419,7 @@
   [
     12. 设函数 $z = f(x^2 + y^2)$ ，其中 $f$ 具有二阶连续导数，求 $partial^2 z / partial x^2, partial^2 z / partial y^2, partial^2 z / partial x partial y$ .
   ],
-  a: [$partial^2 z / partial x^2 = 2 f' + 4 x^2 f''$ , $partial^2 z / partial y^2 = 2 f' + 4 y^2 f''$ , $partial^2 z / partial x partial y = 4 x y f''$ .
-    O],
+  a: [$partial^2 z / partial x^2 = 2 f' + 4 x^2 f''$，$partial^2 z / partial y^2 = 2 f' + 4 y^2 f''$，$partial^2 z / partial x partial y = 4 x y f''$。],
 )
 
 == 第五节 隐函数的求导公式
@@ -430,21 +478,62 @@
   [
     7. 设 $(x/z) = ln (z/y)$ , 求 $partial z / partial x, partial z / partial y$ .
   ],
-  a: [$partial z / partial x = (z/x + z), partial z / partial y = ((z^2)/(y(x + z))).$],
+  a: [
+    记
+    $F(x,y,z)=x/z - ln(z/y)=0$。
+    隐函数求导公式给出
+    $z_x=-F_x/F_z, z_y=-F_y/F_z$。
+
+    先算偏导：
+    $F_x=1/z$，
+    $F_y=1/y$，
+    $F_z=-x/z^2-1/z=-(x+z)/z^2$。
+
+    所以
+    $partial z / partial x = -(1/z)/(-(x+z)/z^2)=z/(x+z)$，
+    $partial z / partial y = -(1/y)/(-(x+z)/z^2)=z^2/(y(x+z))$。
+  ],
 )
 
 #question(
   [
     8. 设 $cases(z = x^2 + y^2, x^2 + 2 y^2 + 3 z^2 = 20)$ 求 $dif y / dif x, dif z / dif x$ .
   ],
-  a: [$dif y / dif x = -((x(6 z + 1))/(2 y(3 z + 1))), dif z / dif x = (x/3 z + 1).$],
+  a: [
+    由第一式 $z=x^2+y^2$ 对 $x$ 求导：
+    $z' = 2x + 2y y'$。
+
+    由第二式 $x^2+2y^2+3z^2=20$ 求导：
+    $2x+4y y'+6z z'=0$。
+    代入 $z'=2x+2y y'$：
+    $2x+4y y'+6z(2x+2y y')=0$，
+    即 $2x(1+6z)+4y(1+3z)y'=0$。
+
+    解得
+    $dif y / dif x = y' = -x(6z+1)/(2y(3z+1))$。
+    再代回 $z'=2x+2y y'$：
+    $dif z / dif x = z' = x/(3z+1)$。
+  ],
 )
 
 #question(
   [
     9. 设 $cases(u = f(u x, v + y), v = g(u - x, v^2y),)$ 其中 $f, g$ 具有一阶连续偏导数，求 $partial u / partial x, partial v / partial x$ .
   ],
-  a: [$partial u / partial x = (-u f_1^( )(2 y v g_2^( ) - 1) - f_2^( ) g_1^( ))((x f_1^( ) - 1)(2 y v g_2^( ) - 1) - f_2^( ) g_1^( )), partial v / partial x = (g_1^( )(x f_1^( ) + u f_1^( ) - 1))((x f_1^( ) - 1)(2 y v g_2^( ) - 1) - f_2^( ) g_1^( )).$],
+  a: [
+    对方程组关于 $x$ 求导，设 $u_x=partial u/partial x, v_x=partial v/partial x$：
+    $u_x = f_1'(u + x u_x) + f_2' v_x$，
+    $v_x = g_1'(u_x - 1) + g_2'(2y v v_x)$。
+
+    整理为线性方程组
+    $cases((1 - x f_1')u_x - f_2' v_x = u f_1', -g_1' u_x + (1 - 2 y v g_2')v_x = -g_1')$。
+    用克拉默法则解之，得
+    分母
+    $Delta=(1 - x f_1')(1 - 2 y v g_2') - f_2' g_1'$，
+    从而
+    $partial u / partial x = (u f_1' (1 - 2 y v g_2') - f_2' g_1')/Delta$，
+    $partial v / partial x = g_1' (x f_1' + u f_1' - 1)/Delta$。
+  ],
 )
 
 #prob-type("四、证明题")
@@ -453,14 +542,42 @@
   [
     10. 设 $2 sin (x + 2 y - 3 z) = x + 2 y - 3 z$ ，证明： $partial z / partial x + partial z / partial y = 1 .$
   ],
-  a: [略。],
+  a: [
+    设 $u=x+2y-3z(x,y)$，原式为 $2sin u=u$。
+    对 $x$ 求偏导：
+    $2cos u dot u_x = u_x$，即 $(2cos u-1)(1-3z_x)=0$。
+    对 $y$ 求偏导：
+    $2cos u dot u_y = u_y$，即 $(2cos u-1)(2-3z_y)=0$。
+
+    若 $2cos u-1=0$，则 $cos u=1/2$，而由 $2sin u=u$ 在实数域只可能 $u=0$，对应 $cos u=1$，矛盾。
+    故 $2cos u-1 != 0$，于是
+    $z_x=1/3, z_y=2/3$。
+    所以
+    $partial z / partial x + partial z / partial y = 1$。
+  ],
 )
 
 #question(
   [
     11. 设函数 $Phi (u, v)$ 具有一阶连续偏导数，证明：由方程 $Phi (c x - a z, c y - b z) = 0$ 所确定的函数 $z = f(x, y)$ 满足 $a partial z / partial x + b partial z / partial y = c .$
   ],
-  a: none,
+  a: [
+    令
+    $u = c x - a z, v = c y - b z$，则 $Phi(u,v)=0$。
+    对 $x$ 求偏导：
+    $Phi_u (c - a z_x) + Phi_v (-b z_x) = 0$，
+    即 $c Phi_u = (a Phi_u + b Phi_v) z_x$。
+
+    对 $y$ 求偏导：
+    $Phi_u (-a z_y) + Phi_v (c - b z_y) = 0$，
+    即 $c Phi_v = (a Phi_u + b Phi_v) z_y$。
+
+    分别乘以 $a,b$ 后相加：
+    $a c Phi_u + b c Phi_v = (a Phi_u + b Phi_v)(a z_x + b z_y)$。
+    只要 $a Phi_u + b Phi_v != 0$（隐函数可解条件），即可约去，得
+    $a z_x + b z_y = c$，即
+    $a partial z / partial x + b partial z / partial y = c$。
+  ],
 )
 
 == 第六节 多元函数微分学的几何应用
@@ -526,7 +643,7 @@
 
 #question(
   [
-    8. 曲面 $(y/1 + x z) = (pi /4)$ 在点 $(-2, 1, 0)$ 处的切平面方程为
+    8. 曲面 $y + x z = pi /4$ 在点 $(-2, 1, 0)$ 处的切平面方程为
   ],
   a: [$y + 2 z = 1$],
 )
@@ -535,9 +652,26 @@
 
 #question(
   [
-    9. 求曲线 $x = (t/1 + t), y = (1 + t/t), z = t^2$ 在 $t = 1$ 的对应点处的切线及法平面方程
+    9. 求曲线 $x = t/(1 + t), y = (1 + t)/t, z = t^2$ 在 $t = 1$ 的对应点处的切线及法平面方程
   ],
-  a: [切线方程为 $x - (1/2) = (y - 2/-4) = (z - 1/8)$ ，法平面方程为 $2 x - 8 y + 1 6 z - 1 = 0$ .],
+  a: [
+    参数方程为
+    $r(t)=(t/(1+t), (1+t)/t, t^2)$。
+    对 $t$ 求导：
+    $r'(t)=(1/(1+t)^2, -1/t^2, 2t)$，
+    故在 $t=1$ 时方向向量
+    $bold(v)=(1/4,-1,2)$，可取等比向量 $(1,-4,8)$。
+
+    点坐标为
+    $P=(1/2,2,1)$。
+    切线方程：
+    $x-1/2=(y-2)/(-4)=(z-1)/8$。
+
+    法平面法向量取 $bold(v)$，
+    所以法平面
+    $1(x-1/2)-4(y-2)+8(z-1)=0$，
+    化简得 $2x-8y+16z-1=0$。
+  ],
 )
 
 #question(
@@ -619,14 +753,50 @@
 
     (2) $(partial f / partial l) |_(1, 2)$，其中方向 $l$ 从点 $(1, 2)$ 到点 $(4, 6)$。
   ],
-  a: [(1) $(2, 2)$；(2) $14/5$。],
+  a: [
+    从点 $(1,2)$ 到 $(2,2)$ 的单位方向向量是 $bold(e_1)=(1,0)$，
+    所以
+    $D_(bold(e_1)) f(1,2)=bold(grad)f(1,2) dot (1,0)=f_x(1,2)=2$。
+
+    从点 $(1,2)$ 到 $(1,1)$ 的单位方向向量是 $bold(e_2)=(0,-1)$，
+    因此
+    $D_(bold(e_2)) f(1,2)=bold(grad)f(1,2) dot (0,-1)=-f_y(1,2)=-2$，
+    得 $f_y(1,2)=2$。
+
+    故
+    $bold(grad)f(1,2)=(2,2)$。
+
+    方向 $l$ 从 $(1,2)$ 到 $(4,6)$，向量为 $(3,4)$，单位向量
+    $bold(e_l)=(3/5,4/5)$。
+    所求方向导数
+    $D_l f(1,2)=bold(grad)f(1,2) dot bold(e_l)=(2,2) dot (3/5,4/5)=14/5$。
+  ],
 )
 
 #question(
   [
     9. 已知曲面 $2 x^2 + 3 y^2 + z^2 = 6$ 在点 $P(1,1,1)$ 处指向外侧的法向量为 $bold(n)$ , 求函数 $u = (( sqrt(6 x^2 + 8 y^2))/(z))$ 在点 $P$ 处沿方向 $bold(n)$ 的方向导数.
   ],
-  a: [$(11/7)$],
+  a: [
+    设 $F(x,y,z)=2x^2+3y^2+z^2-6$，则外法向量方向由 $grad F$ 给出。
+    在 $P(1,1,1)$ 处
+    $grad F(P)=(4,6,2)$，故单位外法向量可取
+    $bold(n)=(2,3,1)/sqrt(14)$。
+
+    又
+    $u(x,y,z)=sqrt(6x^2+8y^2)/z$。
+    计算梯度：
+    $u_x=6x/(z sqrt(6x^2+8y^2))$，
+    $u_y=8y/(z sqrt(6x^2+8y^2))$，
+    $u_z=-sqrt(6x^2+8y^2)/z^2$。
+    在 $P$ 处有
+    $grad u(P)=(6/sqrt(14),8/sqrt(14),-sqrt(14))$。
+
+    方向导数
+    $D_(bold(n))u(P)=grad u(P) dot bold(n)$
+    $=(6/sqrt(14),8/sqrt(14),-sqrt(14)) dot (2,3,1)/sqrt(14)
+    =(12+24-14)/14=11/7$。
+  ],
 )
 
 #prob-type("四、证明题")
@@ -635,7 +805,28 @@
   [
     10. （附加题）证明：函数 $f(x, y) = root(3, x y)$ 在点(0,0)处连续且可偏导，但除沿坐标轴的方向外，在点(0,0)处沿其他方向的方向导数都不存在。
   ],
-  a: [略],
+  a: [
+    (1) 连续性：
+    $f(x,y)=(x y)^(1/3)$，当 $(x,y)->(0,0)$ 时有 $x y -> 0$，故
+    $f(x,y)->0=f(0,0)$，所以在原点连续。
+
+    (2) 偏导数：
+    由定义
+    $f_x(0,0)=lim_(h->0) (f(h,0)-f(0,0))/h = 0$，
+    $f_y(0,0)=lim_(h->0) (f(0,h)-f(0,0))/h = 0$，
+    因而两偏导都存在。
+
+    (3) 方向导数：
+    设方向向量为 $l=(m,n)$（可取单位或非单位，结论一致），
+    则
+    $D_l f(0,0)=lim_(t->0) (f(t m,t n)-f(0,0))/t
+    =lim_(t->0) ((m n t^2)^(1/3))/t
+    =(m n)^(1/3) lim_(t->0) 1/t^(1/3)$。
+
+    当 $m n != 0$ 时，上式极限发散，方向导数不存在；
+    当 $m n = 0$（即沿坐标轴方向）时，分子恒为 0，方向导数为 0。
+    故除坐标轴方向外，其余方向导数都不存在。
+  ],
 )
 
 == 第八节 多元函数的极值及其求法
@@ -717,7 +908,31 @@
   [
     10. （附加题）求函数 $f(x, y, z) = ln x + ln y + 3 ln z$ 在球面 $x^2 + y^2 + z^2 = 5r^2$ ($x > 0, y > 0, z > 0$) 上的最大值，并证明：对于正实数 $a, b, c$，有 $a b c^3 <= 27((a + b + c)/5)^5$ 成立。
   ],
-  a: [最大值 $f(r, r, sqrt(3)r) = ln(3 sqrt(3)r^5)$。],
+  a: [
+    先求约束极值。构造拉格朗日函数
+    $L=ln x+ln y+3ln z+lambda(5r^2-x^2-y^2-z^2)$。
+    一阶条件：
+    $L_x=1/x-2lambda x=0$，
+    $L_y=1/y-2lambda y=0$，
+    $L_z=3/z-2lambda z=0$。
+    得
+    $x^2=1/(2lambda), y^2=1/(2lambda), z^2=3/(2lambda)$，
+    在正象限内故 $x=y, z=sqrt(3)x$。
+
+    代入约束
+    $x^2+y^2+z^2=5x^2=5r^2$，得 $x=y=r, z=sqrt(3)r$。
+    因而最大值为
+    $f_max = ln r + ln r + 3ln(sqrt(3)r)=ln(3sqrt(3)r^5)$。
+
+    证明不等式：令 $x=sqrt(a), y=sqrt(b), z=sqrt(c)$（$a,b,c>0$），
+    并取 $r=sqrt((a+b+c)/5)$，则由上面的最大值结论有
+    $ln x+ln y+3ln z <= ln(3sqrt(3)r^5)$。
+    指数化得
+    $x y z^3 <= 3sqrt(3) r^5$，即
+    $sqrt(a)sqrt(b)c^(3/2) <= 3sqrt(3)((a+b+c)/5)^(5/2)$。
+    两边平方即得
+    $a b c^3 <= 27((a+b+c)/5)^5$。
+  ],
 )
 
 == 总习题九
@@ -825,7 +1040,20 @@
   [
     13. 求螺旋线 $x = a cos theta , y = a sin theta , z = b theta$ 在点 $(a,0,0)$ 处的切线及法平面方程
   ],
-  a: [切线方程为 $(x - a/0) = (y/a) = (z/b)$ , 法平面方程为 $a y + b z = 0$ .],
+  a: [
+    点 $(a,0,0)$ 对应参数 $theta=0$。
+    曲线导向量
+    $r'(theta)=(-a sin theta, a cos theta, b)$，
+    在 $theta=0$ 时为
+    $bold(v)=(0,a,b)$。
+
+    切线过点 $(a,0,0)$，方向 $bold(v)$，故
+    $x=a, y/a=z/b$（或参数式 $x=a, y=a t, z=b t$）。
+
+    法平面的法向量与切向量同向，故
+    $0(x-a)+a(y-0)+b(z-0)=0$，
+    即法平面方程 $a y + b z = 0$。
+  ],
 )
 
 #question(
@@ -841,5 +1069,18 @@
   [
     15. 设函数 $f(x, y) = cases((x^2 y^2)((x^2 + y^2)^(3/2)), & x^2 + y^2 != 0, 0, & x^2 + y^2 = 0,)$ 证明: $f(x, y)$ 在点 (0,0) 处连续且偏导数存在, 但不可微分.
   ],
-  a: [略.],
+  a: [
+    按题面分段函数，先有 $f(0,0)=0$。
+    对 $(x,y)!=(0,0)$，
+    $|f(x,y)| = |x^2 y^2| (x^2+y^2)^(3/2) <= (x^2+y^2)^2 (x^2+y^2)^(3/2) = (x^2+y^2)^(7/2)$，
+    故 $f(x,y)->0$，所以在原点连续。
+
+    由定义
+    $f_x(0,0)=lim_(h->0)(f(h,0)-f(0,0))/h=0$，
+    $f_y(0,0)=lim_(h->0)(f(0,h)-f(0,0))/h=0$，偏导存在。
+
+    说明：按当前题面表达，该函数实际上满足
+    $|f(x,y)|/sqrt(x^2+y^2) <= (x^2+y^2)^3 -> 0$，因此可微。
+    若原命题要求“不可微”，则通常应为分母型表达（如含 $(x^2+y^2)^(3/2)$ 在分母），原题可能存在排版缺失。
+  ],
 )

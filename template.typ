@@ -24,6 +24,8 @@
 #let grad = math.op("grad")
 #let div = math.op("div")
 #let rot = math.op("rot")
+#let Prj = math.op("Prj")
+
 
 #let int = math.integral
 #let iint = math.integral.double

@@ -46,7 +46,11 @@
 
     D. $|bold(a) + bold(b)| > |bold(a) - bold(b)|$
   ],
-  p: [若 $bold(a) perp bold(b)$，则 $bold(a) dot bold(b) = 0$。$|bold(a) plus.minus bold(b)|^2 = |bold(a)|^2 + |bold(b)|^2 plus.minus 2 bold(a) dot bold(b) = |bold(a)|^2 + |bold(b)|^2$。故 $|bold(a) + bold(b)| = |bold(a) - bold(b)|$。],
+  p: [
+    若 $bold(a) perp bold(b)$，则 $bold(a) dot bold(b) = 0$。
+    $|bold(a) plus.minus bold(b)|^2 = |bold(a)|^2 + |bold(b)|^2 plus.minus 2 bold(a) dot bold(b) = |bold(a)|^2 + |bold(b)|^2$。
+    故 $|bold(a) + bold(b)| = |bold(a) - bold(b)|$。
+  ],
   a: [B.],
 )
 
@@ -61,7 +65,7 @@
 
 #question(
   [
-    6. 设 $|bold(a)| = 4$，向量 $bold(a)$ 与轴 $l$ 的夹角为 $pi/6$，则 $op("Prj")_l bold(a) =$ #ans[$2 sqrt(3)$]。
+    6. 设 $|bold(a)| = 4$，向量 $bold(a)$ 与轴 $l$ 的夹角为 $pi/6$，则 $Prj_l bold(a) =$ #ans[$2 sqrt(3)$]。
   ],
   a: [$2 sqrt(3)$],
 )
@@ -93,7 +97,9 @@
 
 #question(
   [
-    10. 设向量 $bold(m) = 3bold(i) + 5bold(j) + 3bold(k), bold(n) = 2bold(i) + bold(j) - 4bold(k), bold(p) = 5bold(i) + bold(j) - 4bold(k)$，求向量 $bold(a) = 4bold(m) + 3bold(n) - bold(p)$ 在 $x$ 轴上的投影及在 $y$ 轴上的分向量。
+    10. 设向量 $bold(m) = 3bold(i) + 5bold(j) + 3bold(k), bold(n) = 2bold(i) + bold(j) - 4bold(k),$
+    $bold(p) = 5bold(i) + bold(j) - 4bold(k)$，
+    求向量 $bold(a) = 4bold(m) + 3bold(n) - bold(p)$ 在 $x$ 轴上的投影及在 $y$ 轴上的分向量。
   ],
   a: [$13, 22bold(j)$。],
 )
@@ -155,7 +161,11 @@
     A. $-bold(i) + 3 bold(j) + 5 bold(k)$ #quad B. $-2 bold(i) + 6 bold(j) + 10 bold(k)$ \
     C. $2 bold(i) - 6 bold(j) - 10 bold(k)$ #quad D. $3 bold(i) + 4 bold(j) + 5 bold(k)$
   ],
-  p: [利用向量积性质：$(bold(a) + bold(b)) times (bold(a) - bold(b)) = bold(a) times bold(a) - bold(a) times bold(b) + bold(b) times bold(a) - bold(b) times bold(b) = 0 - bold(a) times bold(b) - bold(a) times bold(b) = -2 (bold(a) times bold(b))$。
+  p: [利用向量积性质：
+    $(bold(a) + bold(b)) times (bold(a) - bold(b))
+    = bold(a) times bold(a) - bold(a) times bold(b)
+    + bold(b) times bold(a) - bold(b) times bold(b)
+    = -2 (bold(a) times bold(b))$。
     $bold(a) times bold(b) = (1-2)bold(i) - (-2-1)bold(j) + (4+1)bold(k) = -bold(i) + 3bold(j) + 5bold(k)$。
     故结果为 $2bold(i) - 6bold(j) - 10bold(k)$。],
 )
@@ -181,9 +191,9 @@
 
 #question(
   [
-    7. 设向量 $bold(a) = (4, -3, 4), bold(b) = (2, 2, 1)$，则 $op("Prj")_bold(b) bold(a) =$ #ans[$4/3$]。
+    7. 设向量 $bold(a) = (4, -3, 4), bold(b) = (2, 2, 1)$，则 $Prj_bold(b) bold(a) =$ #ans[$4/3$]。
   ],
-  p: [$op("Prj")_bold(b) bold(a) = (bold(a) dot bold(b)) / |bold(b)| = (4 dot 2 - 3 dot 2 + 4 dot 1) / sqrt(2^2 + 2^2 + 1^2) = (8 - 6 + 4) / 3 = 6 / 3 = 2$（此处原答案 4/3 与计算不符，以计算为准，或检查题面）。
+  p: [$Prj_bold(b) bold(a) = (bold(a) dot bold(b)) / |bold(b)| = (4 dot 2 - 3 dot 2 + 4 dot 1) / sqrt(2^2 + 2^2 + 1^2) = (8 - 6 + 4) / 3 = 6 / 3 = 2$（此处原答案 4/3 与计算不符，以计算为准，或检查题面）。
     *纠正：$4 dot 2 + (-3) dot 2 + 4 dot 1 = 6$。$|bold(b)| = 3$。所以结果为 2。*
     但若按原 4/3 填写则保留逻辑过程。],
 )
@@ -232,7 +242,7 @@
   [
     11. 求向量 $bold(a) = (4, -3, 4)$ 在向量 $bold(b) = (2, 2, 1)$ 上的投影。
   ],
-  p: [投影 $op("Prj")_bold(b) bold(a) = (bold(a) dot bold(b)) / |bold(b)| = (8 - 6 + 4) / 3 = 6 / 3 = 2$。],
+  p: [投影 $Prj_bold(b) bold(a) = (bold(a) dot bold(b)) / |bold(b)| = (8 - 6 + 4) / 3 = 6 / 3 = 2$。],
 )
 
 #question(
@@ -252,7 +262,7 @@
   p: [$bold(d) || (bold(a) times bold(b))$。
     $bold(a) times bold(b) = (9-2)bold(i) - (6+1)bold(j) + (-4-3)bold(k) = (7, -7, -7)$，取 $bold(v) = (1, -1, -1)$。
     设 $bold(d) = k (1, -1, -1)$。
-    $op("Prj")_bold(c) bold(d) = (bold(d) dot bold(c)) / |bold(c)| = k(2 - 1 - 2) / sqrt(4+1+4) = -k / 3 = 14$。
+    $Prj_bold(c) bold(d) = (bold(d) dot bold(c)) / |bold(c)| = k(2 - 1 - 2) / sqrt(4+1+4) = -k / 3 = 14$。
     得 $k = -42$。
     故 $bold(d) = -42(1, -1, -1) = (-42, 42, 42)$。],
 )
@@ -429,7 +439,11 @@
 
     D. $(2 sqrt(3))/3$
   ],
-  p: [直线 $L_1$ 过 $M_1(1, 1, 0)$，方向向量 $bold(s) = (1, 2, 1)$。直线 $L_2$ 过 $M_2(2, -1, 1)$。$arrow(M_1 M_2) = (1, -2, 1)$。$d = |arrow(M_1 M_2) times bold(s)| / |bold(s)| = |(1, -2, 1) times (1, 2, 1)| / sqrt(6) = |(-4, 0, 4)| / sqrt(6) = sqrt(32)/sqrt(6) = (4 sqrt(3))/3$。],
+  p: [
+    直线 $L_1$ 过 $M_1(1, 1, 0)$，方向向量 $bold(s) = (1, 2, 1)$。
+    直线 $L_2$ 过 $M_2(2, -1, 1)$。$arrow(M_1 M_2) = (1, -2, 1)$。
+    $d = |arrow(M_1 M_2) times bold(s)| / |bold(s)| = |(1, -2, 1) times (1, 2, 1)| / sqrt(6) = |(-4, 0, 4)| / sqrt(6) = sqrt(32)/sqrt(6) = (4 sqrt(3))/3$。
+  ],
   a: [C.],
 )
 
@@ -767,7 +781,10 @@
 
     D. $-2/3$
   ],
-  p: [垂直条件 $(bold(a) + lambda bold(b)) dot bold(a) = 0 => |bold(a)|^2 + lambda (bold(b) dot bold(a)) = 0$。$|bold(a)|^2 = 3$, $bold(b) dot bold(a) = 2 - 1 + 1 = 2$。故 $3 + 2 lambda = 0 => lambda = -3/2$。],
+  p: [垂直条件 $(bold(a) + lambda bold(b)) dot bold(a) = 0$
+    $=> |bold(a)|^2 + lambda (bold(b) dot bold(a)) = 0$。
+    $|bold(a)|^2 = 3$, $bold(b) dot bold(a) = 2 - 1 + 1 = 2$。
+    故 $3 + 2 lambda = 0 => lambda = -3/2$。],
   a: [B.],
 )
 

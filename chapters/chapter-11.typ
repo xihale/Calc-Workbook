@@ -29,7 +29,11 @@
     A. $1/12 (5 sqrt(5) - 1)$ #quad B. $5 sqrt(5) - 1$ \
     C. $1/12$ #quad D. $1/8 (5 sqrt(5) - 1)$
   ],
-  p: [由 $y = x^2$ 得 $y' = 2x$，故 $dif s = sqrt(1 + 4x^2) dif x$。$I = int_0^1 x sqrt(1 + 4x^2) dif x = 1/8 int_0^1 sqrt(1 + 4x^2) dif (1 + 4x^2) = 1/8 [ 2/3 (1 + 4x^2)^(3/2) ]_0^1 = 1/12 (5 sqrt(5) - 1)$。],
+  p: [由 $y = x^2$ 得 $y' = 2x$，故 $dif s = sqrt(1 + 4x^2) dif x$。
+    $I = int_0^1 x sqrt(1 + 4x^2) dif x$
+    $= 1/8 int_0^1 sqrt(1 + 4x^2) dif (1 + 4x^2)$
+    $= 1/8 [ 2/3 (1 + 4x^2)^(3/2) ]_0^1$
+    $= 1/12 (5 sqrt(5) - 1)$。],
 )
 
 #question(
@@ -82,7 +86,11 @@
 
 #question(
   [
-    7. 设在 $x O y$ 面内有一线密度为 $mu(x, y)$ 的曲线弧 $L$，则此曲线弧关于 $x$ 轴的转动惯量为 $I_x =$ #ans[$int_L y^2 mu(x, y) dif s$]，关于 $y$ 轴的转动惯量为 $I_y =$ #ans[$int_L x^2 mu(x, y) dif s$]，其质心坐标 $(overline(x), overline(y))$ 中 $overline(x) =$ #ans[$(int_L x mu(x, y) dif s) / (int_L mu(x, y) dif s)$]，$overline(y) =$ #ans[$(int_L y mu(x, y) dif s) / (int_L mu(x, y) dif s)$]。
+    7. 设在 $x O y$ 面内有一线密度为 $mu(x, y)$ 的曲线弧 $L$，则：
+    此曲线弧关于 $x$ 轴的转动惯量为 $I_x =$ #ans[$int_L y^2 mu(x, y) dif s$]；
+    关于 $y$ 轴的转动惯量为 $I_y =$ #ans[$int_L x^2 mu(x, y) dif s$]；
+    其质心坐标 $(overline(x), overline(y))$ 中：
+    $overline(x) =$ #ans[$(int_L x mu(x, y) dif s) / (int_L mu(x, y) dif s)$]，$overline(y) =$ #ans[$(int_L y mu(x, y) dif s) / (int_L mu(x, y) dif s)$]。
   ],
   a: [设线弧总质量
     $M=int_L mu(x, y) dif s$。
@@ -263,7 +271,11 @@
     4. 设 $L$ 为从点 $(0, 0)$ 沿折线 $y = 1 - |x - 1|$ 到点 $A(2, 0)$ 的折线段，则 $int_L -y dif x + x dif y =$（ #choice[D] ）。
     A. 0 #quad B. -1 #quad C. 2 #quad D. -2
   ],
-  p: [封闭曲线 $L + A O$ 围成的面积 $S = 1$。由格林公式，$oint_{L+AO} -y dif x + x dif y = 2 iint_D dif sigma = 2$。又 $int_{A O} -y dif x + x dif y = int_2^0 0 dif x = 0$。故 $int_L = 2$。但注意格林公式要求正向（逆时针），此题折线从 $(0,0)$ 经 $(1,1)$ 到 $(2,0)$ 是顺时针方向，故应为 -2。],
+  p: [封闭曲线 $L + A O$ 围成的面积 $S = 1$。
+    由格林公式，$oint_(L + A O) -y dif x + x dif y = 2 iint_D dif sigma = 2$。
+    又 $int_(A O) -y dif x + x dif y = int_2^0 0 dif x = 0$，故 $int_L = 2$。
+    但注意格林公式要求正向（逆时针），
+    此题折线从 $(0,0)$ 经 $(1,1)$ 到 $(2,0)$ 是顺时针方向，故应为 -2。],
 )
 
 #prob-type("二、填空题")
@@ -596,7 +608,13 @@
     A. $-2/3 cos^2 x - 4/((3 cos x))$ #quad B. $-2 cos^2 x$ \
     C. $-2 cos x$ #quad D. $-2/3 cos x - 4/((3 cos x))$
   ],
-  p: [路径无关条件为 $(partial P) / (partial y) = (partial Q) / (partial x)$，即 $sin 2x - f(x) tan x = f'(x)$。这是一阶线性微分方程：$f'(x) + f(x) tan x = sin 2x$。积分因子为 $1/cos x$，则 $(f(x)/cos x)' = 2 sin x cos x / cos x = 2 sin x$。故 $f(x)/cos x = -2 cos x + C$。代入 $f(0)=-2$ 得 $C=0$，故 $f(x) = -2 cos^2 x$。],
+  p: [路径无关条件为 $(partial P) / (partial y) = (partial Q) / (partial x)$，即
+    $sin 2x - f(x) tan x = f'(x)$。
+    这是一阶线性微分方程：$f'(x) + f(x) tan x = sin 2x$。
+    积分因子为 $1/cos x$，则
+    $(f(x)/cos x)' = 2 sin x cos x / cos x = 2 sin x$。
+    故 $f(x)/cos x = -2 cos x + C$。
+    代入 $f(0)=-2$ 得 $C=0$，故 $f(x) = -2 cos^2 x$。],
 )
 
 #question(
@@ -604,7 +622,11 @@
     2. $int_L (2x(x^2 + y^2)^alpha)/y dif x - (x^2(x^2 + y^2)^alpha)/y^2 dif y$ 在不与 $x$ 轴相交的区域上与路径无关，则 $alpha =$（ #choice[D] ）。
     A. $1/2$ #quad B. $-1/2$ #quad C. 任意值 #quad D. 0
   ],
-  p: [路径无关要求 $(partial P) / (partial y) = (partial Q) / (partial x)$。计算得 $(partial P) / (partial y) = (2x dot alpha(x^2+y^2)^(alpha-1) dot 2y dot y - 2x(x^2+y^2)^alpha)/y^2$。$(partial Q) / (partial x) = -(2x(x^2+y^2)^alpha + x^2 dot alpha(x^2+y^2)^(alpha-1) dot 2x)/y^2$。化简相等条件可得 $alpha = 0$。],
+  p: [路径无关要求 $(partial P) / (partial y) = (partial Q) / (partial x)$。
+    计算得
+    $(partial P) / (partial y) = (2x dot alpha(x^2+y^2)^(alpha-1) dot 2y dot y - 2x(x^2+y^2)^alpha)/y^2$。
+    $(partial Q) / (partial x) = -(2x(x^2+y^2)^alpha + x^2 dot alpha(x^2+y^2)^(alpha-1) dot 2x)/y^2$。
+    化简相等条件可得 $alpha = 0$。],
 )
 
 #question(
@@ -741,7 +763,12 @@
 
 #question(
   [
-    10. （附加题）设 $Q(x, y)$ 在 $x O y$ 面上具有一阶连续偏导数，$int_L 2x y dif x + Q(x, y) dif y$ 与路径无关，并且对于任意的 $t$，有 $int_((0, 0))^((t, 1)) 2x y dif x + Q(x, y) dif y = int_((0, 0))^((1, t)) 2x y dif x + Q(x, y) dif y$，求 $Q(x, y)$。
+    10. （附加题）设 $Q(x, y)$ 在 $x O y$ 面上具有一阶连续偏导数，
+    $int_L 2x y dif x + Q(x, y) dif y$ 与路径无关，
+    并且对于任意的 $t$，有
+    $int_((0, 0))^((t, 1)) 2x y dif x + Q(x, y) dif y$
+    $= int_((0, 0))^((1, t)) 2x y dif x + Q(x, y) dif y$，
+    求 $Q(x, y)$。
   ],
   a: [设
     $M=2x y, N=Q(x,y)$。
@@ -771,7 +798,11 @@
     A. $int_0^(2 pi) dif theta int_0^1 sqrt(1 + 4 r^2) r dif r$ #quad B. $int_0^(2 pi) dif theta int_0^2 sqrt(1 + 4 r^2) r dif r$ \
     C. $int_0^(2 pi) dif theta int_0^2 (2 - r^2) sqrt(1 + 4 r^2) r dif r$ #quad D. $int_0^(2 pi) dif theta int_0^(sqrt(2)) sqrt(1 + 4 r^2) r dif r$
   ],
-  p: [抛物面在 $x O y$ 面上方的部分，对应 $2 - x^2 - y^2 >= 0$，即 $x^2 + y^2 <= 2$。其投影区域 $D$ 为圆域 $r <= sqrt(2)$。由 $z = 2 - x^2 - y^2$ 得 $z_x = -2x, z_y = -2y$，故 $dif S = sqrt(1 + z_x^2 + z_y^2) dif sigma = sqrt(1 + 4x^2 + 4y^2) dif x dif y$。在极坐标下为 $sqrt(1 + 4 r^2) r dif r dif theta$。故选 D。],
+  p: [抛物面在 $x O y$ 面上方的部分，对应 $2 - x^2 - y^2 >= 0$，即 $x^2 + y^2 <= 2$。
+    其投影区域 $D$ 为圆域 $r <= sqrt(2)$。
+    由 $z = 2 - x^2 - y^2$ 得 $z_x = -2x, z_y = -2y$，故
+    $dif S = sqrt(1 + z_x^2 + z_y^2) dif sigma = sqrt(1 + 4x^2 + 4y^2) dif x dif y$。
+    在极坐标下为 $sqrt(1 + 4 r^2) r dif r dif theta$，故选 D。],
   a: [D.],
 )
 
@@ -1227,7 +1258,11 @@
 
 #question(
   [
-    4. 设 $cos alpha, cos beta, cos gamma$ 是光滑闭曲面 $Sigma$ 的外法向量的方向余弦，$Sigma$ 所围的空间闭区域为 $Omega$（坐标原点在 $Omega$ 外），则用高斯公式化曲面积分为重积分时，有 $iint_Sigma (x cos alpha + y cos beta + z cos gamma) /(sqrt(x^2 + y^2 + z^2)) dif S =$ #ans[$iiint_Omega 2/(sqrt(x^2 + y^2 + z^2)) dif v$]。
+    4. 设 $cos alpha, cos beta, cos gamma$ 是光滑闭曲面 $Sigma$ 的外法向量的方向余弦，
+    $Sigma$ 所围的空间闭区域为 $Omega$（坐标原点在 $Omega$ 外），
+    则用高斯公式化曲面积分为重积分时，有
+    $iint_Sigma (x cos alpha + y cos beta + z cos gamma) /(sqrt(x^2 + y^2 + z^2)) dif S$
+    $=$ #ans[$iiint_Omega 2/(sqrt(x^2 + y^2 + z^2)) dif v$]。
   ],
   a: [设
     $r=sqrt(x^2+y^2+z^2)$，
@@ -1281,7 +1316,11 @@
 
 #question(
   [
-    7. 设空间闭区域 $Omega$ 由曲面 $z = a^2 - x^2 - y^2$ 与平面 $z = 0$ 所围成, 其中 $a$ 为正整数, 记闭区域 $Omega$ 的表面外侧为 $S, Omega$ 的体积为 $V$ , 则 $iint_S x^2 y z^2 dif y dif z - x y^2 z^2 dif z dif x + z (1 + x y z) dif x dif y =$ #ans[$iiint_Omega (2 x y z^2 - 2 x y^2 z + 1 + x y z) dif v$]。
+    7. 设空间闭区域 $Omega$ 由曲面 $z = a^2 - x^2 - y^2$ 与平面 $z = 0$ 所围成，
+    其中 $a$ 为正整数，记闭区域 $Omega$ 的表面外侧为 $S$，$Omega$ 的体积为 $V$，
+    则
+    $iint_S x^2 y z^2 dif y dif z - x y^2 z^2 dif z dif x + z (1 + x y z) dif x dif y$
+    $=$ #ans[$iiint_Omega (2 x y z^2 - 2 x y^2 z + 1 + x y z) dif v$]。
   ],
   a: [写成高斯公式标准形式
     $iint_S P dif y dif z+Q dif z dif x+R dif x dif y$，其中
@@ -1637,7 +1676,12 @@
     4. 设 $Sigma$ 为平面 $2x + 2y + z - 2 = 0$ 被三个坐标面所截的在第一卦限的部分，则 $iint_Sigma (2x + 2y + z) dif S =$（ #choice[C] ）。
     A. $3/4$ #quad B. $3/2$ #quad C. 3 #quad D. 6
   ],
-  p: [在曲面 $Sigma$ 上，$2x + 2y + z = 2$，故积分为 $2 iint_Sigma dif S = 2 S_Sigma$。平面法向量 $bold(n) = (2, 2, 1)$，其在 $x O y$ 面投影 $D$ 为由 $x=0, y=0, 2x+2y=2$ 围成的三角形，面积 $1/2$。$cos gamma = 1 / sqrt(2^2+2^2+1^2) = 1/3$。故 $S_Sigma = (1/2) / (1/3) = 3/2$。积分为 $2 dot 3/2 = 3$。],
+  p: [
+    在曲面 $Sigma$ 上，$2x + 2y + z = 2$，故积分为 $2 iint_Sigma dif S = 2 S_Sigma$。
+    平面法向量 $bold(n) = (2, 2, 1)$，其在 $x O y$ 面投影 $D$ 为由 $x=0, y=0, 2x+2y=2$ 围成的三角形，面积 $1/2$。
+    $cos gamma = 1 / sqrt(2^2+2^2+1^2) = 1/3$。
+    故 $S_Sigma = (1/2) / (1/3) = 3/2$。积分为 $2 dot 3/2 = 3$。
+  ],
   a: [C.],
 )
 
@@ -1646,7 +1690,11 @@
     5. 已知 $( (x + a y) dif x + y dif y ) / (x + y)^2$ 为某个函数的全微分，则 $a =$（ #choice[D] ）。
     A. -1 #quad B. 0 #quad C. 1 #quad D. 2
   ],
-  p: [全微分条件 $(partial P) / (partial y) = (partial Q) / (partial x)$。$P = (x+a y)/(x+y)^2, Q = y/(x+y)^2$。$(partial P) / (partial y) = (a(x+y)^2 - 2(x+y)(x+a y))/(x+y)^4 = (a x + a y - 2x - 2a y)/(x+y)^3 = ((a-2)x - a y)/(x+y)^3$。$(partial Q) / (partial x) = -2y/(x+y)^3$。对比系数得 $a-2=0, -a=-2$，故 $a=2$。],
+  p: [
+    全微分条件 $(partial P) / (partial y) = (partial Q) / (partial x)$。$P = (x+a y)/(x+y)^2, Q = y/(x+y)^2$。
+    $(partial P) / (partial y) = (a(x+y)^2 - 2(x+y)(x+a y))/(x+y)^4 = (a x + a y - 2x - 2a y)/(x+y)^3 = ((a-2)x - a y)/(x+y)^3$。
+    $(partial Q) / (partial x) = -2y/(x+y)^3$。对比系数得 $a-2=0, -a=-2$，故 $a=2$。
+  ],
   a: [D.],
 )
 

@@ -423,7 +423,11 @@
     4. 设幂级数 $sum_(n=0)^oo (a^n - b^n) / (a^n + b^n) x^n$ ($0 < a < b$)，则幂级数的收敛半径 $R$ 为（ #choice[D] ）。
     A. $b$ #quad B. $1/a$ #quad C. $1/b$ #quad D. 与 $a, b$ 无关
   ],
-  p: [计算系数比值的极限：$lim_{n arrow oo} |c_n / c_{n+1}| = lim_{n arrow oo} | ( (a^n - b^n)/(a^n + b^n) ) / ( (a^{n+1} - b^{n+1})/(a^{n+1} + b^{n+1}) ) | = lim_{n arrow oo} | (-1)/(-1) | = 1$。收敛半径 $R = 1$，与 $a, b$ 无关。],
+  p: [计算系数比值的极限：
+    $lim_{n arrow oo} |c_n / c_{n+1}|$
+    $= lim_{n arrow oo} | ((a^n - b^n)/(a^n + b^n)) / ((a^{n+1} - b^{n+1})/(a^{n+1} + b^{n+1})) |$
+    $= lim_{n arrow oo} | (-1)/(-1) | = 1$。
+    收敛半径 $R = 1$，与 $a, b$ 无关。],
 )
 
 #question(
@@ -560,7 +564,10 @@
     A. $sum_(n=0)^oo b^n / (a + b x_0)^(n+1) (x - x_0)^n$ #quad B. $sum_(n=0)^oo (b / (a + b x_0))^n (x - x_0)^n$ \
     C. $sum_(n=0)^oo (-1)^n (b / (a + b x_0))^n (x - x_0)^n$ #quad D. $sum_(n=0)^oo (-b)^n / (a + b x_0)^(n+1) (x - x_0)^n$
   ],
-  p: [$f(x) = 1 / ((a + b x_0) + b(x - x_0)) = 1 / (a + b x_0) dot 1 / (1 + b/(a + b x_0)(x - x_0)) = 1 / (a + b x_0) sum_{n=0}^oo (-b/(a + b x_0))^n (x - x_0)^n = sum_{n=0}^oo (-b)^n / (a + b x_0)^{n+1} (x - x_0)^n$。],
+  p: [$f(x) = 1 / ((a + b x_0) + b(x - x_0))$
+    $= 1 / (a + b x_0) dot 1 / (1 + b/(a + b x_0)(x - x_0))$
+    $= 1 / (a + b x_0) sum_{n=0}^oo (-b/(a + b x_0))^n (x - x_0)^n$
+    $= sum_{n=0}^oo (-b)^n / (a + b x_0)^{n+1} (x - x_0)^n$。],
 )
 
 #question(
@@ -1533,7 +1540,10 @@
 
 #question(
   [
-    10. 设 $I = iiint_Omega dif v / (1 + x^2 + y^2)$，其中空间闭区域 $Omega$ 由 $z = sqrt(x^2 + y^2)$ 与 $z = 1$ 围成，则 $I$ 在柱面坐标系下的三次积分为 #ans[$int_0^(2 pi) dif theta int_0^1 rho dif rho int_rho^1 rho / (1 + rho^2) dif z$]。
+    10. 设 $I = iiint_Omega dif v / (1 + x^2 + y^2)$，其中空间闭区域 $Omega$ 由
+    $z = sqrt(x^2 + y^2)$ 与 $z = 1$ 围成，
+    则 $I$ 在柱面坐标系下的三次积分为
+    #ans[$int_0^(2 pi) dif theta int_0^1 rho dif rho int_rho^1 rho / (1 + rho^2) dif z$]。
   ],
   a: [柱坐标下
     $x^2+y^2=rho^2, dif v=rho dif z dif rho dif theta$。
@@ -2026,13 +2036,13 @@
 
 #question(
   [
-    6. 已知 $|bold(a)| = 4$ ，向量 $bold(a)$ 与轴 $u$ 的夹角是 $pi / 3$ ，则 $op("Prj")_u bold(a) =$ #ans[$2$] .
+    6. 已知 $|bold(a)| = 4$ ，向量 $bold(a)$ 与轴 $u$ 的夹角是 $pi / 3$ ，则 $Prj_u bold(a) =$ #ans[$2$] .
   ],
   a: [向轴 $u$ 的标量投影为
-    $op("Prj")_u bold(a)=|bold(a)| cos(pi/3)$。
+    $Prj_u bold(a)=|bold(a)| cos(pi/3)$。
     代入
     $|bold(a)|=4$，得
-    $op("Prj")_u bold(a)=4 dot 1/2=2$。],
+    $Prj_u bold(a)=4 dot 1/2=2$。],
 )
 
 #question(
@@ -2245,7 +2255,10 @@
 
 #question(
   [
-    16. 计算 $iint_( Sigma ) x^3 dif y dif z + [(1/z) f(y/z) + y^3] dif z dif x + [(1/y) f(y/z) + z^3] dif x dif y$ ，其中 $f$ 具有一阶连续导数， $Sigma$ 为锥面 $x = sqrt(y^2 + z^2)$ 和球面 $x^2 + y^2 + z^2 = 1$ 所围立体表面的外侧。
+    16. 计算
+    $iint_( Sigma ) x^3 dif y dif z + [(1/z) f(y/z) + y^3] dif z dif x + [(1/y) f(y/z) + z^3] dif x dif y$，
+    其中 $f$ 具有一阶连续导数，$Sigma$ 为锥面 $x = sqrt(y^2 + z^2)$ 和
+    球面 $x^2 + y^2 + z^2 = 1$ 所围立体表面的外侧。
   ],
   a: [记向量场
     $bold(F)=(P,Q,R)$，其中

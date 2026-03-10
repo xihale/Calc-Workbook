@@ -28,7 +28,7 @@
     3. 设 $D$ 是由直线 $x = 0, y = 0, x + y = 3, x + y = 5$ 所围成的闭区域，记 $I_1 = iint_D ln(x + y) dif sigma, I_2 = iint_D ln^2(x + y) dif sigma$，则（ #choice[A] ）。
     A. $I_1 < I_2$ #quad B. $I_1 > I_2$ #quad C. $I_2 = 2 I_1$ #quad D. 无法比较
   ],
-  p: [在积分区域 $D$ 上，$3 le x+y le 5$。由于 $x+y > e$，故 $ln(x+y) > 1$，从而 $\ln^2(x+y) > ln(x+y)$。因此 $I_2 > I_1$。],
+  p: [在积分区域 $D$ 上，$3 <= x+y <= 5$。由于 $x+y > e$，故 $ln(x+y) > 1$，从而 $\ln^2(x+y) > ln(x+y)$。因此 $I_2 > I_1$。],
 )
 
 #prob-type("二、填空题")
@@ -107,7 +107,7 @@
     A. $int_(-1)^2 dif x int_(x^2)^(x + 2) f(x, y) dif y$ #quad B. $int_(-1)^2 dif x int_0^2 f(x, y) dif y$ \
     C. $int_(-2)^1 dif x int_(x^2)^(x + 2) f(x, y) dif y$ #quad D. $int_0^1 dif x int_(x^2)^(x + 2) f(x, y) dif y$
   ],
-  p: [联立方程 $cases(y = x^2, y = x + 2)$ 得交点为 $(-1, 1)$ 和 $(2, 4)$。积分区域 $D$ 可表示为 $-1 le x le 2, x^2 le y le x+2$。故 $iint_D f(x, y) dif sigma = int_{-1}^2 dif x int_{x^2}^{x+2} f(x, y) dif y$。],
+  p: [联立方程 $cases(y = x^2, y = x + 2)$ 得交点为 $(-1, 1)$ 和 $(2, 4)$。积分区域 $D$ 可表示为 $-1 <= x <= 2, x^2 <= y <= x+2$。故 $iint_D f(x, y) dif sigma = int_{-1}^2 dif x int_{x^2}^{x+2} f(x, y) dif y$。],
 )
 
 #question(
@@ -116,7 +116,7 @@
     A. $int_0^4 dif y int_(y^2/4)^y f(x, y) dif x$ #quad B. $int_0^4 dif y int_(-y)^(y^2/4) f(x, y) dif x$ \
     C. $int_0^4 dif y int_(1/4)^y f(x, y) dif x$ #quad D. $int_0^4 dif y int_(y^2/2)^y f(x, y) dif x$
   ],
-  p: [积分区域由 $y = x$ 和 $y = 2 \sqrt{x}$ 围成，交点为 $(0, 0)$ 和 $(4, 4)$。改为 $Y$ 型区域，则 $0 le y le 4$，对于固定的 $y$，有 $y^2/4 le x le y$。故 $I = int_0^4 dif y int_{y^2/4}^y f(x, y) dif x$。],
+  p: [积分区域由 $y = x$ 和 $y = 2 sqrt(x)$ 围成，交点为 $(0, 0)$ 和 $(4, 4)$。改为 $Y$ 型区域，则 $0 <= y <= 4$，对于固定的 $y$，有 $y^2/4 <= x <= y$。故 $I = int_0^4 dif y int_{y^2/4}^y f(x, y) dif x$。],
 )
 
 #question(
@@ -152,7 +152,11 @@
 
 #question(
   [
-    9. 设闭区域 $D$ 由曲线 $y^2 = 2x$ 与直线 $y = x - 4$ 所围成，若将 $D$ 视为 $X$ 型区域，则其相应积分限为 #ans[$0 <= x <= 2, -sqrt(2x) <= y <= sqrt(2x)$ 和 $2 <= x <= 8, x - 4 <= y <= sqrt(2x)$]；若将 $D$ 视为 $Y$ 型区域，则其相应积分限为 #ans[$-2 <= y <= 4, y^2/2 <= x <= y + 4$]。
+    9. 设闭区域 $D$ 由曲线 $y^2 = 2x$ 与直线 $y = x - 4$ 所围成。
+    若将 $D$ 视为 $X$ 型区域，则其相应积分限为
+    #ans[$0 <= x <= 2, -sqrt(2x) <= y <= sqrt(2x)$ 和 $2 <= x <= 8, x - 4 <= y <= sqrt(2x)$]；
+    若将 $D$ 视为 $Y$ 型区域，则其相应积分限为
+    #ans[$-2 <= y <= 4, y^2/2 <= x <= y + 4$]。
   ],
   p: [交点为 $(2,-2)$ 和 $(8,4)$。$Y$ 型更简单。],
 )
@@ -227,7 +231,7 @@
     A. $int_0^1 dif y int_0^(sqrt(y - y^2)) f(x, y) dif x$ #quad B. $int_0^1 dif y int_0^(sqrt(1 - y^2)) f(x, y) dif x$ \
     C. $int_0^1 dif x int_0^1 f(x, y) dif y$ #quad D. $int_0^1 dif x int_0^(sqrt(x - x^2)) f(x, y) dif y$
   ],
-  p: [极坐标方程 $rho = \cos theta$ 对应直角坐标方程 $x^2 + y^2 = x$。由于 $0 le theta le pi/2$，区域在第一象限，即 $0 le x le 1, 0 le y le \sqrt{x-x^2}$。故二次积分为 $int_0^1 dif x int_0^{\sqrt{x-x^2}} f(x, y) dif y$。],
+  p: [极坐标方程 $rho = cos theta$ 对应直角坐标方程 $x^2 + y^2 = x$。由于 $0 <= theta <= pi/2$，区域在第一象限，即 $0 <= x <= 1, 0 <= y <= sqrt(x-x^2)$。故二次积分为 $int_0^1 dif x int_0^{sqrt(x-x^2)} f(x, y) dif y$。],
   a: [D.],
 )
 
@@ -236,7 +240,13 @@
     2. 设闭区域 $D$ 关于直线 $y = x$ 对称，则有 $iint_D f(x, y) dif sigma = iint_D f(y, x) dif sigma$。用此结论可得 $iint_(x^2 + y^2 <= 2) (x^2 + y^2/4) dif sigma =$（ #choice[C] ）。
     A. $pi$ #quad B. $3/2 pi$ #quad C. $5/4 pi$ #quad D. $2 pi$
   ],
-  p: [由对称性，$iint_D x^2 dif sigma = iint_D y^2 dif sigma$。故 $I = iint_D (x^2 + y^2/4) dif sigma = 5/4 iint_D x^2 dif sigma = 5/8 iint_D (x^2 + y^2) dif sigma = 5/8 int_0^{2pi} \dif theta int_0^{\sqrt{2}} rho^3 \dif rho = 5/4 pi$。],
+  p: [由对称性，$iint_D x^2 dif sigma = iint_D y^2 dif sigma$。
+    故
+    $I = iint_D (x^2 + y^2/4) dif sigma$
+    $= 5/4 iint_D x^2 dif sigma$
+    $= 5/8 iint_D (x^2 + y^2) dif sigma$
+    $= 5/8 int_0^{2pi} dif theta int_0^{sqrt(2)} rho^3 dif rho$
+    $= 5/4 pi$。],
   a: [C.],
 )
 
@@ -422,7 +432,9 @@
 
 #question(
   [
-    3. 设 $Omega$ 是由曲面 $z = x^2 + y^2$ 和 $z = 2 - x^2 - y^2$ 所围成的空间闭区域，则 $iiint_Omega f(x, y, z) dif v$ 在柱面坐标系下的三次积分为 #ans[$int_0^(2 pi) dif theta int_0^1 dif rho int_(rho^2)^(2 - rho^2) f(rho cos theta, rho sin theta, z) rho dif z$]。
+    3. 设 $Omega$ 是由曲面 $z = x^2 + y^2$ 和 $z = 2 - x^2 - y^2$ 所围成的空间闭区域，
+    则 $iiint_Omega f(x, y, z) dif v$ 在柱面坐标系下的三次积分为
+    #ans[$int_0^(2 pi) dif theta int_0^1 dif rho int_(rho^2)^(2 - rho^2) f(rho cos theta, rho sin theta, z) rho dif z$]。
   ],
   p: [两曲面交线为 $x^2+y^2=1$。在柱面坐标下 $rho$ 范围为 $0$ 到 $1$，$z$ 范围从下曲面 $rho^2$ 到上曲面 $2-rho^2$。],
 )
@@ -651,20 +663,30 @@
 
 #question(
   [
-    5. 设闭区域 $D$ 由直线 $x = 0, y = 0, x + y = 1/2, x + y = 1$ 所围成，记 $I_1 = iint_D ln(x + y) dif sigma$，$I_2 = iint_D (x + y) dif sigma, I_3 = iint_D sin(x + y) dif sigma$，则 $I_1, I_2, I_3$ 间的大小关系为（ #choice[C] ）。
+    5. 设闭区域 $D$ 由直线 $x = 0, y = 0, x + y = 1/2, x + y = 1$ 所围成，
+    记 $I_1 = iint_D ln(x + y) dif sigma$，
+    $I_2 = iint_D (x + y) dif sigma, I_3 = iint_D sin(x + y) dif sigma$，
+    则 $I_1, I_2, I_3$ 间的大小关系为（ #choice[C] ）。
     A. $I_1 < I_2 < I_3$ #quad B. $I_3 < I_2 < I_1$ \
     C. $I_1 < I_3 < I_2$ #quad D. $I_2 < I_1 < I_3$
   ],
-  p: [在积分区域 $D$ 上，$1/2 le x+y le 1$。在这个范围内：ln 函数值为负，故 $I_1 < 0$；又因为 $sin(x+y) < x+y$，故 $I_3 < I_2$。综上，$I_1 < I_3 < I_2$。],
+  p: [在积分区域 $D$ 上，$1/2 <= x+y <= 1$。在这个范围内：ln 函数值为负，故 $I_1 < 0$；又因为 $sin(x+y) < x+y$，故 $I_3 < I_2$。综上，$I_1 < I_3 < I_2$。],
 )
 
 #question(
   [
     6. 设 $f(x, y)$ 是连续函数，则二次积分 $int_(-6)^2 dif x int_((x^2/4) - 1)^(2 - x) f(x, y) dif y =$（ #choice[D] ）。
     A. $int_(-8)^2 dif y int_(2 sqrt(y + 1))^(2 - y) f(x, y) dif x$ #quad B. $int_(-8)^2 dif y int_(-6)^(2 - y) f(x, y) dif x$ \
-    C. $int_(-1)^2 dif y int_(-2 sqrt(y + 1))^(2 sqrt(y + 1)) f(x, y) dif x + int_2^8 dif y int_(2 sqrt(y + 1))^(2 - y) f(x, y) dif x$ #quad D. $int_(-1)^0 dif y int_(-2 sqrt(y + 1))^(2 sqrt(y + 1)) f(x, y) dif x + int_0^8 dif y int_(-2 sqrt(y + 1))^(2 - y) f(x, y) dif x$
+    C. $int_(-1)^2 dif y int_(-2 sqrt(y + 1))^(2 sqrt(y + 1)) f(x, y) dif x$
+    $+ int_2^8 dif y int_(2 sqrt(y + 1))^(2 - y) f(x, y) dif x$ #quad
+    D. $int_(-1)^0 dif y int_(-2 sqrt(y + 1))^(2 sqrt(y + 1)) f(x, y) dif x$
+    $+ int_0^8 dif y int_(-2 sqrt(y + 1))^(2 - y) f(x, y) dif x$
   ],
-  p: [积分区域由 $y = x^2/4 - 1$ 和 $y = 2-x$ 围成。交点为 $(-6, 8)$ 和 $(2, 0)$。改为 $Y$ 型积分时，在 $y in [-1, 0]$ 段，$x$ 的范围是 $[-2 sqrt(y + 1), 2 sqrt(y + 1)]$；在 $y in [0, 8]$ 段，$x$ 的范围是 $[-2 sqrt(y + 1), 2 - y]$。故选 D。],
+  p: [积分区域由 $y = x^2/4 - 1$ 和 $y = 2-x$ 围成，交点为 $(-6, 8)$ 和 $(2, 0)$。
+    改为 $Y$ 型积分时，在 $y in [-1, 0]$ 段，
+    $x$ 的范围是 $[-2 sqrt(y + 1), 2 sqrt(y + 1)]$；
+    在 $y in [0, 8]$ 段，$x$ 的范围是 $[-2 sqrt(y + 1), 2 - y]$。
+    故选 D。],
 )
 
 #question(

@@ -11,7 +11,7 @@
     1. 设 $L$ 为从点 $A(1, 0)$ 到点 $B(-1, 2)$ 的线段，则 $int_L (x + y) dif s =$（ #choice[B] ）。
     A. $sqrt(2)$ #quad B. $2 sqrt(2)$ #quad C. 2 #quad D. 0
   ],
-  a: [B.],
+  p: [直线 $A B$ 方程为 $y - 0 = (2 - 0) / (-1 - 1) (x - 1)$，即 $y = 1 - x$，从而 $x + y = 1$。$L$ 的长度 $l = sqrt((-1 - 1)^2 + (2 - 0)^2) = 2 sqrt(2)$。故 $int_L (x + y) dif s = int_L 1 dif s = 2 sqrt(2)$。],
 )
 
 #question(
@@ -20,7 +20,7 @@
     A. $int_(2 pi)^0 dif theta$ #quad B. $int_0^(2 pi) dif theta$ \
     C. $int_0^(2 pi) r^2 dif theta$ #quad D. $int_0^(2 pi) sqrt(2) dif theta$
   ],
-  a: [B.],
+  p: [在单位圆 $L$ 上，$x^2 + y^2 = 1$。利用极坐标，$dif s = 1 dif theta$（此处 $r=1$）。故 $oint_L (x^2 + y^2) dif s = int_0^(2 pi) 1 dot 1 dif theta = int_0^(2 pi) dif theta$。],
 )
 
 #question(
@@ -29,7 +29,7 @@
     A. $1/12 (5 sqrt(5) - 1)$ #quad B. $5 sqrt(5) - 1$ \
     C. $1/12$ #quad D. $1/8 (5 sqrt(5) - 1)$
   ],
-  a: [A.],
+  p: [由 $y = x^2$ 得 $y' = 2x$，故 $dif s = sqrt(1 + 4x^2) dif x$。$I = int_0^1 x sqrt(1 + 4x^2) dif x = 1/8 int_0^1 sqrt(1 + 4x^2) dif (1 + 4x^2) = 1/8 [ 2/3 (1 + 4x^2)^(3/2) ]_0^1 = 1/12 (5 sqrt(5) - 1)$。],
 )
 
 #question(
@@ -38,7 +38,7 @@
     A. $int_0^1 sqrt(2) e^(sqrt(2) x) dif x$ #quad B. $int_0^1 sqrt(2) e^(sqrt(2) y) dif y$ \
     C. $int_0^(sqrt(2)) sqrt(2) e^r dif r$ #quad D. $int_0^(sqrt(2)) e^r dif r$
   ],
-  a: [
+  p: [
     线段参数可取 $x=t, y=t, 0<=t<=1$，则
     $dif s=sqrt((dif x)^2+(dif y)^2)=sqrt(2) dif t$，且 $sqrt(x^2+y^2)=sqrt(2)t$。
     所以原积分
@@ -46,7 +46,7 @@
     与 A、B 等价。
 
     令 $r=sqrt(x^2+y^2)=sqrt(2)t$ 时，$dif r=dif s$，
-    原积分也等于 $int_0^(sqrt(2)) e^r dif r$，即 D。
+    原积分也等于 $int_0^(sqrt(2)) e^r dif r$，即 D与原积分等价。
     只有 C 多了一个 $sqrt(2)$ 系数，不相等。
   ],
 )
@@ -57,9 +57,9 @@
   [
     5. 设 $L$ 为曲线 $cases(x = 2 cos t, y = 2 sin t, z = t)$，介于 $t = 0$ 到 $t = pi$ 的一段弧，则 $int_L z / (x^2 + y^2) dif s =$ #ans[$sqrt(5) pi^2 / 8$]。
   ],
-  a: [参数方程下 $x^2+y^2=4, z=t$，且 $r'(t)=(-2sin t, 2cos t, 1)$，故 $dif s = norm(r'(t)) dif t = sqrt(5) dif t$。
+  p: [参数方程下 $x^2+y^2=4, z=t$，且 $r'(t)=(-2sin t, 2cos t, 1)$，故 $dif s = norm(r'(t)) dif t = sqrt(5) dif t$。
     积分为
-    $int_0^pi (t/4) sqrt(5) dif t = (sqrt(5)/4) dot (pi^2/2) = sqrt(5) pi^2 / 8$。],
+    $int_0^{pi} (t/4) sqrt(5) dif t = (sqrt(5)/4) dot (pi^2/2) = sqrt(5) pi^2 / 8$。],
 )
 
 #question(
@@ -85,20 +85,20 @@
     7. 设在 $x O y$ 面内有一线密度为 $mu(x, y)$ 的曲线弧 $L$，则此曲线弧关于 $x$ 轴的转动惯量为 $I_x =$ #ans[$int_L y^2 mu(x, y) dif s$]，关于 $y$ 轴的转动惯量为 $I_y =$ #ans[$int_L x^2 mu(x, y) dif s$]，其质心坐标 $(overline(x), overline(y))$ 中 $overline(x) =$ #ans[$(int_L x mu(x, y) dif s) / (int_L mu(x, y) dif s)$]，$overline(y) =$ #ans[$(int_L y mu(x, y) dif s) / (int_L mu(x, y) dif s)$]。
   ],
   a: [设线弧总质量
-    $M=int_L mu(x,y) dif s$。
-    微元质量为 $dif m=mu(x,y) dif s$。
+    $M=int_L mu(x, y) dif s$。
+    微元质量为 $dif m=mu(x, y) dif s$。
 
     关于 $x$ 轴的转动惯量定义为
-    $I_x=int y^2 dif m=int_L y^2 mu(x,y) dif s$；
+    $I_x=int y^2 dif m=int_L y^2 mu(x, y) dif s$；
     同理关于 $y$ 轴有
-    $I_y=int x^2 dif m=int_L x^2 mu(x,y) dif s$。
+    $I_y=int x^2 dif m=int_L x^2 mu(x, y) dif s$。
 
     质心定义
     $overline(x)=1/M int x dif m,
     overline(y)=1/M int y dif m$，
     故
-    $overline(x)= (int_L x mu(x,y) dif s)/(int_L mu(x,y) dif s)$，
-    $overline(y)= (int_L y mu(x,y) dif s)/(int_L mu(x,y) dif s)$。],
+    $overline(x)= (int_L x mu(x, y) dif s)/(int_L mu(x, y) dif s)$，
+    $overline(y)= (int_L y mu(x, y) dif s)/(int_L mu(x, y) dif s)$。],
 )
 
 #prob-type("三、计算题")
@@ -239,15 +239,15 @@
     A. $int_0^1 2x^2 dif x$ #quad B. $int_1^0 x dif y$ \
     C. $int_1^0 2x^2 dif x$ #quad D. $int_0^1 sqrt(y) dif y$
   ],
-  a: [C.],
+  p: [由 $y = x^2$ 得 $dif y = 2x dif x$。起点 $A(1, 1)$ 对应 $x = 1$，终点 $B(0, 0)$ 对应 $x = 0$。故 $int_L x dif y = int_1^0 x (2x dif x) = int_1^0 2x^2 dif x$。],
 )
 
 #question(
   [
     2. 设 $L$ 为从点 $(a, 0)$ 到点 $(-a, 0)$ 的线段，则 $int_L (x + y^2) dif x =$（ #choice[D] ）。
-    A. $a^2/2$ #quad B. $2a$ #quad C. 1 #quad D. 0
+    A. $a^2/2$ #quad B. $2 a$ #quad C. 1 #quad D. 0
   ],
-  a: [D.],
+  p: [在线段 $L$ 上，$y = 0$，故 $int_L (x + y^2) dif x = int_a^(-a) x dif x = [ 1/2 x^2 ]_a^(-a) = 0$。],
 )
 
 #question(
@@ -255,7 +255,7 @@
     3. 设 $L$ 为抛物线 $2y = x^2$ 上从点 $A(1, 1/2)$ 到点 $B(2, 2)$ 的一段弧，则 $int_L (2x/y) dif x - (x^2/y^2) dif y =$（ #choice[B] ）。
     A. -3 #quad B. 0 #quad C. $3/2$ #quad D. 3
   ],
-  a: [B.],
+  p: [观察被积表达式可知 $(2x/y) dif x - (x^2/y^2) dif y = dif (x^2/y)$。故 $I = [ x^2/y ]_A^B = 2^2/2 - 1^2/(1/2) = 2 - 2 = 0$。],
 )
 
 #question(
@@ -263,7 +263,7 @@
     4. 设 $L$ 为从点 $(0, 0)$ 沿折线 $y = 1 - |x - 1|$ 到点 $A(2, 0)$ 的折线段，则 $int_L -y dif x + x dif y =$（ #choice[D] ）。
     A. 0 #quad B. -1 #quad C. 2 #quad D. -2
   ],
-  a: [D.],
+  p: [封闭曲线 $L + A O$ 围成的面积 $S = 1$。由格林公式，$oint_{L+AO} -y dif x + x dif y = 2 iint_D dif sigma = 2$。又 $int_{A O} -y dif x + x dif y = int_2^0 0 dif x = 0$。故 $int_L = 2$。但注意格林公式要求正向（逆时针），此题折线从 $(0,0)$ 经 $(1,1)$ 到 $(2,0)$ 是顺时针方向，故应为 -2。],
 )
 
 #prob-type("二、填空题")
@@ -272,7 +272,7 @@
   [
     5. 设 $L$ 为抛物线 $y = x^2$ 上从点 $A(0, 0)$ 到点 $B(1, 1)$ 的一段弧，则 $int_L x dif y =$ #ans[$2/3$]。
   ],
-  a: [曲线可用 $x$ 作参数：$y=x^2, 0<=x<=1$，
+  p: [曲线可用 $x$ 作参数：$y=x^2, 0<=x<=1$，
     因而
     $dif y=2x dif x$。
     所以
@@ -298,7 +298,7 @@
     代回原式：
     $int_L P dif x+Q dif y
     =int_L [ (2sqrt(x))/sqrt(1+4x) P(x,y)
-    +1/sqrt(1+4x) Q(x,y)] dif s$。],
+      +1/sqrt(1+4x) Q(x,y)] dif s$。],
 )
 
 #question(
@@ -344,7 +344,7 @@
   [
     9. 计算 $int_L (x^2 - y^2) dif x$，其中 $L$ 为抛物线 $y = x^2$ 上从点 $(0, 0)$ 到点 $(2, 4)$ 的一段弧。
   ],
-  a: [沿抛物线取参数 $x=t, y=t^2$，$0<=t<=2$，则 $dif x=dif t$。
+  p: [沿抛物线取参数 $x=t, y=t^2$，$0<=t<=2$，则 $dif x=dif t$。
     原积分
     $int_L (x^2-y^2) dif x
     =int_0^2 (t^2-t^4) dif t
@@ -398,7 +398,7 @@
     设
     $P=x^2+2x y, Q=x^2+y^4$。
     先验路径无关性：
-    $partial P/partial y=2x, partial Q/partial x=2x$，
+    $(partial P)/(partial y)=2x, (partial Q)/(partial x)=2x$，
     故积分与路径无关。
 
     求势函数 $U$：
@@ -423,10 +423,10 @@
 #question(
   [
     1. 设有界闭区域 $D$ 由分段光滑曲线 $L$ 围成，$L$ 取正向。若函数 $P(x, y), Q(x, y)$ 在 $D$ 上具有一阶连续偏导数，则 $oint_L P dif x + Q dif y =$（ #choice[D] ）。
-    A. $iint_D (partial P / partial y - partial Q / partial x) dif sigma$ #quad B. $iint_D (partial Q / partial y - partial P / partial x) dif sigma$ \
-    C. $iint_D (partial P / partial x - partial Q / partial y) dif sigma$ #quad D. $iint_D (partial Q / partial x - partial P / partial y) dif sigma$
+    A. $iint_D ((partial P) / (partial y) - (partial Q) / (partial x)) dif sigma$ #quad B. $iint_D ((partial Q) / (partial y) - (partial P) / (partial x)) dif sigma$ \
+    C. $iint_D ((partial P) / (partial x) - (partial Q) / (partial y)) dif sigma$ #quad D. $iint_D ((partial Q) / (partial x) - (partial P) / (partial y)) dif sigma$
   ],
-  a: [D.],
+  p: [此为格林公式的标准形式。],
 )
 
 #question(
@@ -434,7 +434,7 @@
     2. 设 $L: x^2 + y^2 = a^2$，取逆时针方向，则 $oint_L x y^2 dif y - x^2 y dif x =$（ #choice[C] ）。
     A. $pi a^2 / 2$ #quad B. $-pi a^4 / 2$ #quad C. $pi a^4 / 2$ #quad D. $-pi a^4$
   ],
-  a: [C.],
+  p: [由格林公式，$I = iint_D (y^2 - (-x^2)) dif sigma = iint_D (x^2 + y^2) dif sigma = int_0^(2 pi) dif theta int_0^a rho^2 dot rho dif rho = 1/2 pi a^4$。],
 )
 
 #question(
@@ -442,7 +442,7 @@
     3. 设面积为 3 的平面有界闭区域 $D$ 由分段光滑曲线 $L$ 围成，$L$ 取正向，则 $oint_L y dif x + 2 dif y =$（ #choice[B] ）。
     A. 3 #quad B. -3 #quad C. -1 #quad D. 无法计算
   ],
-  a: [B.],
+  p: [由格林公式，$I = iint_D ( (partial 2) / (partial x) - (partial y) / (partial y) ) dif sigma = iint_D (0 - 1) dif sigma = -sigma(D) = -3$。],
 )
 
 #prob-type("二、填空题")
@@ -593,10 +593,10 @@
 #question(
   [
     1. 设函数 $f(x)$ 连续可微且 $f(0) = -2$， $int_L (y sin 2x - y f(x) tan x) dif x + f(x) dif y$ 与路径无关，则 $f(x) =$（ #choice[B] ）。
-    A. $-2/3 cos^2 x - 4/(3 cos x)$ #quad B. $-2 cos^2 x$ \
-    C. $-2 cos x$ #quad D. $-2/3 cos x - 4/(3 cos x)$
+    A. $-2/3 cos^2 x - 4/((3 cos x))$ #quad B. $-2 cos^2 x$ \
+    C. $-2 cos x$ #quad D. $-2/3 cos x - 4/((3 cos x))$
   ],
-  a: [B.],
+  p: [路径无关条件为 $(partial P) / (partial y) = (partial Q) / (partial x)$，即 $sin 2x - f(x) tan x = f'(x)$。这是一阶线性微分方程：$f'(x) + f(x) tan x = sin 2x$。积分因子为 $1/cos x$，则 $(f(x)/cos x)' = 2 sin x cos x / cos x = 2 sin x$。故 $f(x)/cos x = -2 cos x + C$。代入 $f(0)=-2$ 得 $C=0$，故 $f(x) = -2 cos^2 x$。],
 )
 
 #question(
@@ -604,7 +604,7 @@
     2. $int_L (2x(x^2 + y^2)^alpha)/y dif x - (x^2(x^2 + y^2)^alpha)/y^2 dif y$ 在不与 $x$ 轴相交的区域上与路径无关，则 $alpha =$（ #choice[D] ）。
     A. $1/2$ #quad B. $-1/2$ #quad C. 任意值 #quad D. 0
   ],
-  a: [D.],
+  p: [路径无关要求 $(partial P) / (partial y) = (partial Q) / (partial x)$。计算得 $(partial P) / (partial y) = (2x dot alpha(x^2+y^2)^(alpha-1) dot 2y dot y - 2x(x^2+y^2)^alpha)/y^2$。$(partial Q) / (partial x) = -(2x(x^2+y^2)^alpha + x^2 dot alpha(x^2+y^2)^(alpha-1) dot 2x)/y^2$。化简相等条件可得 $alpha = 0$。],
 )
 
 #question(
@@ -612,7 +612,7 @@
     3. 若 $int_L (x^2 - 3y) dif x + (a x - sin^2 y) dif y$ 与路径无关，则 $a =$（ #choice[B] ）。
     A. $-1/3$ #quad B. $-3$ #quad C. $1/3$ #quad D. 3
   ],
-  a: [B.],
+  p: [由 $(partial P) / (partial y) = (partial Q) / (partial x)$ 得 $-3 = a$。],
 )
 
 #question(
@@ -621,7 +621,7 @@
     A. $(x + 2 y) dif x + (2 x + y) dif y$ #quad B. $2 x y dif x + x^2 dif y$ \
     C. $e^(y) dif x + (x e^(y) - 2 y) dif y$ #quad D. $(x^2 + y^2) dif x + x y dif y$
   ],
-  a: [D.],
+  p: [对 D 选项，$P = x^2+y^2, Q = x y$，则 $P_y = 2y, Q_x = y$。$P_y != Q_x$，故不是全微分。],
 )
 
 #prob-type("二、填空题")
@@ -651,7 +651,7 @@
 
 #question(
   [
-    6. 为使得 $int_(A B) f(x, y)(y dif x + x dif y)$ 与路径无关，则可微函数 $f(x, y)$ 应满足 #ans[$x partial f / partial x = y partial f / partial y$]。
+    6. 为使得 $int_(A B) f(x, y)(y dif x + x dif y)$ 与路径无关，则可微函数 $f(x, y)$ 应满足 #ans[$x (partial f) / (partial x) = y (partial f) / (partial y)$]。
   ],
   a: [把积分写成
     $int_(A B) M dif x+N dif y$，其中
@@ -665,7 +665,7 @@
     相等即
     $y f_y=x f_x$，
     即
-    $x partial f/partial x=y partial f/partial y$。],
+    $x (partial f)/(partial x)=y (partial f)/(partial y)$。],
 )
 
 #prob-type("三、计算题")
@@ -678,8 +678,7 @@
     设
     $P(x,y)=6x y^2-y^3, Q(x,y)=6x^2 y-3x y^2$。
     计算得
-    $partial P/partial y = 12x y-3y^2,
-    partial Q/partial x = 12x y-3y^2$，
+    $(partial P)/(partial y) = 12x y-3y^2, (partial Q)/(partial x) = 12x y-3y^2$，
     在全平面相等，故积分与路径无关。
 
     求势函数：
@@ -772,6 +771,7 @@
     A. $int_0^(2 pi) dif theta int_0^1 sqrt(1 + 4 r^2) r dif r$ #quad B. $int_0^(2 pi) dif theta int_0^2 sqrt(1 + 4 r^2) r dif r$ \
     C. $int_0^(2 pi) dif theta int_0^2 (2 - r^2) sqrt(1 + 4 r^2) r dif r$ #quad D. $int_0^(2 pi) dif theta int_0^(sqrt(2)) sqrt(1 + 4 r^2) r dif r$
   ],
+  p: [抛物面在 $x O y$ 面上方的部分，对应 $2 - x^2 - y^2 >= 0$，即 $x^2 + y^2 <= 2$。其投影区域 $D$ 为圆域 $r <= sqrt(2)$。由 $z = 2 - x^2 - y^2$ 得 $z_x = -2x, z_y = -2y$，故 $dif S = sqrt(1 + z_x^2 + z_y^2) dif sigma = sqrt(1 + 4x^2 + 4y^2) dif x dif y$。在极坐标下为 $sqrt(1 + 4 r^2) r dif r dif theta$。故选 D。],
   a: [D.],
 )
 
@@ -781,6 +781,7 @@
     A. $iint_Sigma x dif S$ #quad B. $iint_Sigma x rho(x, y, z) dif S$ \
     C. $iint_Sigma x^2 dif S$ #quad D. $iint_Sigma (y^2 + z^2) rho(x, y, z) dif S$
   ],
+  p: [转动惯量定义为各质点到旋转轴距离平方与质量之积的积分。点 $(x, y, z)$ 到 $x$ 轴的距离平方为 $y^2 + z^2$，质量微元为 $rho(x, y, z) dif S$。故选 D。],
   a: [D.],
 )
 
@@ -999,7 +1000,6 @@
     1. 设 $Sigma$ 为平面 $z = 0$ ($|x| <= 1, |y| <= 1$)，方向向下，则 $iint_Sigma dif x dif y =$（ #choice[C] ）。
     A. 1 #quad B. $iint_(D_(x y)) dif x dif y$ #quad C. $-iint_(D_(x y)) dif x dif y$ #quad D. 0
   ],
-  a: [C.],
 )
 
 #question(
@@ -1008,7 +1008,6 @@
     A. $iint_(x^2 + y^2 <= R^2) R^2 dif x dif y = pi R^4$ #quad B. $-iint_(x^2 + y^2 <= R^2) R^2 dif x dif y = -pi R^4$ \
     C. $int_0^(2 pi) dif theta int_0^R r^3 dif r = pi R^4 / 2$ #quad D. 0
   ],
-  a: [C.],
 )
 
 #prob-type("二、填空题")
@@ -1258,7 +1257,7 @@
     由高斯公式
     $iint_Sigma ... =iiint_Omega div bold(F) dif v$。
     计算散度：
-    $div bold(F)=partial(z-y)/partial x+partial(y-x)/partial y+partial(x-z)/partial z$
+    $div bold(F)=(partial(z-y))/(partial x)+(partial(y-x))/(partial y)+(partial(x-z))/(partial z)$
     $=0+0+0=0$。
     因而
     $iint_Sigma ... =iiint_Omega 0 dif v=0$。],
@@ -1483,8 +1482,8 @@
   a: [设 $grad f=(f_x,f_y,f_z)$，则
     $rot(grad f)=
     (f_(z y)-f_(y z),
-    f_(x z)-f_(z x),
-    f_(y x)-f_(x y))$。
+      f_(x z)-f_(z x),
+      f_(y x)-f_(x y))$。
     由二阶偏导连续（Clairaut 定理），混合偏导可交换，
     三个分量都为 0，故
     $rot(grad f)=bold(0)$。],
@@ -1608,15 +1607,19 @@
     1. 设 $L$ 为以三点 $O(0,0), A(1,0), B(0,1)$ 为顶点的三角形边界，则 $int_L (x + y) dif s =$ （#choice[C]）。
     A. $sqrt(2)$ #quad B. $2 + sqrt(2)$ #quad C. $1 + sqrt(2)$ #quad D. $1 + 2 sqrt(2)$
   ],
+  p: [三角形三边分别为 $L_1$: $y=0, x \in [0, 1]$；$L_2$: $x=0, y \in [0, 1]$；$L_3$: $x+y=1, x \in [0, 1]$。
+    $I_1 = int_0^1 x dif x = 1/2$; $I_2 = int_0^1 y dif y = 1/2$; $I_3 = int_L 1 dif s = sqrt(2)$。
+    总积分为 $1 + sqrt(2)$。],
   a: [C.],
 )
 
 #question(
   [
-    2. 设 $L$ 为抛物线 $y^2 = x$ 上从点 $A(1, -1)$ 到点 $B(1, 1)$ 的一段弧，$P(x, y)$ 是连续函数，则 $int_L P(x, y) dif x =$（ #choice[D] ）。
+    2. 设 $L$ 为抛物线 $y^2 = x$ 上从点 $A(1, -1)$ 到点 $B(1, 1)$ 的一段弧，$P(x, y)$ 是连续函数，则 $int_L P(x, y) dif x =$（ #choice[D] ).
     A. $2 int_0^1 P(x, sqrt(x)) dif x$ #quad B. $2 int_(-1)^0 P(x, -sqrt(x)) dif x$ \
     C. $int_0^1 P(x, -sqrt(x)) dif x + int_0^1 P(x, sqrt(x)) dif x$ #quad D. $int_1^0 P(x, -sqrt(x)) dif x + int_0^1 P(x, sqrt(x)) dif x$
   ],
+  p: [抛物线 $y^2=x$分上下两支。下支 $y = -sqrt(x)$，从 $(1, -1)$ 到 $(0, 0)$，$x$ 从 1 到 0；上支 $y = sqrt(x)$，从 $(0, 0)$ 到 $(1, 1)$，$x$ 从 0 到 1。故选 D。],
   a: [D.],
 )
 
@@ -1625,6 +1628,7 @@
     3. 设 $L$ 为圆 $x^2 + y^2 = -2x$ 的正向边界，则 $oint_L (x^3 - y) dif x + (x - y^3) dif y =$（ #choice[D] ）。
     A. $-2 pi$ #quad B. 0 #quad C. $3/2 pi$ #quad D. $2 pi$
   ],
+  p: [由格林公式，$I = iint_D (1 - (-1)) dif sigma = 2 iint_D dif sigma = 2 sigma(D)$。圆 $(x+1)^2 + y^2 = 1$ 的面积为 $pi$。故积分值为 $2 pi$。],
   a: [D.],
 )
 
@@ -1633,6 +1637,7 @@
     4. 设 $Sigma$ 为平面 $2x + 2y + z - 2 = 0$ 被三个坐标面所截的在第一卦限的部分，则 $iint_Sigma (2x + 2y + z) dif S =$（ #choice[C] ）。
     A. $3/4$ #quad B. $3/2$ #quad C. 3 #quad D. 6
   ],
+  p: [在曲面 $Sigma$ 上，$2x + 2y + z = 2$，故积分为 $2 iint_Sigma dif S = 2 S_Sigma$。平面法向量 $bold(n) = (2, 2, 1)$，其在 $x O y$ 面投影 $D$ 为由 $x=0, y=0, 2x+2y=2$ 围成的三角形，面积 $1/2$。$cos gamma = 1 / sqrt(2^2+2^2+1^2) = 1/3$。故 $S_Sigma = (1/2) / (1/3) = 3/2$。积分为 $2 dot 3/2 = 3$。],
   a: [C.],
 )
 
@@ -1641,14 +1646,16 @@
     5. 已知 $( (x + a y) dif x + y dif y ) / (x + y)^2$ 为某个函数的全微分，则 $a =$（ #choice[D] ）。
     A. -1 #quad B. 0 #quad C. 1 #quad D. 2
   ],
+  p: [全微分条件 $(partial P) / (partial y) = (partial Q) / (partial x)$。$P = (x+a y)/(x+y)^2, Q = y/(x+y)^2$。$(partial P) / (partial y) = (a(x+y)^2 - 2(x+y)(x+a y))/(x+y)^4 = (a x + a y - 2x - 2a y)/(x+y)^3 = ((a-2)x - a y)/(x+y)^3$。$(partial Q) / (partial x) = -2y/(x+y)^3$。对比系数得 $a-2=0, -a=-2$，故 $a=2$。],
   a: [D.],
 )
 
 #question(
   [
-    6. 设 $int_L x y^2 dif x + y (x) dif y$ 与路径无关，其中 $(x)$ 具有连续导数，且 $(0) = 0$ ，则 $int_(0,0)^(1,1) x y^2 dif x + y (x) dif y =$（ #choice[B] ）。
+    6. 设 $int_L x y^2 dif x + psi(y) x dif y$ 与路径无关，其中 $psi(y)$ 具有连续导数，且 $psi(0) = 0$ ，则 $int_(0,0)^(1,1) x y^2 dif x + psi(y) x dif y =$（ #choice[B] ）。
     A. $3/8$ #quad B. $1/2$ #quad C. $3/4$ #quad D. 1
   ],
+  p: [路径无关条件 $2x y = psi(y)$。故 $psi(y) = 2y$（且 $psi(0)=0$ 满足）。$I = int_(0,0)^(1,1) x y^2 dif x + 2y x dif y = [ 1/2 x^2 y^2 ]_(0,0)^(1,1) = 1/2$。],
   a: [B.],
 )
 
@@ -1657,6 +1664,7 @@
     7. 设 $S$ 是平面 $x + y + z = 4$ 被柱面 $x^2 + y^2 = 1$ 截出的有限部分，则 $iint_S y dif S =$（ #choice[A] ）。
     A. 0 #quad B. $4/3 sqrt(3)$ #quad C. $4 sqrt(3)$ #quad D. $pi$
   ],
+  p: [由对称性，区域 $S$ 关于 $x O z$ 平面对称，而被积函数 $y$ 关于 $y$ 是奇函数，故积分为 0。],
   a: [A.],
 )
 
@@ -1693,13 +1701,13 @@
     10. 设有一质量分布均匀的曲面 $Sigma$，在点 $(x, y, z)$ 处的面密度为 $rho(x, y, z)$，则该曲面关于 $z$ 轴的转动惯量 $I_z =$ #ans[$iint_Sigma (x^2 + y^2) rho dif S$]。
   ],
   a: [曲面质量微元
-    $dif m=rho(x,y,z) dif S$。
+    $dif m=rho(x, y, z) dif S$。
     点 $(x,y,z)$ 到 $z$ 轴距离
     $r=sqrt(x^2+y^2)$。
     由转动惯量定义
     $I_z=int r^2 dif m$，
     即
-    $I_z=iint_Sigma (x^2+y^2) rho(x,y,z) dif S$。],
+    $I_z=iint_Sigma (x^2+y^2) rho(x, y, z) dif S$。],
 )
 
 #question(
@@ -1773,7 +1781,7 @@
 
 #question(
   [
-    15. 设函数 $P(x, y, z)$ 在空间有界闭区域 $V$ 上具有一阶连续偏导数，$Sigma$ 为 $V$ 的光滑边界曲面的外侧，由高斯公式得 $iint_Sigma P(x, y, z) dif y dif z =$ #ans[$iiint_V partial P / partial x dif v$]。
+    15. 设函数 $P(x, y, z)$ 在空间有界闭区域 $V$ 上具有一阶连续偏导数，$Sigma$ 为 $V$ 的光滑边界曲面的外侧，由高斯公式得 $iint_Sigma P(x, y, z) dif y dif z =$ #ans[$iiint_V (partial P) / (partial x) dif v$]。
   ],
   a: [把曲面积分看作向量场
     $bold(F)=(P,0,0)$ 的外向通量：
@@ -1783,10 +1791,10 @@
     $iint_Sigma bold(F) dot bold(n) dif S
     =iiint_V div bold(F) dif v$。
     而
-    $div bold(F)=partial P/partial x$，
+    $div bold(F)=(partial P)/(partial x)$，
     因此
     $iint_Sigma P(x,y,z) dif y dif z
-    =iiint_V partial P/partial x dif v$。],
+    =iiint_V (partial P)/(partial x) dif v$。],
 )
 
 #prob-type("三、计算题")

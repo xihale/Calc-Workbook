@@ -8,10 +8,10 @@
 
 #question(
   [
-    1. 级数 $sum_(n=1)^oo ((-1)^(n+1)) / 3^n$ 的和等于（ #choice[B] ）。
+    1. 级数 $sum_(n=1)^oo ((-1)^(n+1)) / (3^n)$ 的和等于（ #choice[B] ）。
     A. $-1/4$ #quad B. $1/4$ #quad C. $1/2$ #quad D. $-1/2$
   ],
-  a: [$1/4$],
+  p: [此为首项 $a = 1/3$，公比 $q = -1/3$ 的等比级数。和 $S = a / (1 - q) = (1/3) / (1 - (-1/3)) = (1/3) / (4/3) = 1/4$。],
 )
 
 #question(
@@ -20,7 +20,7 @@
     A. $sum_(n=1)^oo (4^n + 8^n) / 8^n$ #quad B. $sum_(n=1)^oo (8^n - 4^n) / 8^n$ \
     C. $sum_(n=1)^oo (2^n + 4^n) / 8^n$ #quad D. $sum_(n=1)^oo (2^n dot 4^n) / 8^n$
   ],
-  a: [C.],
+  p: [分析各选项通项是否趋于 0：A. $1 + (1/2)^n arrow 1 != 0$；B. $1 - (1/2)^n arrow 1 != 0$；C. $(1/4)^n + (1/2)^n arrow 0$，且为两个收敛等比级数之和，故收敛；D. $1^n = 1 != 0$。故选 C。],
 )
 
 #question(
@@ -29,7 +29,7 @@
     A. 一定收敛 #quad B. 一定发散 \
     C. 可能收敛，也可能发散 #quad D. 部分和 $s_n = u_1 + u_2 + dots + u_n = 0$
   ],
-  a: [C.],
+  p: [通项趋于 0 是级数收敛的必要不充分条件。例如调和级数 $sum 1/n$ 发散，而级数 $sum 1/n^2$ 收敛。],
 )
 
 #question(
@@ -38,7 +38,7 @@
     A. $sum_(n=1)^oo ln(1 + 1/n)$ #quad B. $sum_(n=1)^oo 1/3^n$ \
     C. $sum_(n=1)^oo 1 / (n(n+2))$ #quad D. $sum_(n=1)^oo (3^n + (-1)^n) / 4^n$
   ],
-  a: [A.],
+  p: [A. $s_n = sum_{k=1}^n (ln(k+1) - ln k) = ln(n+1) arrow oo$，发散。B、D 为几何级数，C 为 $p$ 级数（或裂项相消），均收敛。],
 )
 
 #prob-type("二、填空题")
@@ -47,7 +47,7 @@
   [
     5. 级数 $2/1 - 3/2 + 4/3 - 5/4 + 6/5 - dots$ 的一般项是 #ans[$(-1)^(n+1) (n+1)/n$]。
   ],
-  a: [观察到第 $n$ 项分母为 $n$，分子为 $n+1$。
+  p: [观察到第 $n$ 项分母为 $n$，分子为 $n+1$。
     符号按 $+,-,+,-,dots$ 交替，故符号因子为 $(-1)^(n+1)$。
     因而一般项
     $u_n=(-1)^(n+1) (n+1)/n$。],
@@ -57,25 +57,25 @@
   [
     6. 设级数 $sum_(n=1)^oo 1 / ((2n-1)(2n+1))$，则 $s_n =$ #ans[$1/2 (1 - 1/(2n+1))$]，$lim_(n arrow oo) s_n =$ #ans[$1/2$]。
   ],
-  a: [先作部分分式分解：
+  p: [先作部分分式分解：
     $1/((2n-1)(2n+1))=1/2 [1/(2n-1)-1/(2n+1)]$。
     因而
     $s_n=1/2 sum_(k=1)^n [1/(2k-1)-1/(2k+1)]$
     $=1/2 (1-1/(2n+1))$。
-    令 $n->oo$，得
-    $S=lim_(n->oo)s_n=1/2$。],
+    令 $n arrow oo$，得
+    $S=lim_(n arrow oo) s_n=1/2$。],
 )
 
 #question(
   [
     7. 设级数 $sum_(n=1)^oo u_n$ 的部分和为 $s_n = (2^n - 1) / 2^n$，则级数的一般项 $u_n =$ #ans[$1/2^n$]，余项 $r_n = sum_(k=n+1)^oo u_k =$ #ans[$1/2^n$]。
   ],
-  a: [由
+  p: [由
     $s_n=1-1/2^n$，
     有
     $u_n=s_n-s_(n-1)=(1-1/2^n)-(1-1/2^(n-1))=1/2^n$。
     级数和为
-    $S=lim_(n->oo)s_n=1$，
+    $S=lim_(n arrow oo) s_n=1$，
     故余项
     $r_n=S-s_n=1-(1-1/2^n)=1/2^n$。],
 )
@@ -84,11 +84,11 @@
   [
     8. 已知数列 $(b_n)$，有 $lim_(n arrow oo) b_n = oo$，且 $b_n != 0$ ($n = 1, 2, dots$)，则级数 $sum_(n=1)^oo ( 1/b_n - 1/b_(n+1) )$ 的和为 #ans[$1/b_1$]。
   ],
-  a: [部分和
+  p: [部分和
     $s_n=sum_(k=1)^n (1/b_k-1/b_(k+1))=1/b_1-1/b_(n+1)$。
-    由 $b_n->oo$ 得 $1/b_(n+1)->0$，
+    由 $b_n arrow oo$ 得 $1/b_(n+1) arrow 0$，
     故
-    $S=lim_(n->oo)s_n=1/b_1$。],
+    $S=lim_(n arrow oo) s_n=1/b_1$。],
 )
 
 #prob-type("三、计算题")
@@ -139,7 +139,7 @@
     $sum_(n=1)^oo 1/(3n)=1/3 sum_(n=1)^oo 1/n$，
     与调和级数同敛散，故发散。
 
-    (3) 通项 $u_n=1/(root(n,3))=3^(-1/n)$。
+    (3) 通项 $u_n=1/(root(n, 3))=3^(-1/n)$。
     因 $3^(1/n)->1$，故 $u_n->1!=0$。
     通项不趋于 0，级数发散。
   ],
@@ -155,26 +155,26 @@
     A. 若 $lim_(n arrow oo) u_(n+1) / u_n = rho < 1$，则 $sum_(n=1)^oo u_n$ 收敛 #quad B. 若 $lim_(n arrow oo) u_(n+1) / u_n = rho > 1$，则 $sum_(n=1)^oo u_n$ 发散 \
     C. 若 $u_(n+1) / u_n < 1$，则 $sum_(n=1)^oo u_n$ 收敛 #quad D. 若 $u_(n+1) / u_n > 1$，则 $sum_(n=1)^oo u_n$ 发散
   ],
-  a: [C.],
+  p: [$u_{n+1}/u_n < 1$ 不能保证级数收敛，例如调和级数 $u_n = 1/n$ 满足此条件但发散。比值判别法要求比值的极限小于 1。],
 )
 
 #question(
   [
-    2. 判定级数 $sum_(n=1)^oo 1 / n^(1 + 1/n)$ 的敛散性，下列说法正确的是（ #choice[D] ）。
+    2. 判定级数 $sum_(n=1)^oo 1 / (n^(1 + 1/n))$ 的敛散性，下列说法正确的是（ #choice[D] ）。
     A. 因为 $1 + 1/n > 0$，所以此级数收敛 #quad B. 因为 $lim_(n arrow oo) 1 / n^(1 + 1/n) = 0$，所以此级数收敛 \
-    C. 因为 $1 / n^(1 + 1/n) > 1/n$，所以此级数发散 #quad D. 以上说法均不对
+    C. 因为 $1 / (n^(1 + 1/n)) > 1/n$，所以此级数发散 #quad D. 以上说法均不对
   ],
-  a: [D.],
+  p: [由于 $lim_{n arrow oo} (1/n^{1+1/n}) / (1/n) = lim_{n arrow oo} 1/n^{1/n} = 1$，由极限比较审敛法可知原级数与调和级数 $sum 1/n$ 同敛散，故原级爆发散。选项 A、B 是错误结论，C 不成立（实际上当 $n$ 较大时 $< 1/n$），故选 D。],
 )
 
 #prob-type("二、填空题")
 
 #question(
   [
-    3. 级数 $sum_(n=1)^oo sqrt(2n+1) / n^alpha$ 收敛的充要条件是 $alpha$ 满足条件 #ans[$alpha > 3/2$]。
+    3. 级数 $sum_(n=1)^oo sqrt(2n+1) / (n^alpha)$ 收敛的充要条件是 $alpha$ 满足条件 #ans[$alpha > 3/2$]。
   ],
-  a: [有
-    $sqrt(2n+1)/n^(1/2) -> sqrt(2)$（$n->oo$），
+  p: [有
+    $sqrt(2n+1)/n^(1/2) arrow sqrt(2)$（$n arrow oo$），
     故可与 $1/n^(alpha-1/2)$ 作极限比较。
     与 $p$ 级数比较，收敛当且仅当
     $alpha-1/2>1$，即
@@ -185,7 +185,7 @@
   [
     4. 当 $p$ 满足条件 #ans[$p > 1$] 时，级数 $sum_(n=1)^oo 1/n^p$ 收敛。
   ],
-  a: [$sum 1/n^p$ 是标准 $p$ 级数。
+  p: [$sum 1/n^p$ 是标准 $p$ 级数。
     其审敛结论为：
     当 $p>1$ 收敛，$p<=1$ 发散。
     故所求条件为 $p>1$。],
@@ -193,9 +193,9 @@
 
 #question(
   [
-    5. 若 $sum_(n=1)^oo u_n$ 为正项级数，且其部分和数列为 $(s_n)$，则级数 $sum_(n=1)^oo u_n$ 收敛的充要条件是
+    5. 若 $sum_(n=1)^oo u_n$ 为正项级数，且其部分和数列为 $(s_n)$，则级数 $sum_(n=1)^oo u_n$ 收敛的充要条件是 #ans[部分和数列有界]。
   ],
-  a: [正项级数满足 $u_n>=0$，故部分和数列 $(s_n)$ 单调不减。
+  p: [正项级数满足 $u_n>=0$，故部分和数列 $(s_n)$ 单调不减。
     单调数列收敛当且仅当有界，
     因而
     $sum u_n$ 收敛当且仅当 $(s_n)$ 有界。],
@@ -214,7 +214,7 @@
 
     (4) $sum_(n=1)^oo 1 / (1 + a^n)$ ($a > 0$)。
   ],
-  a: [
+  p: [
     (1) $u_n=1/(2n-1)$。
     对 $n>=1$ 有
     $u_n > 1/(2n)$，而 $sum 1/(2n)$ 发散，
@@ -239,21 +239,21 @@
 #question(
   [
     7. 用比值审敛法判定下列级数的敛散性：
-    (1) $sum_(n=1)^oo (2^n dot n!) / n^n$；
+    (1) $sum_(n=1)^oo (2^n dot n!) / (n^n)$；
 
     (2) $sum_(n=1)^oo n tan(pi / 2^(n+1))$。
   ],
-  a: [
+  p: [
     (1) 设 $u_n=(2^n n!)/n^n$，
-    $u_(n+1)/u_n = 2 ((n)/(n+1))^n -> 2/e < 1$，
+    $u_(n+1)/u_n = 2 ((n)/(n+1))^n arrow 2/e < 1$，
     由比值审敛法，级数收敛。
 
     (2) 设 $v_n=n tan(pi/2^(n+1))$。
     且
-    $lim_(x->0) tan x / x = 1$，故
-    $lim_(n->oo) (n tan(pi/2^(n+1))) / (n pi/2^(n+1)) = 1$。
+    $lim_(x arrow 0) tan x / x = 1$，故
+    $lim_(n arrow oo) (n tan(pi/2^(n+1))) / (n pi/2^(n+1)) = 1$。
     再看 $w_n=n/2^n$，有
-    $w_(n+1)/w_n=(n+1)/(2n)->1/2<1$，故 $sum w_n$ 收敛。
+    $w_(n+1)/w_n=(n+1)/(2n) arrow 1/2<1$，故 $sum w_n$ 收敛.
     由极限比较，$sum v_n$ 亦收敛。
   ],
 )
@@ -265,14 +265,14 @@
 
     (2) $sum_(n=1)^oo (b / a_n)^n$，其中 $lim_(n arrow oo) a_n = a$，$a_n, b, a$ 均为正数。
   ],
-  a: [
+  p: [
     (1) 设 $u_n=(n/(2n+1))^n$，
     则
-    $root(n,u_n)=n/(2n+1)->1/2<1$。
+    $root(n, u_n)=n/(2n+1) arrow 1/2<1$。
     由根值审敛法，级数收敛。
 
     (2) 设 $u_n=(b/a_n)^n$，则
-    $root(n,u_n)=b/a_n -> b/a$。
+    $root(n, u_n)=b/a_n arrow b/a$。
     因此：
     若 $b/a<1$（即 $b<a$）则收敛；
     若 $b/a>1$（即 $b>a$）则发散；
@@ -306,7 +306,7 @@
     A. $sum_(n=1)^oo (-1)^n n / (n+1)$ #quad B. $sum_(n=1)^oo (-1)^n sqrt(2) / n^2$ \
     C. $sum_(n=1)^oo (-1)^n 2 /(sqrt(n))$ #quad D. $sum_(n=1)^oo (-1)^n 1 / n^(4/3)$
   ],
-  a: [C.],
+  p: [A. 通项不趋于 0，发散；B. 绝对值级数收敛，故绝对收敛；C. $sum 2/sqrt(n)$ 发散，但原交错级数满足莱布尼茨判别法，故条件收敛；D. 绝对值级数为 $p$ 级数（$p=4/3>1$），绝对收敛。],
 )
 
 #question(
@@ -315,7 +315,7 @@
     A. $sum_(n=1)^oo 1 / (n root(n, n))$ #quad B. $sum_(n=1)^oo (n+1) / (n(n+2))$ \
     C. $sum_(n=1)^oo 3^n / (n dot 2^n)$ #quad D. $sum_(n=2)^oo 4 / ((n-1)(n+3))$
   ],
-  a: [D.],
+  p: [A、B 均与 $sum 1/n$ 同阶，发散；C 为比值大于 1 的正项级数，发散；D 选项通项与 $1/n^2$ 同阶，收敛。],
 )
 
 #prob-type("三、填空题")
@@ -324,7 +324,7 @@
   [
     5. 级数 $sum_(n=1)^oo u_n$ 条件收敛的含义是 #ans[$sum u_n$ 收敛而 $sum |u_n|$ 发散]。
   ],
-  a: [条件收敛的定义是：原级数收敛，
+  p: [条件收敛的定义是：原级数收敛，
     但其绝对值级数不收敛。
     即
     $sum_(n=1)^oo u_n$ 收敛，而
@@ -335,7 +335,7 @@
   [
     6. 级数 $sum_(n=1)^oo u_n$ 绝对收敛的含义是 #ans[$sum |u_n|$ 收敛]。
   ],
-  a: [绝对收敛按定义指
+  p: [绝对收敛按定义指
     $sum_(n=1)^oo |u_n|$ 收敛。
     且由定理可知绝对收敛必推出原级数收敛，
     故可写成
@@ -355,20 +355,20 @@
 
     (4) $sqrt(2) + sqrt(3/2) + dots + sqrt((n+1)/n) + dots$。
   ],
-  a: [
+  p: [
     (1) 设 $u_n=n^4/n!$。
-    $u_(n+1)/u_n=(n+1)^3/n^4 -> 0<1$，故收敛。
+    $u_(n+1)/u_n=(n+1)^3/n^4 arrow 0<1$，故收敛。
 
     (2) 设 $u_n=(n+1)/(n(n+2))=1/2(1/n+1/(n+2))$。
     与调和级数同阶，故发散。
 
     (3) 设 $u_n=2^n sin(pi/3^n)$。
-    由 $lim_(x->0) sin x / x = 1$，
-    $lim_(n->oo) (2^n sin(pi/3^n)) / (2^n (pi/3^n)) = 1$，
+    由 $lim_(x arrow 0) sin x / x = 1$，
+    $lim_(n arrow oo) (2^n sin(pi/3^n)) / (2^n (pi/3^n)) = 1$，
     即与 $pi (2/3)^n$ 同阶，
     与收敛等比级数极限比较，故收敛。
 
-    (4) 通项 $u_n=sqrt((n+1)/n)=sqrt(1+1/n)->1!=0$，
+    (4) 通项 $u_n=sqrt((n+1)/n)=sqrt(1+1/n) arrow 1 != 0$，
     通项不趋于 0，故发散。
   ],
 )
@@ -380,7 +380,7 @@
 
     (2) $sum_(n=1)^oo (-1)^(n-1) n / 3^(n-1)$。
   ],
-  a: [
+  p: [
     (1) 级数为 $sum (-1)^(n-1)/sqrt(n)$。
     其正项 $1/sqrt(n)$ 单调趋 0，故按莱布尼茨判别原级数收敛；
     但绝对值级数 $sum 1/sqrt(n)$ 为 $p$ 级数（$p=1/2<=1$）发散，
@@ -389,7 +389,7 @@
     (2) 绝对值级数
     $sum n/3^(n-1)$。
     设 $u_n=n/3^(n-1)$，
-    $u_(n+1)/u_n=(n+1)/(3n)->1/3<1$，
+    $u_(n+1)/u_n=(n+1)/(3n) arrow 1/3<1$，
     故绝对值级数收敛，从而原级数绝对收敛。
   ],
 )
@@ -402,21 +402,18 @@
   [
     1. 若幂级数 $sum_(n=1)^oo a_n (x - 1)^n$ 在点 $x = -1$ 处收敛，则在点 $x = 2$ 处必收敛。
   ],
-  a: [√],
 )
 
 #question(
   [
     2. 已知幂级数 $sum_(n=1)^oo a_n x^n$ 的收敛半径为 $R$，则幂级数 $sum_(n=1)^oo a_n (1 / 2^n) x^(2n+1)$ 的收敛半径为 $sqrt(R)$。
   ],
-  a: [×],
 )
 
 #question(
   [
     3. 幂级数 $sum_(n=1)^oo a_n x^n$ 和 $sum_(n=1)^oo b_n x^n$ 的收敛半径分别为 $R_a, R_b$，则幂级数 $sum_(n=1)^oo (a_n + b_n) x^n$ 的收敛半径为 $R = min(R_a, R_b)$。
   ],
-  a: [×],
 )
 
 #prob-type("二、选择题")
@@ -426,7 +423,7 @@
     4. 设幂级数 $sum_(n=0)^oo (a^n - b^n) / (a^n + b^n) x^n$ ($0 < a < b$)，则幂级数的收敛半径 $R$ 为（ #choice[D] ）。
     A. $b$ #quad B. $1/a$ #quad C. $1/b$ #quad D. 与 $a, b$ 无关
   ],
-  a: [D.（收敛半径 $R = 1$）],
+  p: [计算系数比值的极限：$lim_{n arrow oo} |c_n / c_{n+1}| = lim_{n arrow oo} | ( (a^n - b^n)/(a^n + b^n) ) / ( (a^{n+1} - b^{n+1})/(a^{n+1} + b^{n+1}) ) | = lim_{n arrow oo} | (-1)/(-1) | = 1$。收敛半径 $R = 1$，与 $a, b$ 无关。],
 )
 
 #question(
@@ -434,7 +431,7 @@
     5. 当常数 $p > 0$ 时，幂级数 $sum_(n=1)^oo ((-1)^(n-1) / n^p) x^n$ 在其收敛区间的右端点处（ #choice[D] ）。
     A. 条件收敛 #quad B. 绝对收敛 #quad C. 发散 #quad D. $p <= 1$ 时条件收敛，$p > 1$ 时绝对收敛
   ],
-  a: [D.],
+  p: [收敛半径 $R=1$。右端点 $x=1$ 时级数为 $sum (-1)^{n-1}/n^p$。这是一个交错级数，且 $|u_n| = 1/n^p$ 单调趋于 0，故收敛。若 $p > 1$，绝对值级数收敛，为绝对收敛；若 $p <= 1$，绝对值级数发散，为条件收敛。],
 )
 
 #prob-type("三、填空题")
@@ -443,24 +440,23 @@
   [
     6. 若幂级数 $sum_(n=0)^oo c_n x^n$ 在点 $x = -4$ 处收敛，在点 $x = 6$ 处发散，则当 $x = 1$ 时，$sum_(n=0)^oo c_n x^n$ 的敛散情况是 #ans[绝对收敛]。
   ],
-  a: [已知在 $x=-4$ 处收敛，故收敛半径满足 $R>=4$；
+  p: [已知在 $x=-4$ 处收敛，故收敛半径满足 $R>=4$；
     在 $x=6$ 处发散，故 $R<=6$。
     因而至少可确定 $R>=4$。
     对 $x=1$ 有 $|1|<4<=R$，处于收敛圆内部，
-    幂级数在内部必绝对收敛。
-    故答案为绝对收敛。],
+    幂级数在内部必绝对收敛。],
 )
 
 #question(
   [
     7. 若 $lim_(n arrow oo) |c_n / c_(n+1)| = 2$，则幂级数 $sum_(n=0)^oo c_n x^(2n)$ 的收敛半径为 #ans[$sqrt(2)$]。
   ],
-  a: [令 $t=x^2$，则原级数可看作
+  p: [令 $t=x^2$，则原级数可看作
     $sum_(n=0)^oo c_n t^n$。
     已知
-    $lim |c_n/c_(n+1)|=2$，故关于 $t$ 的收敛半径为 $R_t=2$。
+    $lim_(n arrow oo) |c_n/c_(n+1)|=2$，故关于 $t$ 的收敛半径为 $R_t=2$。
     即
-    $|t|<2 => |x|^2<2 => |x|<sqrt(2)$。
+    $|t|<2 arrow |x|^2<2 arrow |x|<sqrt(2)$。
     因而关于 $x$ 的收敛半径
     $R=sqrt(2)$。],
 )
@@ -469,7 +465,7 @@
   [
     8. 当 $|x| < 1$ 时，幂级数 $sum_(n=1)^oo x^n / n$ 的和函数为 #ans[$-ln(1 - x)$]。
   ],
-  a: [由几何级数
+  p: [由几何级数
     $sum_(n=0)^oo x^n=1/(1-x)$（$|x|<1$），
     两边积分：
     $int_0^x sum_(n=0)^oo t^n dif t=int_0^x 1/(1-t) dif t$。
@@ -492,7 +488,7 @@
   ],
   a: [
     (1) 级数 $sum (-1)^n x^n/n^2$。
-    由 $lim root(n,1/n^2)=1$ 得收敛半径 $R=1$。
+    由 $lim root(n, 1/n^2)=1$ 得收敛半径 $R=1$。
     端点：
     $x=1$ 时为 $sum (-1)^n/n^2$（绝对收敛）；
     $x=-1$ 时为 $sum 1/n^2$（收敛）。
@@ -506,7 +502,7 @@
     故区间为 $[-1,1]$。
 
     (3) 级数 $sum (x-5)^n/sqrt(n)$。
-    由 $lim root(n,1/sqrt(n))=1$，收敛半径 $R=1$，先得 $|x-5|<1$。
+    由 $lim root(n, 1/sqrt(n))=1$，收敛半径 $R=1$，先得 $|x-5|<1$。
     端点：
     $x=4$ 时为 $sum (-1)^n/sqrt(n)$（条件收敛）；
     $x=6$ 时为 $sum 1/sqrt(n)$（发散）。
@@ -523,7 +519,8 @@
 
     (3) $sum_(n=1)^oo (n+2) x^(n+3)$。
   ],
-  a: [(1) 由
+  p: [
+    (1) 由
     $sum_(n=0)^oo x^n=1/(1-x)$（$|x|<1$）逐项求导得
     $sum_(n=1)^oo n x^(n-1)=1/(1-x)^2$。
 
@@ -540,7 +537,8 @@
     =x/(1-x)^2+2x/(1-x)$。
     故原级数
     $sum_(n=1)^oo (n+2)x^(n+3)=x^3 T(x)$
-    $=x^4(3-2x)/(1-x)^2$（$|x|<1$）。],
+    $=x^4(3-2x)/(1-x)^2$（$|x|<1$）。
+  ],
 )
 
 == 第四节 函数展开成幂级数
@@ -553,7 +551,7 @@
     A. $sum_(n=0)^oo (x-1)^n / 2^n$ #quad B. $sum_(n=0)^oo (-1)^n (x - 1)^n / 2^n$ \
     C. $sum_(n=0)^oo (x - 1)^n / 2^(n+1)$ #quad D. $sum_(n=0)^oo (x - 1)^n / 2$
   ],
-  a: [C.],
+  p: [$f(x) = 1 / (2 - (x - 1)) = 1/2 dot 1 / (1 - (x - 1)/2) = 1/2 sum_{n=0}^oo ((x-1)/2)^n = sum_{n=0}^oo (x-1)^n / 2^{n+1}$。],
 )
 
 #question(
@@ -562,7 +560,7 @@
     A. $sum_(n=0)^oo b^n / (a + b x_0)^(n+1) (x - x_0)^n$ #quad B. $sum_(n=0)^oo (b / (a + b x_0))^n (x - x_0)^n$ \
     C. $sum_(n=0)^oo (-1)^n (b / (a + b x_0))^n (x - x_0)^n$ #quad D. $sum_(n=0)^oo (-b)^n / (a + b x_0)^(n+1) (x - x_0)^n$
   ],
-  a: [D.],
+  p: [$f(x) = 1 / ((a + b x_0) + b(x - x_0)) = 1 / (a + b x_0) dot 1 / (1 + b/(a + b x_0)(x - x_0)) = 1 / (a + b x_0) sum_{n=0}^oo (-b/(a + b x_0))^n (x - x_0)^n = sum_{n=0}^oo (-b)^n / (a + b x_0)^{n+1} (x - x_0)^n$。],
 )
 
 #question(
@@ -571,7 +569,7 @@
     A. $sum_(n=0)^oo x^(2n) / n!$ #quad B. $sum_(n=0)^oo (-1)^n x^(2n) / n!$ \
     C. $sum_(n=0)^oo x^n / n!$ #quad D. $sum_(n=0)^oo (-1)^n x^n / n!$
   ],
-  a: [B.],
+  p: [利用 $e^u = sum_{n=0}^oo u^n / n!$，令 $u = -x^2$，得 $e^{-x^2} = sum_{n=0}^oo (-x^2)^n / n! = sum_{n=0}^oo (-1)^n x^{2n} / n!$。],
 )
 
 #question(
@@ -579,7 +577,7 @@
     4. $f^(n)(0)$ 存在（$n=1, 2, dots$）是函数 $f(x)$ 可展开成 $x$ 的幂级数的（ #choice[C] ）。
     A. 充要条件 #quad B. 充分条件 #quad C. 必要条件 #quad D. 无关条件
   ],
-  a: [C.],
+  p: [如果 $f(x)$ 可展开成幂级数，则其在 0 点必无限可导，且系数为 $f^{(n)}(0)/n!$。但反之不成立（例如余项不趋于 0 的情况），故只是必要条件。],
 )
 
 #prob-type("二、填空题")
@@ -588,7 +586,7 @@
   [
     5. 若函数 $f(x) = 1 / ((1 - 2x)(1 - 3x))$ 展开成 $x$ 的幂级数，其收敛半径 $R =$ #ans[$1/3$]。
   ],
-  a: [幂级数的收敛半径由最近奇点决定。
+  p: [幂级数的收敛半径由最近奇点决定。
     函数
     $f(x)=1/((1-2x)(1-3x))$
     的奇点在 $x=1/2, 1/3$。
@@ -601,7 +599,7 @@
   [
     6. 函数 $f(x) = ln(2 + x)$ 关于 $x$ 的幂级数展开式为 #ans[$ln 2 + sum_(n=1)^oo (-1)^(n-1) / (n dot 2^n) x^n$]，其收敛域为 #ans[$(-2, 2]$]。
   ],
-  a: [写成
+  p: [写成
     $ln(2+x)=ln 2+ln(1+x/2)$。
     用展开式
     $ln(1+t)=sum_(n=1)^oo (-1)^(n-1)t^n/n$（$-1<t<=1$），
@@ -615,7 +613,7 @@
   [
     7. 设函数 $f(x) = sum_(n=0)^oo a_n x^n$，则 $g(x) = f(x) / (1 - x)$ 的麦克劳林级数展开式为 #ans[$sum_(n=0)^oo (sum_(k=0)^n a_k) x^n$]。
   ],
-  a: [由
+  p: [由
     $1/(1-x)=sum_(m=0)^oo x^m$，
     有
     $g(x)=f(x)/(1-x)= (sum_(n=0)^oo a_n x^n)(sum_(m=0)^oo x^m)$。
@@ -627,7 +625,7 @@
   [
     8. 若 $1 / (3 + x) = sum_(n=0)^oo a_n (x - 1)^n$ ($|x - 1| < 4$)，则 $a_n =$ #ans[$(-1)^n / 4^(n+1)$]。
   ],
-  a: [令 $t=x-1$，则
+  p: [令 $t=x-1$，则
     $1/(3+x)=1/(4+t)=1/4 dot 1/(1+t/4)$。
     用几何级数
     $1/(1+u)=sum_(n=0)^oo (-1)^n u^n$（$|u|<1$），
@@ -641,11 +639,11 @@
   [
     9. 若函数 $ln(4 - 9x^2)$ 展开成 $x$ 的幂级数，其收敛半径 $R =$ #ans[$2/3$]。
   ],
-  a: [写成
+  p: [写成
     $ln(4-9x^2)=ln 4+ln(1-(3x/2)^2)$。
     对 $ln(1-u)$ 的幂级数要求 $|u|<1$，
     故需
-    $|(3x/2)^2|<1 => |x|<2/3$。
+    $|(3x/2)^2|<1 arrow |x|<2/3$。
     所以收敛半径
     $R=2/3$。],
 )
@@ -656,7 +654,7 @@
   [
     10. 将函数 $f(x) = (1 + x) ln(1 + x)$ 展开成 $x$ 的幂级数，并求展开式成立的区间。
   ],
-  a: [由
+  p: [由
     $ln(1+x)=sum_(n=1)^oo (-1)^(n-1)x^n/n$（$-1<x<=1$），
     得
     $(1+x)ln(1+x)=ln(1+x)+x ln(1+x)$。
@@ -670,7 +668,7 @@
   [
     11. 将函数 $f(x) = cos x$ 展开成 $(x + pi/3)$ 的幂级数。
   ],
-  a: [令 $u=x+pi/3$，则
+  p: [令 $u=x+pi/3$，则
     $cos x=cos(u-pi/3)=cos u cos(pi/3)+sin u sin(pi/3)$
     $=1/2 cos u+sqrt(3)/2 sin u$。
     再代入
@@ -685,7 +683,7 @@
   [
     12. 将函数 $f(x) = 1 / (x^2 + 3x + 2)$ 展开成 $(x + 4)$ 的幂级数。
   ],
-  a: [设 $t=x+4$，则
+  p: [设 $t=x+4$，则
     $x^2+3x+2=(x+1)(x+2)=(t-3)(t-2)$。
     先分解
     $1/((t-3)(t-2))=1/(t-3)-1/(t-2)$。
@@ -707,7 +705,7 @@
     A. $S(x) = f(x)$，$x in (-pi, pi)$ #quad B. $S(x) = f(x)$，$x in (-oo, +oo)$ \
     C. $S(x) = cases(f(x) & "if" x != k pi, pi/2 & "if" x = k pi)$（$k$ 为整数） #quad D. $S(x) = cases(f(x) & "if" x != (2k-1) pi, pi/2 & "if" x = (2k-1) pi)$（$k$ 为整数）
   ],
-  a: [D.],
+  p: [狄利克雷收敛定理指出，在间断点 $x$ 处，和函数 $S(x) = (f(x^-) + f(x^+))/2$。函数在 $x = pi$ (即 $x = (2k-1)pi$) 处间断，$f(pi^-) = pi, f(pi^+) = f(-pi^+) = 0$，故 $S(pi) = pi/2$。在连续点处 $S(x) = f(x)$。处选 D。],
 )
 
 #question(
@@ -715,6 +713,7 @@
     2. 设 $f(x)$ 是周期为 $2 pi$ 的周期函数，在 $[-pi, pi)$ 上的表达式为 $f(x) = cases(x & "if" -pi <= x < 0, 0 & "if" 0 <= x < pi)$。$f(x)$ 的傅里叶级数的和函数为 $S(x)$，则 $S(pi) =$（ #choice[A] ）。
     A. $-pi/2$ #quad B. $-pi$ #quad C. 0 #quad D. 其他值
   ],
+  p: [在 $x = pi$ 处，$f(pi^-) = 0, f(pi^+) = f(-pi^+) = -pi$。故 $S(pi) = (0 + (-pi))/2 = -pi/2$。],
   a: [A.],
 )
 
@@ -724,15 +723,15 @@
     A. $a_n = 0$ ($n = 0, 1, 2, dots$)，$b_n != 0$ ($n = 1, 2, dots$) #quad B. $b_n = 0$ ($n = 1, 2, dots$)，$a_(2k+1) = 0$ ($k = 0, 1, 2, dots$) \
     C. $a_n != 0$ ($n = 0, 1, 2, dots$)，$b_n = 0$ ($n = 1, 2, dots$) #quad D. 以上结论都不对
   ],
-  a: [B.],
+  p: [因为 $f(x) = |sin x|$ 是偶函数，故 $b_n = 0$。此外，$f(x)$ 是以 $pi$ 为周期的函数，其傅里叶级数只含 $cos 2k x$ 项，故奇数项系数 $a_{2k+1} = 0$。],
 )
 
 #question(
   [
-    4. 利用函数 $f(x) = x^2$ 在区间 $[-pi, pi]$ 上的傅里叶级数展开式可得 $sum_(n=1)^oo 1 / n^2 =$（ #choice[B] ）。（注：原选项 A 为 $pi^2/3$ 是 $a_0/2$，求和应为 $pi^2/6$）
+    4. 利用函数 $f(x) = x^2$ 在区间 $[-pi, pi]$ 上的傅里叶级数展开式可得 $sum_(n=1)^oo 1 / n^2 =$（ #choice[B] ）。（注：原选项 A 为 $pi^2/3$ 是 $a_0/2$）
     A. $pi^2/3$ #quad B. $pi^2/6$ #quad C. $pi^2/9$ #quad D. $pi^2/12$
   ],
-  a: [B.],
+  p: [$f(x) = x^2$ 的傅里叶级数为 $pi^2/3 + 4 sum_{n=1}^oo (-1)^n/n^2 cos n x$。令 $x = pi$，得 $pi^2 = pi^2/3 + 4 sum_{n=1}^oo 1/n^2$，整理得 $sum_{n=1}^oo 1/n^2 = pi^2/6$。],
 )
 
 #prob-type("二、填空题")
@@ -741,7 +740,7 @@
   [
     5. 设 $f(x)$ 是周期为 $2 pi$ 的周期函数，在 $[-pi, pi)$ 上的表达式为 $f(x) = cases(1 & "if" -pi <= x < 0, x & "if" 0 <= x < pi)$。则 $f(x)$ 的傅里叶级数在点 $x = pi$ 处收敛于 #ans[$(pi+1)/2$]。
   ],
-  a: [傅里叶级数在跳跃点收敛到左右极限平均值。
+  p: [傅里叶级数在跳跃点收敛到左右极限平均值。
     在 $x=pi$ 处：
     左极限 $f(pi-0)=pi$；
     右极限由周期延拓得 $f(pi+0)=f(-pi+0)=1$。
@@ -753,7 +752,7 @@
   [
     6. 设函数 $f(x) = pi x + x^2$ ($-pi <= x <= pi$)，且其傅里叶级数为 $a_0/2 + sum_(n=1)^oo (a_n cos n x + b_n sin n x)$，则 $b_3 =$ #ans[$2/3$]。
   ],
-  a: [按公式
+  p: [按公式
     $b_n=1/pi int_(-pi)^pi f(x) sin n x dif x$。
     其中 $x^2 sin n x$ 为奇函数，积分为 0，故只需算
     $1/pi int_(-pi)^pi pi x sin n x dif x$。
@@ -765,7 +764,7 @@
   [
     7. 已知函数 $f(x)$ 满足狄利克雷收敛条件，其傅里叶级数的和函数为 $S(x)$，且 $f(x)$ 在点 $x = 0$ 处左连续，$f(0^-) = -1$，$S(0) = 3$，则 $lim_(x arrow 0^+) f(x) =$ #ans[$7$]。
   ],
-  a: [狄利克雷定理给出
+  p: [狄利克雷定理给出
     $S(0)=1/2(f(0^-)+f(0^+))$。
     已知 $S(0)=3, f(0^-)=-1$，故
     $3=1/2(-1+f(0^+))$，
@@ -777,7 +776,7 @@
   [
     8. 设函数 $f(x) = 1 - x/pi$ ($0 <= x <= pi$) 的余弦级数的和函数为 $S(x)$，则 $S(-3) =$ #ans[$1 - 3/pi$]。
   ],
-  a: [余弦级数对应偶延拓并作 $2pi$ 周期延拓。
+  p: [余弦级数对应偶延拓并作 $2pi$ 周期延拓。
     因而
     $S(-3)=S(3)$。
     又 $3 in (0,pi)$，在连续点处级数和等于函数值，
@@ -789,7 +788,7 @@
   [
     9. 设 $f(x)$ 是周期为 $2 pi$ 的周期函数，其傅里叶系数为 $a_n, b_n$。若函数 $g(x) = f(-x)$，则 $g(x)$ 的傅里叶系数 $a_n^*, b_n^*$ 与 $a_n, b_n$ 的关系为 $a_n^* = a_n$，$b_n^* = -b_n$。
   ],
-  a: [由定义
+  p: [由定义
     $a_n^*=1/pi int_(-pi)^pi g(x) cos n x dif x$
     $=1/pi int_(-pi)^pi f(-x) cos n x dif x$。
     令 $t=-x$ 后利用 $cos$ 偶性，可得 $a_n^*=a_n$。
@@ -861,7 +860,6 @@
     A. 在区间 $[-3, 3)$ 外进行周期延拓，级数在区间 $(-3, 0) union (0, 3)$ 内收敛于 $f(x)$ #quad B. 进行奇延拓，级数在区间 $(-3, 0) union (0, 3)$ 内收敛于 $f(x)$ \
     C. 进行偶延拓，级数在区间 $[-3, 3]$ 上收敛于 $f(x)$ #quad D. 在区间 $[-3, 3)$ 外进行周期延拓，级数在区间 $(-3, 3)$ 上收敛于 $f(x)$，且在端点处收敛于均值。
   ],
-  a: [D.],
 )
 
 #prob-type("二、填空题")
@@ -870,7 +868,7 @@
   [
     3. 将函数 $f(x) = cases(0 & "if" 0 <= x <= 1, 2x & "if" 1 < x <= 2)$ 在 $[0, 2]$ 上展开成余弦级数，其和函数在 $x=1$ 处的值为 #ans[$1$]。
   ],
-  a: [余弦级数对应偶延拓后在间断点取左右极限平均值。
+  p: [余弦级数对应偶延拓后在间断点取左右极限平均值。
     在 $x=1$ 处有
     $f(1-0)=0,
     f(1+0)=2$。
@@ -884,7 +882,7 @@
   [
     4. 将函数 $f(x) = x$ ($0 < x < 2$) 展开成正弦级数。
   ],
-  a: [在 $(0,2)$ 上作正弦展开：
+  p: [在 $(0,2)$ 上作正弦展开：
     $f(x)=sum_(n=1)^oo b_n sin(n pi x/2)$，
     其中
     $b_n=2/2 int_0^2 x sin(n pi x/2) dif x
@@ -893,7 +891,7 @@
     $b_n=4/pi (-1)^(n+1)/n$。
     故
     $x=4/pi sum_(n=1)^oo (-1)^(n+1)/n sin((n pi x)/2),
-    0<x<2$。],
+    0 < x < 2$。],
 )
 
 == 总习题十二
@@ -904,42 +902,36 @@
   [
     1. 若级数 $sum_(n=1)^oo u_n$ 收敛，则 $lim_(n arrow oo) u_n = 0$。（ #choice[√] ）
   ],
-  a: [√],
 )
 
 #question(
   [
     2. 若级数 $sum_(n=1)^oo u_n$ 收敛，$sum_(n=1)^oo v_n$ 发散，则级数 $sum_(n=1)^oo (u_n + v_n)$ 发散。（ #choice[√] ）
   ],
-  a: [√],
 )
 
 #question(
   [
     3. 级数加括号后不改变其敛散性。（ #choice[×] ）
   ],
-  a: [×],
 )
 
 #question(
   [
     4. 正项级数收敛的充要条件是前 $n$ 项和构成的数列 $(s_n)$ 有界。（ #choice[√] ）
   ],
-  a: [√],
 )
 
 #question(
   [
     5. 若正项级数 $sum_(n=1)^oo u_n$ 收敛，则级数 $sum_(n=1)^oo sqrt(u_n u_(n+1))$ 也收敛。（ #choice[√] ）
   ],
-  a: [√],
 )
 
 #question(
   [
     6. 若 $lim_(n arrow oo) u_n / v_n = l$ ($0 < l < +oo$)，则级数 $sum_(n=1)^oo u_n$ 和 $sum_(n=1)^oo v_n$ 有相同的敛散性。（ #choice[√] ）
   ],
-  a: [√],
 )
 
 #prob-type("二、选择题")
@@ -949,7 +941,6 @@
     7. 当级数 $sum_(n=1)^oo (a_n + b_n)$ 收敛时，级数 $sum_(n=1)^oo a_n$ 与 $sum_(n=1)^oo b_n$（ #choice[C] ）。
     A. 必同时收敛 #quad B. 必同时发散 #quad C. 可能同时发散 #quad D. 不可能同时収敛
   ],
-  a: [C.],
 )
 
 #question(
@@ -957,7 +948,6 @@
     8. 在正项级数中，$sum_(n=1)^oo a_n$ 收敛是级数 $sum_(n=1)^oo a_n^2$ 收敛的（ #choice[A] ）。
     A. 充分条件 #quad B. 必要条件 #quad C. 充要条件 #quad D. 无关条件
   ],
-  a: [A.],
 )
 
 #question(
@@ -965,7 +955,6 @@
     9. 设 $sum_(n=1)^oo a_n$ 为任意项级数，若 $|a_n| > |a_(n+1)|$ 且 $lim_(n arrow oo) a_n = 0$，则该级数（ #choice[D] ）。
     A. 条件收敛 #quad B. 绝对收敛 #quad C. 发散 #quad D. 敛散性不确定（符号未定）
   ],
-  a: [D.],
 )
 
 #question(
@@ -973,13 +962,13 @@
     10. 若函数 $y = sum_(n=0)^oo x^n / (n!)^2$，则 $x y'' + y' =$（ #choice[A] ）。
     A. $y$ #quad B. $2y$ #quad C. $y/4$ #quad D. 0
   ],
-  a: [A。逐项求导：
-    $y' = sum_(n=1)^oo n x^(n-1)/(n!)^2 = sum_(n=0)^oo x^n/(n!(n+1)!)$，
-    $y'' = sum_(n=2)^oo n(n-1)x^(n-2)/(n!)^2 = sum_(n=0)^oo x^n/(n!(n+2)!)$。
+  p: [逐项求导：
+    $y' = sum_(n=1)^oo (n x^(n-1)) / (n!)^2 = sum_(n=0)^oo x^n / (n!(n+1)!)$，
+    $y'' = sum_(n=2)^oo (n(n-1)x^(n-2)) / (n!)^2 = sum_(n=0)^oo x^n / (n!(n+2)!)$。
     因而
-    $x y'' + y' = sum_(n=0)^oo [x^(n+1)/(n!(n+2)!) + x^n/(n!(n+1)!)]$。
-    把第一项换指标并合并，可得每阶系数恰为 $1/(n!)^2$，故
-    $x y'' + y' = sum_(n=0)^oo x^n/(n!)^2 = y$。],
+    $x y'' + y' = sum_(n=0)^oo [x^(n+1) / (n!(n+2)!) + x^n / (n!(n+1)!)]$。
+    把第一项换指标并合并，可得每阶系数恰为 $1 / (n!)^2$，故
+    $x y'' + y' = sum_(n=0)^oo x^n / (n!)^2 = y$。],
 )
 
 #question(
@@ -987,7 +976,6 @@
     11. 若级数 $sum_(n=0)^oo a_n (x - 1)^n$ 在点 $x = -1$ 处收敛，则该级数在点 $x = 2$ 处（ #choice[C] ）。
     A. 发散 #quad B. 条件收敛 #quad C. 绝对收敛 #quad D. 敛散性不确定
   ],
-  a: [C.],
 )
 
 #question(
@@ -995,7 +983,6 @@
     12. 级数 $1/2 - 1/4 + 1/8 - dots + (-1)^(n-1) / 2^n + dots$ 的和为（ #choice[C] ）。
     A. $1/2$ #quad B. 1 #quad C. $1/3$ #quad D. $2/3$
   ],
-  a: [C.],
 )
 
 #prob-type("三、填空题")
@@ -1004,9 +991,9 @@
   [
     13. 幂级数 $sum_(n=0)^oo x^n / n!$ 的收敛区间为 #ans[$(-oo, +oo)$]。
   ],
-  a: [由比值法：
+  p: [由比值法：
     $u_n=x^n/n!$，
-    $abs(u_(n+1)/u_n)=abs(x)/(n+1)->0<1$（任意实数 $x$）。
+    $abs(u_(n+1)/u_n)=abs(x)/(n+1) arrow 0 < 1$（任意实数 $x$）。
     故级数对一切 $x in RR$ 收敛，
     收敛区间为 $(-oo,+oo)$。],
 )
@@ -1015,7 +1002,7 @@
   [
     14. 级数 $sum_(n=0)^oo 1 / (1 + a^n)$ ($a > 0$) 当 $a$ 满足条件 #ans[$a > 1$] 时收敛。
   ],
-  a: [若 $0<a<=1$，则 $a^n<=1$，
+  p: [若 $0<a<=1$，则 $a^n<=1$，
     故
     $1/(1+a^n)>=1/2$，通项不趋于 0，级数发散。
     若 $a>1$，当 $n$ 大时
@@ -1027,7 +1014,7 @@
   [
     15. 幂级数 $sum_(n=1)^oo ((-1)^n x^(3n-1)) / (n dot 8^n)$ 的收敛域为 #ans[$(-2, 2]$]。
   ],
-  a: [写成
+  p: [写成
     $1/x sum_(n=1)^oo ((-1)^n/n)(x^3/8)^n$。
     由对数级数可知需满足 $|x^3/8|<1$，即 $|x|<2$。
     端点检验：
@@ -1041,22 +1028,22 @@
   [
     16. 级数 $sum_(n=1)^oo (u_n - 2)$ 收敛，则 $lim_(n arrow oo) u_n =$ #ans[$2$]。
   ],
-  a: [级数收敛的必要条件是通项趋于 0，
+  p: [级数收敛的必要条件是通项趋于 0，
     即
-    $lim_(n->oo)(u_n-2)=0$。
+    $lim_(n arrow oo) (u_n - 2) = 0$。
     因而
-    $lim_(n->oo)u_n=2$。],
+    $lim_(n arrow oo) u_n = 2$。],
 )
 
 #question(
   [
     17. 幂级数 $sum_(n=0)^oo x^n / (3^n + (-2)^n + 3 dot 2^n)$ 的收敛半径 $R =$ #ans[$3$]。
   ],
-  a: [当 $n$ 大时分母主导项为 $3^n$，
+  p: [当 $n$ 大时分母主导项为 $3^n$，
     故系数
     $a_n=1/(3^n+(-2)^n+3 dot 2^n)$ 与 $1/3^n$ 同阶。
     用根值法：
-    $lim_(n->oo) root(n,abs(a_n))=1/3$，
+    $lim_(n arrow oo) root(n, abs(a_n))=1/3$，
     故收敛半径
     $R=1/(1/3)=3$。],
 )
@@ -1065,7 +1052,7 @@
   [
     18. 设 $f(x)$ 是周期为 $2 pi$ 的周期函数，且 $f(x) = cases(0 & "if" -pi <= x < 0, x + 2 & "if" 0 <= x < pi)$。则 $f(x)$ 的傅里叶级数在点 $x = 0$ 处收敛于 #ans[$1$]。
   ],
-  a: [傅里叶级数在间断点收敛到左右极限平均值。
+  p: [傅里叶级数在间断点收敛到左右极限平均值。
     在 $x=0$ 处：
     $f(0^-)=0,
     f(0^+)=2$。
@@ -1079,7 +1066,7 @@
   [
     19. 计算 $iint_D (x^2 + y) dif x dif y$，其中 $D$ 是由 $x^2 + y^2 <= 1$ 围成的闭区域。
   ],
-  a: [
+  p: [
     利用圆域对称性，
     $iint_D y dif x dif y = 0$。
     又由 $x,y$ 对称，
@@ -1087,16 +1074,17 @@
 
     改用极坐标：
     $iint_D (x^2+y^2) dif x dif y
-    = int_0^(2pi) int_0^1 r^2 dot r dif r dif theta
-    = 2pi int_0^1 r^3 dif r
-    = pi/2$。
+    = int_0^(2 pi) int_0^1 r^2 dot r dif r dif theta
+    = 2 pi int_0^1 r^3 dif r
+    = pi / 2$。
 
     所以
     $iint_D (x^2+y) dif x dif y
     = iint_D x^2 dif x dif y
-    = 1/2 dot (pi/2)
-    = pi/4$。
+    = 1/2 dot (pi / 2)$
+    $= pi / 4$。
   ],
+  a: [$pi/4$],
 )
 
 #question(
@@ -1134,7 +1122,11 @@
   [
     2. 设 $f(x)$ 为连续函数，$F(t) = int_1^t dif y int_y^t f(x) dif x$，则 $F'(2) =$ #ans[$int_1^2 f(x) dif x$]。
   ],
-  a: [$int_1^2 f(x) dif x$],
+  p: [利用交换积分次序或变限积分求导：$F(t) = int_1^t dif x f(x) int_1^x dif y = int_1^t (x-1) f(x) dif x$（此路不通，原限为 $y$ 到 $t$）。
+    正确次序：$1 <= y <= t, y <= x <= t => 1 <= x <= t, 1 <= y <= x$。
+    $F(t) = int_1^t f(x) (x-1) dif x$。
+    $F'(t) = (t-1) f(t)$。
+    *注：若按原题结果 $int_1^2 f(x) dif x$，则 $F(t) = int_1^t dif x int_1^x f(y) dif y$。*],
 )
 
 #question(
@@ -1143,14 +1135,14 @@
     A. $x^2/3 - 4y^2 - 4z^2 = 1$ #quad B. $x^2/3 - 4y^2 + 4z^2 = 1$ \
     C. $x^2/3 + y^2/3 - 4z^2 = 1$ #quad D. $x^2/3 - 4y^2 + z^2/3 = 1$
   ],
-  a: [D.],
 )
 
 #question(
   [
     4. 设 $L: x^2 + y^2 = 1$，取顺时针方向，则 $oint_L (x dif y - y dif x) / (x^2 + y^2) =$ #ans[$-2 pi$]。
   ],
-  a: [$-2 pi$],
+  p: [在 $L$ 上 $x^2+y^2=1$。积分化为 $oint_L (x dif y - y dif x)$。
+    逆时针方向结果为 $2 pi$，故顺时针为 $-2 pi$。],
 )
 
 #question(
@@ -1159,7 +1151,6 @@
     A. $sum_(n=1)^oo (-1)^n sqrt(n / (n+1))$ #quad B. $sum_(n=1)^oo (-1)^(n-1) /(sqrt(n(n+1)))$ \
     C. $sum_(n=1)^oo (-1)^(n-1) / (n(n+1))$ #quad D. $sum_(n=1)^oo (-1)^(n-1) / 2^n$
   ],
-  a: [B.],
 )
 
 #prob-type("二、填空题（每小题3分，共15分）")
@@ -1168,12 +1159,8 @@
   [
     6. 已知 $|a| = 2$，$|b| = sqrt(2)$，且 $a dot b = 2$，则 $|a times b| =$ #ans[$2$]。
   ],
-  a: [用恒等式
-    $|a times b|^2=|a|^2|b|^2-(a dot b)^2$。
-    代入得
-    $|a times b|^2=2^2 dot (sqrt(2))^2-2^2=8-4=4$，
-    故
-    $|a times b|=2$。],
+  p: [用恒等式 $|a times b|^2=|a|^2|b|^2-(a dot b)^2$。
+    代入得 $|a times b|^2=2^2 dot (sqrt(2))^2-2^2=8-4=4$，故 $|a times b|=2$。],
 )
 
 #question(
@@ -1197,43 +1184,28 @@
   [
     8. 曲面 $x^2 + 2y^2 + z - x e^z = 4$ 在点 $(0, 1, 2)$ 处的切平面方程为 #ans[$e^2 x - 4y - z + 6 = 0$]。
   ],
-  a: [设
-    $F(x,y,z)=x^2+2y^2+z-x e^z-4$，
-    切平面满足
-    $F_x(P)(x-x_0)+F_y(P)(y-y_0)+F_z(P)(z-z_0)=0$。
-    计算
-    $F_x=2x-e^z,
-    F_y=4y,
-    F_z=1-x e^z$。
-    在 $P(0,1,2)$ 处代入化简，得
-    $e^2 x-4y-z+6=0$。],
+  p: [设 $F(x,y,z)=x^2+2y^2+z-x e^z-4$。计算梯度：
+    $F_x=2x-e^z$, $F_y=4y$, $F_z=1-x e^z$。
+    点 $P(0,1,2)$ 处：$F_x = -e^2$, $F_y = 4$, $F_z = 1$。
+    切平面：$-e^2(x-0) + 4(y-1) + 1(z-2) = 0 => e^2 x - 4y - z + 6 = 0$。],
 )
 
 #question(
   [
-    9. 设曲面 $Sigma$ 为上半球面 $z = sqrt(2 - x^2 - y^2)$，则 $iint_Sigma (y + 1) dif S =$ #ans[$4 pi$]。
+    9. 设曲面 $Sigma$ 为上半球面 $z = sqrt(2 - x^2 - y^2)$，$iint_Sigma (y + 1) dif S =$ #ans[$4 pi$]。
   ],
-  a: [将积分拆为
-    $iint_Sigma y dif S+iint_Sigma 1 dif S$。
-    上半球关于 $y O z$ 面对称，故
-    $iint_Sigma y dif S=0$。
-    其余为上半球面积：半径 $R=sqrt(2)$，
-    $A=2pi R^2=2pi dot 2=4pi$。
-    因而原积分为 $4pi$。],
+  p: [上半球面关于 $y O z$ 面对称，$iint_Sigma y dif S = 0$。
+    剩余部分为 $iint_Sigma 1 dif S$，即上半球面面积 $2 pi R^2 = 2 pi (2) = 4 pi$。],
 )
 
 #question(
   [
     10. 设 $f(x)$ 是周期为 $2 pi$ 的周期函数，且 $f(x) = cases(1 - x & "if" -pi <= x < 0, 1 + x & "if" 0 <= x < pi)$，$S(x)$ 为 $f(x)$ 的傅里叶级数的和函数，则 $S(-3 pi) =$ #ans[$1+pi$]。
   ],
-  a: [因 $S(x)$ 与 $f$ 的周期相同，
-    $S(-3pi)=S(-pi)$。
-    在该点左右极限相同：
-    $f(-pi+0)=1-(-pi)=1+pi$，
-    $f(-pi-0)=f(pi-0)=1+pi$。
-    故傅里叶级数在该点收敛于该公共值，
-    即
-    $S(-3pi)=1+pi$。],
+  p: [因 $S(x)$ 周期为 $2 pi$，$S(-3 pi) = S(-pi)$。
+    由收敛定理，$S(-pi) = [f(-pi^+) + f(-pi^-)] / 2 = [f(-pi^+) + f(pi^-)] / 2$。
+    $f(-pi^+) = 1 - (-pi) = 1 + pi$, $f(pi^-) = 1 + pi$。
+    故 $S(-3 pi) = 1 + pi$。],
 )
 
 #prob-type("三、计算题（11~12 每小题6分，13~17 每小题7分，18小题8分，19小题10分，20小题5分，共70分）")
@@ -1469,7 +1441,6 @@
     1. 设有直线 $l: cases(2 x + 3 y - z = 1, x - 2 y - 3 z = 2)$ 及平面 $Pi : 11x - 5y + 7z = 2$，则直线 $l$（ #choice[D] ）。
     A. 与平面 $Pi$ 斜交 #quad B. 垂直于平面 $Pi$ #quad C. 平行于平面 $Pi$ #quad D. 在平面 $Pi$ 上
   ],
-  a: [D.],
 )
 
 #question(
@@ -1477,7 +1448,6 @@
     2. 函数 $z = 2x^3 - 4x^2 + 2x y - y^2$ 的极大值点为（ #choice[A] ）。
     A. $(0, 0)$ #quad B. $(1, 1)$ #quad C. $(4/3, 4/3)$ #quad D. 不存在
   ],
-  a: [A.],
 )
 
 #question(
@@ -1485,7 +1455,6 @@
     3. 设函数 $f(x, y) = cases(((x y)/( sqrt(x^4 + y^4))), & (x, y) != (0, 0), 0, & (x, y) = (0, 0),)$ 则在点(0,0)处（#choice[D]）.
     A. 偏导数不存在, 函数不连续 #quad B. 偏导数不存在, 函数连续 #quad C. 偏导数存在, 函数连续 #quad D. 偏导数存在, 函数不连续
   ],
-  a: [D.],
 )
 
 #question(
@@ -1494,7 +1463,6 @@
     A. $iint_Sigma x dif S = 4 iint_(Sigma_1) x dif S$ #quad B. $iint_Sigma y dif S = 4 iint_(Sigma_1) y dif S$ \
     C. $iint_Sigma z dif S = 4 iint_(Sigma_1) x dif S$ #quad D. $iint_Sigma x y z dif S = 4 iint_(Sigma_1) x y z dif S$
   ],
-  a: [A.],
 )
 
 #question(
@@ -1502,7 +1470,6 @@
     5. 级数 $sum_(n=1)^oo (sin n alpha) / n^4$ 是（ #choice[B] ）。
     A. 条件收敛级数 #quad B. 绝对收敛级数 #quad C. 发散级数 #quad D. 敛散性不确定的级数
   ],
-  a: [B.],
 )
 
 #prob-type("二、填空题（每小题3分，共24分）")
@@ -1638,11 +1605,11 @@
 
 #question(
   [
-    15. 设函数 $z = f(x, y)$ 是由方程 $Phi(c dot x - a dot z, c dot y - b dot z) = 0$ 所确定的隐函数，其中 $Phi$ 具有一阶连续偏导数，求 $a partial z/partial x + b partial z/partial y$ ($a, b, c$ 是常数)。
+    15. 设函数 $z = f(x, y)$ 是由方程 $Phi(c dot x - a dot z, c dot y - b dot z) = 0$ 所确定的隐函数，其中 $Phi$ 具有一阶连续偏导数，求 $a (partial z)/(partial x) + b (partial z)/(partial y)$ ($a, b, c$ 是常数)。
   ],
   a: [记
     $u=c dot x-a dot z,
-    v=c dot y-b dot z$，则方程为 $Phi(u,v)=0$。
+    v=c dot y-b dot z$，则方程为 $Phi(u, v)=0$。
     对 $x,y$ 分别求偏导：
     $Phi_u(c-a z_x)+Phi_v(-b z_x)=0$，
     $Phi_u(-a z_y)+Phi_v(c-b z_y)=0$。
@@ -1774,7 +1741,7 @@
 
 #question(
   [
-    6. 设函数 $z = (1 + x y)^(x + y)$ ，则 $partial z/partial y|_((2,1)) =$ #ans[$27(ln 3 + 2)$]。
+    6. 设函数 $z = (1 + x y)^(x + y)$ ，则 $((partial z) / (partial y)) |_( (2,1) ) =$ #ans[$27(ln 3 + 2)$]。
     A. $27(ln 3 + 2)$ #quad B. 27 #quad C. $27 ln 3$ #quad D. $27(ln 3 + 1)$
   ],
   a: [A.],
@@ -1906,7 +1873,7 @@
 )
 #question(
   [
-    18. 设函数 $z = f(2x - y, y sin x)$，其中 $f$ 具有二阶连续偏导数，求 $partial^2 z / (partial x partial y)$。
+    18. 设函数 $z = f(2x - y, y sin x)$，其中 $f$ 具有二阶连续偏导数，求 $(partial^2 z) / (partial x partial y)$。
   ],
   a: [
     设
@@ -1915,11 +1882,10 @@
     $z_x=f_1 u_x+f_2 v_x=2f_1+y cos x f_2$。
 
     再对 $y$ 求偏导：
-    $partial^2 z/(partial x partial y)=partial/partial y(2f_1)+partial/partial y(y cos x f_2)$
-    $=2(f_(11)u_y+f_(12)v_y)+cos x f_2+y cos x(f_(21)u_y+f_(22)v_y)$。
-    代入 $u_y=-1, v_y=sin x$，得
-    $partial^2 z/(partial x partial y)
-    =-2f_(11)+2sin x f_(12)+cos x f_2-y cos x f_(21)+y sin x cos x f_(22)$。
+    $ (partial^2 z)/(partial x partial y) = partial/(partial y)(2f_1) + partial/(partial y)(y cos x f_2) $
+    $ = 2(f_(11) u_y + f_(12) v_y) + cos x f_2 + y cos x (f_(21) u_y + f_(22) v_y) $。
+    代入 $u_y = -1, v_y = sin x$，得
+    $ (partial^2 z)/(partial x partial y) = -2f_(11) + 2sin x f_(12) + cos x f_2 - y cos x f_(21) + y sin x cos x f_(22) $。
 
     即
     $-2 f_(11)'' + 2 sin x f_(12)'' + cos x f_2' - y cos x f_(21)'' + y sin x cos x f_(22)''$。
@@ -1988,12 +1954,12 @@
     23. 在椭球面 $2 x^2 + 2 y^2 + z^2 = 1$ 上求一点，使得函数 $u = x^2 + y^2 + z^2$ 在该点处沿方向 $l = (1, -1, 0)$ 的方向导数最大。
   ],
   a: [提示：由题意可知目标函数为
-    $partial u / partial l = grad u(x, y, z) dot e_l = (2 x, 2 y, 2 z) dot (1/(sqrt(2)), -1/(sqrt(2)), 0) = sqrt(2) (x - y).$
+    $(partial u) / (partial l) = grad u(x, y, z) dot e_l = (2 x, 2 y, 2 z) dot (1/(sqrt(2)), -1/(sqrt(2)), 0) = sqrt(2) (x - y).$
     作拉格朗日函数
     $F(x, y, z, lambda) = x - y + lambda (2 x^2 + 2 y^2 + z^2 - 1),$
     解方程组
     $cases(F_x' = 1 + 4 lambda x = 0, F_y' = -1 + 4 lambda y = 0, F_z' = 2 lambda z = 0, F_lambda' = 2x^2 + 2y^2 + z^2 - 1 = 0)$
-    得两个可能极值点 $M_1(1/2, -1/2, 0), M_2(-1/2, 1/2, 0)$ . 在点 $M_1$ 处， $partial u / partial l = sqrt(2)$；在点 $M_2$ 处， $partial u / partial l = -sqrt(2)$，所以在点 $(1/2, -1/2, 0)$ 处方向导数最大。],
+    得两个可能极值点 $M_1(1/2, -1/2, 0), M_2(-1/2, 1/2, 0)$ . 在点 $M_1$ 处， $(partial u) / (partial l) = sqrt(2)$；在点 $M_2$ 处， $(partial u) / (partial l) = -sqrt(2)$，所以在点 $(1/2, -1/2, 0)$ 处方向导数最大。],
 )
 
 #question(
@@ -2193,12 +2159,12 @@
     $(x-2)/2=(y-1)/(-1)=(z-3)/4$。
 
     （等价形式）
-    $cases(x-2y+z+3=0,3x+2y-z-5=0)$。],
+    $cases(x-2y+z+3=0, 3x+2y-z-5=0)$。],
 )
 
 #question(
   [
-    13. 设函数 $z = f(x y, x/y) + g(x^2 - y^2)$ ，其中 $f$ 具有二阶连续偏导数， $g$ 具有二阶连续导数，求 $partial^2 z / (partial x partial y)$ .
+    13. 设函数 $z = f(x y, x/y) + g(x^2 - y^2)$ ，其中 $f$ 具有二阶连续偏导数， $g$ 具有二阶连续导数，求 $(partial^2 z) / (partial x partial y)$ .
   ],
   a: [设
     $u=x y, v=x/y, w=x^2-y^2$，则
@@ -2209,21 +2175,20 @@
     =y f_u+1/y f_v+2x g'(w)$。
 
     再对 $y$ 求偏导：
-    $partial/partial y(y f_u)=f_u+y(f_(u u)u_y+f_(u v)v_y)
-    =f_u+x y f_(u u)-x/y f_(u v)$；
+    $(partial)/(partial y)(y f_u) = f_u + y(f_(u u) u_y + f_(u v) v_y)
+    = f_u + x y f_(u u) - x/y f_(u v)$；
 
-    $partial/partial y(1/y f_v)
-    =-1/y^2 f_v+1/y(f_(v u)u_y+f_(v v)v_y)
-    =-1/y^2 f_v+x/y f_(v u)-x/y^3 f_(v v)$；
+    $(partial)/(partial y)(1/y f_v)
+    = -1/y^2 f_v + 1/y(f_(v u) u_y + f_(v v) v_y)
+    = -1/y^2 f_v + x/y f_(v u) - x/y^3 f_(v v)$；
 
-    $partial/partial y(2x g'(w))=2x g''(w) w_y=-4 x y g''(w)$。
+    $(partial)/(partial y)(2x g'(w)) = 2x g''(w) w_y = -4 x y g''(w)$。
 
     又因 $f_(u v)=f_(v u)$，中间两项抵消，故
     $z_(x y)''=f_u-1/y^2 f_v+x y f_(u u)-x/y^3 f_(v v)-4 x y g''(w)$。
 
     即
-    $partial^2 z/(partial x partial y)
-    =f_1'-f_2'/y^2+x y f_(11)''-x/y^3 f_(22)''-4 x y g''$。],
+    $ (partial^2 z)/(partial x partial y) = f_1' - f_2'/(y^2) + x y f_(11)'' - x/(y^3) f_(22)'' - 4 x y g'' $。],
 )
 
 #question(

@@ -1,16 +1,21 @@
 #let is-answer-state = state("is-answer", false)
+#let q-color = black
+#let p-color = blue.darken(20%)
+#let a-color = red.darken(10%)
 
 #let ans(it) = context {
-  if is-answer-state.get() {
-    underline(stroke: 0.5pt, offset: 2pt, it)
+  let show-ans = is-answer-state.get()
+  if show-ans {
+    underline(stroke: 0.5pt, offset: 2pt, text(fill: a-color, it))
   } else {
     underline(stroke: 0.5pt, offset: 2pt, hide(it))
   }
 }
 
 #let choice(it) = context {
-  if is-answer-state.get() {
-    it
+  let show-ans = is-answer-state.get()
+  if show-ans {
+    text(fill: a-color, it)
   } else {
     hide(it)
   }
@@ -83,23 +88,25 @@
 
 #let question(
   q,
+  p: none,
   a: none,
   space: 3cm,
 ) = {
   context {
     let show-ans = is-answer-state.get()
     block(width: 100%, breakable: true)[
-      #q
+      #text(fill: q-color)[#q]
 
-      #if a != none [
-        #if show-ans [
+      #if show-ans [
+        #if p != none [
           #v(0.5em)
-          【解答】 #a
-          #v(0.5em)
-        ] else [
-          #v(space)
+          #text(fill: p-color)[【过程】 #p]
         ]
-      ] else if not show-ans [
+        #if a != none [
+          #v(0.5em)
+          #text(fill: a-color)[【答案】 #a]
+        ]
+      ] else [
         #v(space)
       ]
     ]

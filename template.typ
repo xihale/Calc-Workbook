@@ -6,9 +6,9 @@
 #let ans(it) = context {
   let show-ans = is-answer-state.get()
   if show-ans {
-    underline(stroke: 0.5pt, offset: 2pt, text(fill: a-color, it))
+    underline(stroke: 0.5pt, offset: 3.5pt, text(fill: a-color, it))
   } else {
-    underline(stroke: 0.5pt, offset: 2pt, hide(it))
+    underline(stroke: 0.5pt, offset: 3.5pt, hide(it))
   }
 }
 
@@ -17,7 +17,7 @@
   if show-ans {
     text(fill: a-color, it)
   } else {
-    hide(it)
+    h(1.8em)
   }
 }
 
@@ -62,8 +62,12 @@
   )
 
   set text(font: ("Times New Roman", "Noto Serif CJK SC", "SimSun"), size: 10.5pt)
-  set par(justify: true, leading: 0.8em)
+  set par(justify: true, leading: 1.2em)
   set heading(numbering: "1.1")
+
+  // 优化数学公式的显示
+  // set math.equation(spacing: 0.6em)
+  show math.equation: set text(font: ("New Computer Modern Math", "Noto Serif CJK SC", "SimSun"))
 
   show heading: it => {
     v(0.6em)
@@ -96,17 +100,15 @@
 ) = {
   context {
     let show-ans = is-answer-state.get()
+    let sol = if p != none { p } else if a != none { a } else { none }
+    let sol-label = if p != none { "【解】" } else { "【答】" }
     block(width: 100%, breakable: true)[
       #text(fill: q-color)[#q]
 
       #if show-ans [
-        #if p != none [
+        #if sol != none [
           #v(0.5em)
-          #text(fill: p-color)[【过程】 #p]
-        ]
-        #if a != none [
-          #v(0.5em)
-          #text(fill: a-color)[【答案】 #a]
+          #text(fill: p-color)[#sol-label #sol]
         ]
       ] else [
         #v(space)
